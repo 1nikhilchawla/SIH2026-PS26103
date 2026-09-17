@@ -1,0 +1,31 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "anumaan-demo",
+      "runtimeExecutable": "anumaan/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8765",
+        "--directory",
+        "anumaan/demo"
+      ],
+      "port": 8765
+    },
+    {
+      "name": "anumaan-app",
+      "runtimeExecutable": "anumaan/.venv/Scripts/python.exe",
+      "runtimeArgs": [
+        "-m",
+        "uvicorn",
+        "app.main:app",
+        "--port",
+        "8000",
+        "--app-dir",
+        "anumaan"
+      ],
+      "port": 8000
+    }
+  ]
+}

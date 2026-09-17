@@ -1,0 +1,113 @@
+{
+ "question": "Does lowering the cost-change threshold surface enough positives to train a cost-overrun model on this corpus?",
+ "answer": "no",
+ "data_source": "paimana",
+ "panel_file": "results/paimana/panel.csv",
+ "labelled_rows": 14790,
+ "threshold_sweep": [
+  {
+   "threshold": 0.0,
+   "positives": 136,
+   "base_rate": 0.009195402298850575,
+   "positives_by_month": {
+    "2025-09": 5,
+    "2025-10": 15,
+    "2025-11": 3,
+    "2025-12": 8,
+    "2026-01": 0,
+    "2026-02": 2,
+    "2026-03": 11,
+    "2026-04": 3,
+    "2026-05": 1,
+    "2026-06": 88
+   },
+   "months_with_at_least_30_positives": 1
+  },
+  {
+   "threshold": 0.001,
+   "positives": 116,
+   "base_rate": 0.00784313725490196,
+   "positives_by_month": {
+    "2025-09": 3,
+    "2025-10": 13,
+    "2025-11": 3,
+    "2025-12": 8,
+    "2026-01": 0,
+    "2026-02": 2,
+    "2026-03": 11,
+    "2026-04": 3,
+    "2026-05": 1,
+    "2026-06": 72
+   },
+   "months_with_at_least_30_positives": 1
+  },
+  {
+   "threshold": 0.0025,
+   "positives": 115,
+   "base_rate": 0.00777552400270453,
+   "positives_by_month": {
+    "2025-09": 3,
+    "2025-10": 13,
+    "2025-11": 3,
+    "2025-12": 8,
+    "2026-01": 0,
+    "2026-02": 2,
+    "2026-03": 11,
+    "2026-04": 3,
+    "2026-05": 1,
+    "2026-06": 71
+   },
+   "months_with_at_least_30_positives": 1
+  },
+  {
+   "threshold": 0.005,
+   "positives": 114,
+   "base_rate": 0.007707910750507099,
+   "positives_by_month": {
+    "2025-09": 3,
+    "2025-10": 13,
+    "2025-11": 3,
+    "2025-12": 8,
+    "2026-01": 0,
+    "2026-02": 2,
+    "2026-03": 11,
+    "2026-04": 3,
+    "2026-05": 1,
+    "2026-06": 70
+   },
+   "months_with_at_least_30_positives": 1
+  },
+  {
+   "threshold": 0.01,
+   "positives": 114,
+   "base_rate": 0.007707910750507099,
+   "positives_by_month": {
+    "2025-09": 3,
+    "2025-10": 13,
+    "2025-11": 3,
+    "2025-12": 8,
+    "2026-01": 0,
+    "2026-02": 2,
+    "2026-03": 11,
+    "2026-04": 3,
+    "2026-05": 1,
+    "2026-06": 70
+   },
+   "months_with_at_least_30_positives": 1
+  }
+ ],
+ "fraction_of_project_months_with_any_cost_change": 0.014469235970250169,
+ "quantiles_of_next_month_cost_change_ratio": {
+  "q0.5": 0.0,
+  "q0.9": 0.0,
+  "q0.95": 0.0,
+  "q0.99": 0.0,
+  "q0.999": 0.7398681541040186
+ },
+ "distinct_projects_that_ever_changed_revised_cost": 200,
+ "busiest_month": "2026-06",
+ "positives_in_busiest_month": 88,
+ "reading": "Dropping the threshold from 0.5% to 0% moves the positive count from 114 to 136 - it does not unlock the target. The reason is in the corpus, not the threshold: 98.55% of project-months carry exactly zero change in revised cost, and even the 99th percentile of the month-on-month change ratio is 0.000000. Revised cost in these reports is a near-static field that moves in episodic administrative batches, not a monthly signal. Option (a) from the rubric is refuted; option (b) is the honest course.",
+ "generated_at": "2026-09-17T17:31:11+05:30",
+ "generated_by": "python scripts/diagnose_cost_target.py"
+}

@@ -1,0 +1,22 @@
+{
+ "data_source": "paimana",
+ "run_complete": true,
+ "n_reports": 32,
+ "n_pdfs_on_disk": 32,
+ "reports_with_any_rows": 2,
+ "total_parsed_rows": 2750,
+ "total_quarantined_rows": 21444,
+ "unparsed_row_pct": 88.63,
+ "real_reconcile_pass": 0,
+ "real_reconcile_pass_rate_pct": 0.0,
+ "parser_claimed_ok": 17,
+ "parser_claimed_ok_rate_pct": 53.1,
+ "vacuous_passes": 17,
+ "status_breakdown": {
+  "ROWS_PARSED_RECONCILE_FAIL": 2,
+  "NO_ERA_DETECTED": 17,
+  "ZERO_ROWS_ALL_QUARANTINED": 13
+ },
+ "generated_at": "2026-09-16T15:36:25+05:30",
+ "generated_by": "python scripts/parse_report.py --all ; inline reconciliation table build"
+}

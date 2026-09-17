@@ -1,0 +1,21 @@
+# Copy to config/settings.yaml and edit. settings.yaml is gitignored.
+
+source:
+  base_url: "https://paimana-proj.mospi.gov.in"
+  current_page: "/ReportPage"
+  archive_page: "/ReportPage/ArchiveProjectMonitoring"
+  # Be a good citizen: one request at a time, with a real delay between them.
+  delay_seconds: 2.0
+  timeout_seconds: 180
+  user_agent: "SIH2026-student-research/0.1 (contact: your-email@example.com)"
+
+harvest:
+  # Start narrow. Widen only after the parser is reliable.
+  since_fy: "2019-20"
+  raw_dir: "data/raw"
+  manifest: "data/raw/manifest.csv"
+
+parse:
+  interim_dir: "data/interim"
+  count_tolerance: 0
+  cost_tolerance_pct: 0.5

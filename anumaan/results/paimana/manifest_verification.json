@@ -1,0 +1,25 @@
+{
+ "data_source": "paimana",
+ "manifest_file": "data/raw/manifest.csv",
+ "manifest_rows": 32,
+ "sha_ok": 32,
+ "sha_mismatch": 0,
+ "missing_files": 0,
+ "pdfs_on_disk": 32,
+ "pdf_header_ok": 32,
+ "unlisted_pdfs_on_disk": [],
+ "fy_counts": {
+  "2024-25": 16,
+  "2025-26": 12,
+  "2026-27": 4
+ },
+ "era_column_counts": {
+  "ocms": 16,
+  "paimana": 16
+ },
+ "era_column_note": "manifest 'era' is assigned by a filename/FY heuristic and is NOT verified against PDF content; parse_paimana.py detects era from the document itself",
+ "failures": [],
+ "ok": true,
+ "generated_at": "2026-09-17T17:04:18+05:30",
+ "generated_by": "python scripts/verify_corpus.py"
+}

@@ -1,0 +1,107 @@
+{
+ "data_source": "paimana",
+ "n_rows": 17010,
+ "n_projects": 2195,
+ "n_months": 11,
+ "panel_span": "2025-09 to 2026-07",
+ "months": [
+  "2025-09",
+  "2025-10",
+  "2025-11",
+  "2025-12",
+  "2026-01",
+  "2026-02",
+  "2026-03",
+  "2026-04",
+  "2026-05",
+  "2026-06",
+  "2026-07"
+ ],
+ "source_reports": [
+  {
+   "file": "FlashReport_April2026.pdf",
+   "report_month": "2026-04-01",
+   "rows": 1981,
+   "reconciled": true,
+   "summary_projects": 1981
+  },
+  {
+   "file": "FlashReport_December_2025.pdf",
+   "report_month": "2025-12-01",
+   "rows": 1392,
+   "reconciled": true,
+   "summary_projects": 1392
+  },
+  {
+   "file": "FlashReport_February_2026.pdf",
+   "report_month": "2026-02-01",
+   "rows": 1948,
+   "reconciled": true,
+   "summary_projects": 1948
+  },
+  {
+   "file": "FlashReport_January_2026.pdf",
+   "report_month": "2026-01-01",
+   "rows": 1702,
+   "reconciled": true,
+   "summary_projects": 1702
+  },
+  {
+   "file": "FlashReport_July_2026.pdf",
+   "report_month": "2026-07-01",
+   "rows": 1775,
+   "reconciled": true,
+   "summary_projects": 1775
+  },
+  {
+   "file": "FlashReport_June_2026.pdf",
+   "report_month": "2026-06-01",
+   "rows": 1847,
+   "reconciled": true,
+   "summary_projects": 1847
+  },
+  {
+   "file": "FlashReport_March_2026.pdf",
+   "report_month": "2026-03-01",
+   "rows": 1941,
+   "reconciled": true,
+   "summary_projects": 1941
+  },
+  {
+   "file": "FlashReport_May2026.pdf",
+   "report_month": "2026-05-01",
+   "rows": 1987,
+   "reconciled": true,
+   "summary_projects": 1987
+  },
+  {
+   "file": "FlashReport_November_2025.pdf",
+   "report_month": "2025-11-01",
+   "rows": 823,
+   "reconciled": true,
+   "summary_projects": 823
+  },
+  {
+   "file": "FlashReport_October_2025.pdf",
+   "report_month": "2025-10-01",
+   "rows": 820,
+   "reconciled": true,
+   "summary_projects": 820
+  },
+  {
+   "file": "FlashReport_September_2025.pdf",
+   "report_month": "2025-09-01",
+   "rows": 794,
+   "reconciled": true,
+   "summary_projects": 794
+  }
+ ],
+ "labelled_rows_slip_next": 10463,
+ "labelled_rows_cost_up_next": 14790,
+ "slip_next_base_rate": 0.19200993978782377,
+ "cost_up_next_base_rate": 0.007707910750507099,
+ "label_horizon_months": 1,
+ "include_unreconciled": false,
+ "generated_at": "2026-09-17T17:30:29+05:30",
+ "generated_by": "python scripts/build_panel.py"
+}

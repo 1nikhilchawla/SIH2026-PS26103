@@ -1,0 +1,53 @@
+{
+  "split_cutoff": "2025-01",
+  "n_train": 11061,
+  "n_test": 6300,
+  "base_rate_test": 0.06714285714285714,
+  "always_majority": {
+    "pr_auc": 0.06714285714285714,
+    "brier": 0.9328571428571428
+  },
+  "sector_rate": {
+    "pr_auc": 0.11851554497522104,
+    "brier": 0.08053953320222791
+  },
+  "slip_continues": {
+    "pr_auc": 0.07844457953394124,
+    "brier": 0.6495238095238095
+  },
+  "logistic": {
+    "pr_auc": 0.13661830859234772,
+    "brier": 0.08350151558403233
+  },
+  "lightgbm": {
+    "pr_auc": 0.15479811564884713,
+    "brier": 0.08141687752514011
+  },
+  "leakage_check": {
+    "real_pr_auc": 0.13661830859234772,
+    "with_synthetic_leak_pr_auc": 0.9852950073643926,
+    "shuffled_train_pr_auc": 0.13661830859234772,
+    "interpretation": "Synthetic leak should drive PR-AUC to ~1.0; real pipeline should stay near real_pr_auc; shuffled_train should match real_pr_auc.",
+    "ok": true
+  },
+  "lead_time_table": [
+    {
+      "horizon_months": 3,
+      "logistic_pr_auc": 0.30920426102612164,
+      "lgbm_pr_auc": 0.2911245280304754,
+      "base_rate": 0.20015873015873015
+    },
+    {
+      "horizon_months": 6,
+      "logistic_pr_auc": 0.23613948400553167,
+      "lgbm_pr_auc": 0.2192956216747796,
+      "base_rate": 0.14063492063492064
+    },
+    {
+      "horizon_months": 12,
+      "logistic_pr_auc": 0.13661830859234772,
+      "lgbm_pr_auc": 0.15479811564884713,
+      "base_rate": 0.06714285714285714
+    }
+  ]
+}

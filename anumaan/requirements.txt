@@ -1,0 +1,52 @@
+# ANUMAAN - runtime dependencies
+#
+# Every pin below is the version actually installed in the .venv that produced
+# the artefacts under results/paimana/. They were re-pinned on 17 Sep 2026
+# after the previous file was found to pin versions that were never installed
+# here (it said pandas==2.2.3 while 2.3.3 was in use, scikit-learn==1.5.2 while
+# 1.9.1 was in use, and so on for every line). A "pinned" file that pins the
+# wrong versions is worse than no pins: it promises a reproduction it cannot
+# deliver, and several of those older pins have no wheel for Python 3.14 and
+# fail at metadata-build time.
+#
+# Interpreter: Python 3.14 (3.14.0 in use). Older minors are untested here.
+#
+# Install:
+#   python -m venv .venv
+#   .venv/Scripts/python.exe -m pip install -r requirements.txt
+# Then:
+#   ./run.ps1            (full pipeline)
+#   ./run.ps1 -Serve     (pipeline, then the live app)
+
+# --- Corpus harvest and PDF extraction --------------------------------------
+requests==2.34.2
+beautifulsoup4==4.15.0
+pdfplumber==0.11.10
+
+# --- Panel construction and modelling ---------------------------------------
+pandas==2.3.3
+numpy==2.5.3
+scikit-learn==1.9.1
+lightgbm==4.7.0
+shap==0.52.0            # TreeExplainer: exact per-project attributions
+pyyaml==6.0.3           # config/delay_taxonomy.yaml, config/competitors.yaml
+matplotlib==3.11.2      # reliability and lead-time plots (Agg backend only)
+
+# --- Live service (app/main.py) ---------------------------------------------
+# Required: app/main.py imports fastapi and is started through uvicorn. A
+# previous revision removed both while the import remained, so a clean
+# checkout could not run the app at all.
+fastapi==0.141.1
+uvicorn==0.53.0
+
+# --- Tests ------------------------------------------------------------------
+pytest==9.1.1
+
+# --- Deliberately NOT dependencies ------------------------------------------
+# pandera, rapidfuzz  - were declared for schema validation and fuzzy entity
+#                       resolution; neither is imported by any file in the
+#                       repository today, so they are not listed.
+# lifelines           - right-censored hazard model, cut from this build.
+# mapie               - conformal intervals, cut from this build.
+# camelot-py[cv]      - alternative ruled-table extractor; needs ghostscript
+#                       and is not used. parse_paimana.py reconciles without it.

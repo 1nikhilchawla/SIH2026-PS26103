@@ -1,0 +1,50 @@
+{
+ "eval_month": "2026-06",
+ "data_source": "paimana",
+ "n_test": 1404,
+ "test_positives": 257,
+ "test_base_rate": 0.18304843304843305,
+ "rows": [
+  {
+   "k": 10,
+   "n_slips_caught": 10,
+   "n_slips_at_random_k": 2,
+   "precision_at_k": 1.0,
+   "recall_at_k": 0.0389,
+   "lift_over_random": 5.46
+  },
+  {
+   "k": 25,
+   "n_slips_caught": 24,
+   "n_slips_at_random_k": 5,
+   "precision_at_k": 0.96,
+   "recall_at_k": 0.0934,
+   "lift_over_random": 5.24
+  },
+  {
+   "k": 50,
+   "n_slips_caught": 48,
+   "n_slips_at_random_k": 9,
+   "precision_at_k": 0.96,
+   "recall_at_k": 0.1868,
+   "lift_over_random": 5.24
+  },
+  {
+   "k": 100,
+   "n_slips_caught": 92,
+   "n_slips_at_random_k": 18,
+   "precision_at_k": 0.92,
+   "recall_at_k": 0.358,
+   "lift_over_random": 5.03
+  },
+  {
+   "k": 250,
+   "n_slips_caught": 156,
+   "n_slips_at_random_k": 46,
+   "precision_at_k": 0.624,
+   "recall_at_k": 0.607,
+   "lift_over_random": 3.41
+  }
+ ],
+ "interpretation": "If a ministry inspects `k` projects each month, our model puts `n_slips_caught` of them in the top-k list. Random inspection would catch `n_slips_at_random_k` of the same size. The `lift_over_random` shows how many times better than chance the ranked list is."
+}

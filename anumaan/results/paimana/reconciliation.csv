@@ -1,0 +1,33 @@
+report,era,pages,parsed_rows,quarantined_rows,summary_projects,row_count_ok,cost_ok,exp_ok,unparsed_cells,reconcile_ok,reason
+April_Part-I_Synopsis.pdf,,5,0,0,,,,,,False,not a PAIMANA-era report
+April_Part-II_List_of_tables.pdf,,572,0,0,,,,,,False,not a PAIMANA-era report
+August_Part-1(synopsis).pdf,,4,0,0,,,,,,False,not a PAIMANA-era report
+August_Part-2(List_of_tables).pdf,,245,0,0,,,,,,False,not a PAIMANA-era report
+December.pdf,,219,0,0,,,,,,False,not a PAIMANA-era report
+FlashReport_April2026.pdf,paimana,163,1981,0,1981,True,True,True,0,True,
+FlashReport_August_2025.pdf,,67,0,0,,,,,,False,not a PAIMANA-era report
+FlashReport_December_2025.pdf,paimana,108,1392,0,1392,True,True,True,0,True,
+FlashReport_February_2026.pdf,paimana,168,1948,0,1948,True,True,True,0,True,
+FlashReport_January_2026.pdf,paimana,134,1702,0,1702,True,True,True,0,True,
+FlashReport_July_2025.pdf,,67,0,0,,,,,,False,not a PAIMANA-era report
+FlashReport_July_2026.pdf,paimana,153,1775,0,1775,True,True,True,0,True,
+FlashReport_June_2026.pdf,paimana,161,1847,8,1847,True,True,True,0,True,
+FlashReport_March_2026.pdf,paimana,157,1941,0,1941,True,True,True,0,True,
+FlashReport_May2026.pdf,paimana,163,1987,0,1987,True,True,True,0,True,
+FlashReport_November_2025.pdf,paimana,73,823,0,823,True,True,True,0,True,
+FlashReport_October_2025.pdf,paimana,73,820,0,820,True,True,True,0,True,
+FlashReport_September_2025.pdf,paimana,72,794,0,794,True,True,True,0,True,
+FR_JUNE_2025.pdf,,234,0,0,,,,,,False,not a PAIMANA-era report
+FR_May2025.pdf,,212,0,0,,,,,,False,not a PAIMANA-era report
+FRApril2025.pdf,,273,0,0,,,,,,False,not a PAIMANA-era report
+FRMarch2025.pdf,,244,0,0,,,,,,False,not a PAIMANA-era report
+January.pdf,,244,0,0,,,,,,False,not a PAIMANA-era report
+July_Part-I.pdf,,4,0,0,,,,,,False,not a PAIMANA-era report
+July_Part-II.pdf,,267,0,0,,,,,,False,not a PAIMANA-era report
+June.pdf,,309,0,0,,,,,,False,not a PAIMANA-era report
+May_Part-1.pdf,,5,0,0,,,,,,False,not a PAIMANA-era report
+May_Part-2.pdf,,571,0,0,,,,,,False,not a PAIMANA-era report
+November.pdf,,282,0,0,,,,,,False,not a PAIMANA-era report
+October.pdf,,278,0,0,,,,,,False,not a PAIMANA-era report
+September_Part-1(synopsis).pdf,,4,0,0,,,,,,False,not a PAIMANA-era report
+September_Part-2(List_of_tables).pdf,,250,0,0,,,,,,False,not a PAIMANA-era report

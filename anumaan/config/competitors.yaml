@@ -1,0 +1,137 @@
+# Competitor / alternative-systems comparison for SIH26103.
+#
+# RULE (Law 1): every row carries its source URL and the date we opened it.
+# verified: true  = we fetched that page in this project and read the claim on it.
+# verified: false = the claim comes from a search-result summary only; the
+#                   primary page was not opened (or returned an error). Such
+#                   rows are shown in the UI with an explicit "not verified" tag.
+#
+# What we deliberately do NOT claim: that ANUMAAN is more accurate than any of
+# these systems. None of them publish a per-project accuracy or calibration
+# number we could compare against. The comparison is on capability and on what
+# each system publishes, not on an accuracy race we cannot referee.
+
+updated: 2026-09-17
+
+competitors:
+  - key: paimana
+    name: PAIMANA
+    operator: MoSPI, Government of India
+    category: Government monitoring portal (the incumbent for this PS)
+    unit_of_analysis: Project status as reported by the implementing agency
+    input_required: Agency self-reporting, ~60% auto-updated via IPMP APIs
+    scale: 1847 ongoing projects, 17 ministries, revised cost Rs 40.54 lakh crore, expenditure Rs 21.97 lakh crore (54.18%)
+    scale_asof: June 2026
+    per_project_forecast: false
+    calibration_published: false
+    leakage_test_published: false
+    cost_model: Government platform
+    source_url: https://ddindia.co.in/2026/08/paimana-monitors-1847-ongoing-central-infrastructure-projects-as-of-june-2026/
+    source_date: 2026-09-17
+    verified: true
+    note: >-
+      Describes real-time monitoring, performance dashboards and data analytics.
+      Neither this page nor the 12 Feb 2026 feature write-up we opened
+      (insightsonindia.com/2026/02/12/paimana-web-portal/) describes a
+      forward-looking per-project forecast. A search summary suggested
+      AI-driven forecasting is planned "going ahead"; we could NOT confirm
+      that on any primary page we opened, so we do not assert it either way.
+
+  - key: pmg
+    name: Project Monitoring Group (PMG)
+    operator: DPIIT, Government of India
+    category: Government issue-resolution mechanism
+    unit_of_analysis: Issues raised on projects, milestone tracking
+    input_required: Project proponent raises an issue; investment >= Rs 500 crore
+    scale: Projects of Rs 500 crore and above
+    scale_asof: 2026
+    per_project_forecast: false
+    calibration_published: false
+    leakage_test_published: false
+    cost_model: Government platform
+    source_url: https://www.dpiit.gov.in/project-monitoring-group-pmg
+    source_date: 2026-09-17
+    verified: false
+    note: >-
+      Search-summary only; we did not open the DPIIT page itself. PMG is
+      described as facilitating resolution of issues and clearances rather
+      than forecasting slippage. Treat this row as indicative until the
+      primary page is read.
+
+  - key: nplan
+    name: nPlan
+    operator: nPlan (commercial, UK)
+    category: Commercial ML schedule-risk forecasting
+    unit_of_analysis: Activities inside a CPM programme file
+    input_required: Detailed as-planned / as-built schedules (programme files)
+    scale: Claims the largest database of as-planned and as-built construction projects in the world (>750,000 programme files)
+    scale_asof: 2026-09-17
+    per_project_forecast: true
+    calibration_published: false
+    leakage_test_published: false
+    cost_model: Commercial licence
+    source_url: https://www.nplan.io/our-ai
+    source_date: 2026-09-17
+    verified: true
+    note: >-
+      The page claims deep learning and Graph Neural Networks and says models
+      "go through a rigorous testing process to ensure the highest accuracy",
+      but publishes no accuracy percentage, error rate, calibration curve or
+      validation metric. Requires schedule files that MoSPI Flash Reports do
+      not contain, so it cannot run on this problem statement's public data.
+
+  - key: primavera
+    name: Oracle Primavera Risk Analysis
+    operator: Oracle (commercial)
+    category: Monte Carlo schedule risk simulation
+    unit_of_analysis: Activities in a CPM schedule with uncertainty ranges
+    input_required: Well-formed detailed schedule plus analyst-supplied uncertainty and risk impacts
+    scale: Supports up to 30,000 risks per analysis
+    scale_asof: 2026
+    per_project_forecast: true
+    calibration_published: false
+    leakage_test_published: false
+    cost_model: Commercial licence
+    source_url: https://docs.oracle.com/cd/E80480_01/help/en/user/93538.htm
+    source_date: 2026-09-17
+    verified: false
+    note: >-
+      Search-summary only; Oracle docs page not opened directly. Simulation
+      output is a distribution driven by analyst-entered uncertainty, not a
+      model learned from outcome history, so there is no out-of-sample
+      accuracy to publish. Needs schedule detail absent from Flash Reports.
+
+  - key: academic
+    name: "Andric et al. 2024 (closest published research)"
+    operator: Sustainability 16(24):11159, doi:10.3390/su162411159
+    category: Academic baseline on South Asian infrastructure
+    unit_of_analysis: Completed projects, one row each
+    input_required: Completion reports
+    scale: n = 138 projects, 7 countries; mean cost overrun 3.3%; random forest best model
+    scale_asof: 2024
+    per_project_forecast: false
+    calibration_published: false
+    leakage_test_published: false
+    cost_model: Published research
+    source_url: https://www.mdpi.com/2071-1050/16/24/11159
+    source_date: 2026-09-15
+    verified: true
+    note: >-
+      Verified via Crossref metadata and the MDPI abstract. Retrospective:
+      explains overruns on finished projects. No time dimension, no
+      point-in-time features, no walk-forward evaluation, so it cannot issue
+      a forward-looking alert on a live project.
+
+# ANUMAAN's own column is NOT stored here. It is computed at request time from
+# the live model run so it can never drift from the artefacts. See
+# app/main.py::competitors().
+anumaan_axes:
+  name: ANUMAAN
+  operator: "SIH26103 entry"
+  category: Calibrated forecast auditor on published monitoring reports
+  unit_of_analysis: One row per project x month (panel)
+  input_required: The monthly Flash Report PDFs MoSPI already publishes
+  per_project_forecast: true
+  calibration_published: true
+  leakage_test_published: true
+  cost_model: Open source, no licence cost

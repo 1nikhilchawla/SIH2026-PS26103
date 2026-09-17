@@ -1,0 +1,21 @@
+{
+  "started_at": "2026-09-16T14:52:20+0530",
+  "fys": [
+    "2024-25"
+  ],
+  "per_fy": {
+    "2024-25": {
+      "listed": 17,
+      "downloaded": 5,
+      "already_have": 11,
+      "failed": 1
+    }
+  },
+  "totals": {
+    "downloaded": 5,
+    "already_have": 11,
+    "failed": 1,
+    "pdfs_on_disk": 32
+  },
+  "finished_at": "2026-09-16T14:53:32+0530"
+}

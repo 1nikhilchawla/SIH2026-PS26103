@@ -1,0 +1,1405 @@
+entity_id,report_month,ministry,sector,y_true,p_slip,stated_doc,original_doc
+400006,2026-06-01,Ministry of Railways,Railways,0,0.026346533388265186,2026-12-01,2025-10-01
+400010,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.025007411563632807,2026-07-01,2021-09-01
+400012,2026-06-01,Ministry of Petroleum & Natural Gas,Energy Storage,1,0.08988709036208661,2026-06-01,2021-12-01
+400013,2026-06-01,Department of Telecommunications,Telecommunication,0,0.012854273432530162,2027-03-01,2024-06-01
+400022,2026-06-01,Ministry of Railways,Railways,0,0.003040579638679445,2030-07-01,2030-07-01
+400023,2026-06-01,Ministry of Railways,Railways,0,0.004709325461541522,2030-03-01,2028-04-01
+400043,2026-06-01,Ministry of Petroleum & Natural Gas,Energy Storage,0,0.006924122226558583,2027-03-01,2026-05-01
+400045,2026-06-01,Ministry of Railways,Railways,0,0.016290673956994812,2025-01-01,2025-03-01
+400047,2026-06-01,Ministry of Railways,Railways,0,0.037907699943598355,2026-12-01,2024-12-01
+400048,2026-06-01,Ministry of Railways,Railways,0,0.05032928756010401,2027-06-01,2024-12-01
+400081,2026-06-01,Department of Sports,Education,0,0.04412523262177215,2026-08-01,2024-08-01
+400100,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.012248553304351883,2026-06-01,2019-12-01
+400101,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.002222355587114667,2027-03-01,2019-12-01
+400102,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.012757654661171928,2025-12-01,2019-12-01
+400103,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.00163593402869055,2026-12-01,2019-12-01
+400111,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.01009578246151026,2026-06-01,2019-12-01
+400115,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.009786778332619202,2026-03-01,2019-12-01
+400116,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.003400025267781082,2026-12-01,2019-12-01
+400119,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.03764704456433204,2026-10-01,2018-04-01
+400120,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.07829796673329462,2026-06-01,2020-06-01
+400141,2026-06-01,Ministry of Mines,Metals & Mining,0,0.037317542065867106,2026-06-01,2022-12-01
+400148,2026-06-01,Ministry of Coal,Coal,0,0.05265861061329971,2027-03-01,2021-03-01
+400160,2026-06-01,Ministry of Coal,Coal,0,0.043888296804330394,2027-03-01,2016-03-01
+400162,2026-06-01,Ministry of Coal,Coal,0,0.08439481375685705,2027-03-01,2023-03-01
+400167,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.005443994439161852,2026-12-01,2026-03-01
+400168,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.01113249854502693,2027-06-01,2025-04-01
+400169,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.06487052693829418,2026-07-01,2025-03-01
+400171,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.006036757193638895,2026-12-01,2023-02-01
+400172,2026-06-01,Ministry of Coal,Coal,0,0.00787341463070033,2028-03-01,2026-03-01
+400173,2026-06-01,Ministry of Coal,Coal,0,0.010818486340710377,2030-03-01,2026-03-01
+400174,2026-06-01,Ministry of Steel,Steel,0,0.006116642609318262,2027-06-01,2027-10-01
+400177,2026-06-01,Ministry of Coal,Coal,0,0.10773545044376776,2027-03-01,2025-03-01
+400180,2026-06-01,Ministry of Coal,Coal,0,0.010323279571076982,2030-03-01,2026-03-01
+400188,2026-06-01,Ministry of Housing & Urban Affairs,Real Estate,0,0.02646908358736599,2025-12-01,2025-12-01
+400192,2026-06-01,Ministry of Power,Coal,1,0.03109095279326529,2026-05-01,2026-05-01
+400203,2026-06-01,Ministry of Coal,Railways,0,0.2942380482868238,2026-08-01,2026-12-01
+400204,2026-06-01,Ministry of Railways,Railways,0,0.0024221490666027847,2030-10-01,2030-10-01
+400205,2026-06-01,Ministry of Railways,Railways,0,0.0028659433660379436,2029-03-01,2029-03-01
+400220,2026-06-01,Ministry of Railways,Railways,0,0.0061417713710648055,2026-12-01,2018-09-01
+400223,2026-06-01,Ministry of Railways,Railways,0,0.00390929044281513,2028-03-01,2027-03-01
+400232,2026-06-01,Ministry of Railways,Railways,0,0.002943705314930293,2026-12-01,2026-12-01
+400247,2026-06-01,Ministry of Railways,Railways,0,0.0027346195833673165,2028-03-01,2027-02-01
+400254,2026-06-01,Ministry of Railways,Railways,0,0.0046465504185414135,2027-03-01,2024-12-01
+400261,2026-06-01,Ministry of Power,Electricity Generation,0,0.026156150649873238,2027-04-01,2023-03-01
+400273,2026-06-01,Ministry of Railways,Railways,0,0.010373642544368079,2026-02-01,2019-03-01
+400275,2026-06-01,Ministry of Railways,Railways,0,0.003366563891277483,2028-03-01,2025-09-01
+400280,2026-06-01,Ministry of Railways,Railways,0,0.009934859747446529,2025-09-01,2025-07-01
+400291,2026-06-01,Ministry of Railways,Railways,0,0.003744817535333324,2027-04-01,2020-03-01
+400298,2026-06-01,Ministry of Railways,Railways,0,0.0026152678500191515,2028-03-01,2027-05-01
+400299,2026-06-01,Ministry of Mines,Metals & Mining,0,0.016902658442549776,2026-11-01,2025-03-01
+400301,2026-06-01,Ministry of Petroleum & Natural Gas,Energy Storage,0,0.01538358157285308,2026-09-01,2017-02-01
+400321,2026-06-01,Ministry of Coal,Coal,0,0.011109191975181716,2028-03-01,2025-03-01
+400369,2026-06-01,Ministry of Coal,Coal,0,0.05486814284002325,2027-03-01,2024-03-01
+400416,2026-06-01,Ministry of Coal,Railways,0,0.053315513755870785,2027-06-01,2025-06-01
+400424,2026-06-01,Ministry of Coal,Coal,0,0.0650951899532632,2027-03-01,2023-03-01
+400425,2026-06-01,Ministry of Coal,Coal,0,0.5585387645782051,2026-09-01,2019-03-01
+400426,2026-06-01,Ministry of Mines,Metals & Mining,0,0.004473410828795617,2029-03-01,2020-04-01
+602096,2026-06-01,Ministry of Power,Electricity Generation,1,0.00962243075132173,2026-05-01,2010-09-01
+602098,2026-06-01,Department of Higher Education,Education,0,0.012772732044687833,2025-11-01,2023-06-01
+602099,2026-06-01,Department of Higher Education,Education,1,0.10278054577981624,2026-06-01,2023-10-01
+602181,2026-06-01,Ministry of Power,Electricity Generation,1,0.009437446984157978,2027-12-01,2024-03-01
+602182,2026-06-01,Ministry of Power,Electricity Generation,0,0.007295096056960598,2032-02-01,2032-02-01
+602184,2026-06-01,Ministry of Power,Electricity Generation,1,0.007032990537604024,2029-03-01,2019-09-01
+602185,2026-06-01,Ministry of Power,Electricity Generation,1,0.06853623946871393,2029-04-01,2013-03-01
+602195,2026-06-01,Ministry of Power,Electricity Generation,0,0.009212335428451771,2028-06-01,2022-12-01
+602223,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.01345839005223311,2027-03-01,2018-12-01
+602525,2026-06-01,Ministry of Power,Electricity Generation,0,0.011419984279160338,2026-12-01,2020-04-01
+602532,2026-06-01,Ministry of Power,Electricity Generation,0,0.013410260245089279,2026-12-01,2023-09-01
+602535,2026-06-01,Ministry of Power,Electricity Generation,0,0.008986634967355347,2028-11-01,2026-02-01
+602538,2026-06-01,Ministry of Power,Electricity Generation,1,0.03996326875176277,2026-05-01,2024-01-01
+602579,2026-06-01,Ministry of Power,Electricity Generation,0,0.028486791189039597,2026-05-01,2024-01-01
+602582,2026-06-01,Ministry of Power,Electricity Generation,0,0.007785283695026486,2027-03-01,2025-11-01
+602593,2026-06-01,Ministry of Power,Electricity Generation,1,0.007417691879703409,2030-02-01,2026-01-01
+602792,2026-06-01,Ministry of Railways,Railways,0,0.023073213166009084,2026-06-01,2025-02-01
+602797,2026-06-01,Ministry of Railways,Railways,0,0.00358652781364779,2027-03-01,2027-03-01
+602961,2026-06-01,Ministry of Power,Electricity Generation,0,0.008274437237264265,2028-05-01,2027-05-01
+603293,2026-06-01,Ministry of Power,Coal,0,0.006525353486029813,2027-04-01,2056-12-01
+603945,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.004997090756693436,2026-06-01,2019-12-01
+604791,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.015010680725865066,2027-03-01,2024-07-01
+604833,2026-06-01,Ministry of Petroleum & Natural Gas,Energy Storage,1,0.0643176994043234,2026-06-01,2025-05-01
+604853,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.007127252236218873,2027-07-01,2022-12-01
+604859,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.026570021038405493,2026-08-01,2024-01-01
+604863,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.061747902672853336,2026-06-01,2020-02-01
+605155,2026-06-01,Ministry of Power,Electricity Generation,0,0.008230248363542206,2028-03-01,2026-11-01
+605156,2026-06-01,Ministry of Power,Electricity Generation,0,0.009851904087693082,2026-11-01,2024-05-01
+605292,2026-06-01,Department of Higher Education,Education,0,0.03349229684717371,2026-11-01,2023-06-01
+606013,2026-06-01,Department of Higher Education,Education,0,0.016952222654403146,2026-01-01,2024-07-01
+606112,2026-06-01,Department of Higher Education,Education,0,0.01241835786308883,2025-12-01,2023-11-01
+606431,2026-06-01,Department of Higher Education,Education,0,0.028874241121099375,2026-06-01,2022-06-01
+606479,2026-06-01,Department of Higher Education,Education,1,0.02389199536813143,2026-03-01,2022-09-01
+607653,2026-06-01,Ministry of Railways,Railways,0,0.025251885525810654,2027-02-01,2024-06-01
+607709,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.00906205624410071,2027-03-01,2018-12-01
+609019,2026-06-01,Department of Higher Education,Education,1,0.026840100322458496,2026-03-01,2023-03-01
+609424,2026-06-01,"Ministry of Ports, Shipping and Waterways",Shipping,0,0.0034226289243594332,2027-09-01,2027-03-01
+609736,2026-06-01,Department of Higher Education,Education,1,0.0075012114570785,2026-03-01,2025-01-01
+609996,2026-06-01,Department of Higher Education,Education,0,0.029250187222270716,2026-01-01,2024-10-01
+610315,2026-06-01,Department of Higher Education,Education,0,0.16188755314230818,2026-06-01,2021-03-01
+610984,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.04682179063672134,2026-07-01,2024-01-01
+611047,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.027670596425226856,2026-11-01,2026-06-01
+611495,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.006858532236330589,2027-03-01,2027-03-01
+611570,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.035855178558180836,2026-08-01,2025-09-01
+611586,2026-06-01,Ministry of Power,Electricity Generation,0,0.009478130333187751,2029-12-01,2028-04-01
+611602,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.00894505144706209,2026-12-01,2025-07-01
+611669,2026-06-01,Ministry of Railways,Railways,0,0.003935693372153917,2028-03-01,2027-03-01
+611735,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.01039887841670516,2026-12-01,2025-03-01
+611884,2026-06-01,Ministry of Railways,Railways,0,0.00276420462008529,2028-02-01,2028-02-01
+611917,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.009300819632510188,2026-12-01,2025-03-01
+611930,2026-06-01,Ministry of Power,Electricity Generation,0,0.012667629563085534,2028-11-01,2028-06-01
+611943,2026-06-01,Ministry of Railways,Railways,0,0.0052529819255835,2028-02-01,2028-01-01
+611945,2026-06-01,Ministry of Railways,Railways,0,0.0027689032744458177,2030-05-01,2030-05-01
+611949,2026-06-01,Ministry of Power,Transmission & Distribution,1,0.05486508708867862,2026-05-01,2025-04-01
+611970,2026-06-01,Ministry of Railways,Railways,0,0.0033021343665953717,2030-03-01,2030-03-01
+611971,2026-06-01,Ministry of Railways,Railways,0,0.003189168824306492,2030-03-01,2030-03-01
+611974,2026-06-01,Ministry of Railways,Railways,0,0.008064271011145705,2027-12-01,2026-12-01
+612072,2026-06-01,Ministry of Railways,Railways,0,0.0040318649510130405,2028-07-01,2027-03-01
+612096,2026-06-01,Ministry of Railways,Railways,0,0.008750799449779006,2027-03-01,2027-03-01
+612128,2026-06-01,Department of Higher Education,Education,1,0.008343352412276807,2026-07-01,2026-03-01
+612132,2026-06-01,Ministry of Power,Transmission & Distribution,1,0.0294097498857044,2026-09-01,2025-08-01
+612133,2026-06-01,Ministry of Power,Transmission & Distribution,1,0.011383007499357204,2026-12-01,2025-12-01
+612134,2026-06-01,Ministry of Power,Transmission & Distribution,1,0.009853747791651116,2026-12-01,2025-12-01
+612138,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.056852789117866884,2026-08-01,2026-02-01
+612139,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.016157847355492423,2026-12-01,2025-12-01
+612140,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.03433178797492157,2026-09-01,2025-12-01
+612142,2026-06-01,Ministry of Power,Electricity Generation,0,0.015065246312313929,2030-04-01,2030-02-01
+612167,2026-06-01,Ministry of Labour and Employment,Healthcare,1,0.07126674135956948,2026-06-01,2025-10-01
+612186,2026-06-01,Ministry of Labour and Employment,Healthcare,0,0.007984881731057387,2027-05-01,2026-03-01
+612194,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.014868909746346862,2026-11-01,2026-07-01
+612211,2026-06-01,Ministry of Labour and Employment,Healthcare,0,0.017399549364457752,2026-11-01,2025-10-01
+612213,2026-06-01,Ministry of Labour and Employment,Healthcare,0,0.0164289266200687,2026-09-01,2025-08-01
+612259,2026-06-01,Ministry of Labour and Employment,Healthcare,0,0.032322676771943136,2026-07-01,2024-10-01
+612745,2026-06-01,Ministry of Labour and Employment,Healthcare,0,0.007593455812119119,2027-05-01,2027-01-01
+612781,2026-06-01,Ministry of Steel,Steel,0,0.006195083740117468,2027-09-01,2026-12-01
+612786,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,1,0.032205370049291665,2026-07-01,2026-01-01
+612787,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,1,0.06152346558529167,2026-06-01,2026-01-01
+612788,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,1,0.11062722780444502,2026-06-01,2026-02-01
+612789,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.007288890846619831,2026-12-01,2025-09-01
+612790,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.01483712349601421,2026-09-01,2025-11-01
+612791,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.055439571873503166,2026-08-01,2025-10-01
+612793,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.007938240382293505,2027-06-01,2026-06-01
+612851,2026-06-01,Department of Higher Education,Education,0,0.007459751485798818,2026-01-01,2025-09-01
+612855,2026-06-01,Ministry of Power,Transmission & Distribution,1,0.04112168616713563,2026-06-01,2026-05-01
+612876,2026-06-01,Department of Higher Education,Education,0,0.009499800356701279,2022-03-01,2029-12-01
+612877,2026-06-01,Department of Higher Education,Education,0,0.008681419734015835,2026-05-01,2024-12-01
+612883,2026-06-01,Department of Higher Education,Education,0,0.007898957044208623,2026-12-01,2028-02-01
+612885,2026-06-01,Department of Higher Education,Education,0,0.00368709953506218,2026-10-01,2022-03-01
+612894,2026-06-01,Department of Higher Education,Education,0,0.013871588401443286,2026-03-01,2024-11-01
+612898,2026-06-01,Department of Higher Education,Education,0,0.006475997667292826,2024-08-01,2026-08-01
+612916,2026-06-01,Department of Higher Education,Education,0,0.023709445788022917,2026-03-01,2025-03-01
+613793,2026-06-01,Ministry of Coal,Coal,0,0.009811782021571796,2028-03-01,2026-03-01
+613800,2026-06-01,Ministry of Coal,Coal,0,0.08116756509809268,2027-03-01,2025-03-01
+613801,2026-06-01,Ministry of Coal,Coal,0,0.007803863192206519,2028-03-01,2026-03-01
+613802,2026-06-01,Ministry of Coal,Coal,0,0.009791785578432386,2028-03-01,2026-03-01
+613808,2026-06-01,Ministry of Coal,Coal,0,0.05520057833535304,2026-12-01,2014-04-01
+615183,2026-06-01,Ministry of Coal,Coal,0,0.06817663713743706,2027-03-01,2025-03-01
+615186,2026-06-01,Ministry of Coal,Coal,0,0.07997583948235294,2027-03-01,2026-03-01
+615189,2026-06-01,Ministry of Coal,Coal,0,0.09118297747889159,2027-03-01,2026-03-01
+615192,2026-06-01,Ministry of Coal,Coal,0,0.08538767147871298,2027-03-01,2026-03-01
+615202,2026-06-01,Ministry of Steel,Metals & Mining,0,0.0037469760618994022,2028-03-01,2028-12-01
+615206,2026-06-01,Ministry of Coal,Coal,0,0.05684405733212672,2027-03-01,2026-03-01
+615332,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.009915688412174124,2027-03-01,2026-08-01
+615333,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.02252596833535999,2026-12-01,2026-08-01
+615334,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.009443188720330906,2027-04-01,2026-08-01
+615335,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.012629408808570799,2027-03-01,2026-08-01
+615336,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.058949711345865435,2026-12-01,2026-02-01
+615337,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.02051617356700963,2026-09-01,2026-02-01
+615338,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.01918247657332597,2027-06-01,2026-11-01
+615339,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.011862706620998817,2027-04-01,2026-11-01
+615340,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.014297573956018002,2027-06-01,2026-11-01
+615342,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.02376637224558877,2027-04-01,2026-07-01
+615344,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.00958133660147076,2027-06-01,2026-10-01
+615345,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.008641802949790193,2027-10-01,2026-10-01
+615346,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.010653240559350907,2027-02-01,2026-08-01
+615818,2026-06-01,Ministry of Coal,Coal,0,0.09902502394225056,2027-03-01,2025-03-01
+615843,2026-06-01,Ministry of Coal,Coal,0,0.07629682202191757,2027-03-01,2025-03-01
+615860,2026-06-01,Ministry of Coal,Coal,0,0.3960043799816477,2026-03-01,2025-03-01
+615861,2026-06-01,Ministry of Coal,Coal,0,0.2911960577120508,2026-03-01,2025-03-01
+615865,2026-06-01,Ministry of Coal,Coal,0,0.37723670632811346,2026-03-01,2025-03-01
+615915,2026-06-01,Ministry of Railways,Railways,0,0.04373873398336549,2026-11-01,2026-03-01
+615982,2026-06-01,Ministry of Coal,Coal,0,0.09747501704225638,2027-03-01,2022-03-01
+616044,2026-06-01,Ministry of Coal,Coal,0,0.06810248781527141,2027-03-01,2021-03-01
+616050,2026-06-01,Ministry of Coal,Coal,0,0.06999682477347068,2027-03-01,2024-03-01
+616223,2026-06-01,Ministry of Coal,Coal,0,0.0948644676632123,2027-03-01,2024-03-01
+616594,2026-06-01,"Department of Water Resources, River Development & GR",Waste & Water,0,0.0037211549624213166,2026-12-01,2025-04-01
+616600,2026-06-01,"Department of Water Resources, River Development & GR",Waste & Water,0,0.0029080575485080935,2026-12-01,2025-02-01
+616604,2026-06-01,"Department of Water Resources, River Development & GR",Waste & Water,0,0.01574817272518872,2026-08-01,2025-03-01
+616605,2026-06-01,"Department of Water Resources, River Development & GR",Waste & Water,0,0.004695187118199756,2027-03-01,2024-12-01
+616611,2026-06-01,"Department of Water Resources, River Development & GR",Waste & Water,0,0.014376535055188986,2026-09-01,2025-12-01
+616615,2026-06-01,"Department of Water Resources, River Development & GR",Waste & Water,0,0.00241191653508599,2026-12-01,2025-04-01
+616616,2026-06-01,"Department of Water Resources, River Development & GR",Waste & Water,0,0.0023493815374544752,2026-12-01,2025-06-01
+616670,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.010122972260938893,2027-06-01,2026-12-01
+616671,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.011925983638837205,2027-03-01,2026-12-01
+616691,2026-06-01,Ministry of Labour and Employment,Healthcare,0,0.016339272044096482,2026-09-01,2025-08-01
+616841,2026-06-01,Ministry of Railways,Railways,0,0.004354168417843244,2028-12-01,2026-12-01
+616843,2026-06-01,Ministry of Railways,Railways,0,0.006395659556364475,2028-03-01,2027-06-01
+616858,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.08077241905645675,2026-06-01,2024-03-01
+616933,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.004448481789645757,2028-03-01,2028-03-01
+617179,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.013851204914017996,2027-06-01,2026-07-01
+617181,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.014168261490646551,2027-06-01,2026-12-01
+617185,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.01278367918640861,2027-09-01,2027-03-01
+617186,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.025034910072543135,2027-06-01,2027-03-01
+617188,2026-06-01,Ministry of Power,Electricity Generation,0,0.008347417463326172,2029-11-01,2029-09-01
+617239,2026-06-01,Ministry of Railways,Railways,0,0.01432812472989688,2030-03-01,2029-11-01
+617245,2026-06-01,Ministry of Railways,Railways,0,0.03700549393691565,2027-02-01,2026-08-01
+617246,2026-06-01,Ministry of Steel,Steel,0,0.004787289875536242,2027-10-01,2026-06-01
+617248,2026-06-01,Ministry of Steel,Steel,0,0.017018474516212797,2026-11-01,2026-07-01
+617250,2026-06-01,Ministry of Steel,Steel,0,0.005958271968380789,2027-04-01,2026-10-01
+617251,2026-06-01,Ministry of Steel,Steel,1,0.05256825435366747,2026-08-01,2026-05-01
+617254,2026-06-01,Ministry of Steel,Steel,0,0.004633493060098798,2027-04-01,2026-06-01
+617255,2026-06-01,Ministry of Steel,Steel,0,0.01879333886608441,2026-09-01,2026-06-01
+617256,2026-06-01,Ministry of Steel,Steel,0,0.008655046729073135,2026-09-01,2025-10-01
+617257,2026-06-01,Ministry of Steel,Steel,0,0.0037632187201179956,2027-11-01,2026-11-01
+617269,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.013706217225946438,2026-12-01,2026-06-01
+617270,2026-06-01,Ministry of Power,Transmission & Distribution,1,0.030357838956072504,2027-06-01,2026-05-01
+617271,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.05629730737087368,2026-09-01,2026-03-01
+617299,2026-06-01,Ministry of Coal,Electricity Generation,0,0.07155579263599397,2026-12-01,2025-06-01
+617302,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.012125532547820075,2026-09-01,2020-12-01
+617326,2026-06-01,Ministry of Power,Transmission & Distribution,1,0.02844199665343399,2026-08-01,2026-03-01
+617391,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.018667979207699043,2027-06-01,2026-11-01
+617409,2026-06-01,Ministry of Railways,Railways,0,0.009698559172511449,2026-03-01,2026-12-01
+617413,2026-06-01,Department of Telecommunications,Telecommunication,0,0.01761939654297103,2026-12-01,2025-05-01
+617730,2026-06-01,Ministry of Coal,Electricity Generation,0,0.09180065710021472,2026-12-01,2026-06-01
+617801,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.01693749752642181,2027-06-01,2026-12-01
+617828,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.011424029335869938,2029-03-01,2029-03-01
+617829,2026-06-01,Ministry of Petroleum & Natural Gas,Energy Storage,0,0.011004761095833716,2028-03-01,2028-10-01
+617837,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.06389329708122968,2026-10-01,2025-12-01
+617885,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7979623201011429,2026-07-01,2023-08-01
+617886,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.06026396613999169,2027-03-01,2026-06-01
+617888,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7864244776874902,2026-07-01,2025-02-01
+617889,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7864244776874902,2026-07-01,2024-06-01
+617892,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.820182125909293,2026-07-01,2023-11-01
+617893,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06689164844366495,2028-05-01,2028-05-01
+617894,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12258632655962493,2027-05-01,2026-03-01
+617895,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11282381446372332,2026-12-01,2025-04-01
+617896,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.26426689183537483,2026-10-01,2026-10-01
+617897,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.1504909166130402,2026-10-01,2025-07-01
+617898,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.026781165417963573,2027-10-01,2027-10-01
+617899,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2101198784200234,2026-11-01,2026-02-01
+617901,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7639070487368913,2026-07-01,2024-12-01
+617902,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04046616554089197,2026-12-01,2026-12-01
+617904,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7829193931935658,2026-07-01,2025-10-01
+617905,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.2551896432982163,2026-10-01,2025-05-01
+617906,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1304491877049444,2027-01-01,2027-01-01
+617908,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.021595600166148674,2027-04-01,2027-04-01
+617909,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05402392856595006,2027-02-01,2027-02-01
+617911,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5666359547693915,2026-08-01,2017-07-01
+617912,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07222467230358964,2027-10-01,2027-10-01
+617913,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2564681025454937,2026-06-01,2020-05-01
+617914,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08299522641882427,2027-06-01,2025-12-01
+617916,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0436644684549376,2028-02-01,2028-02-01
+617919,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18092747672088516,2025-08-01,2021-01-01
+617920,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04397675225194483,2027-06-01,2027-06-01
+617921,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2207214176903545,2026-11-01,2025-06-01
+617922,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05516681026289065,2027-07-01,2027-07-01
+617923,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07322933342136279,2027-05-01,2027-05-01
+617925,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7601261547715676,2026-07-01,2024-11-01
+617926,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.018283249835322576,2027-08-01,2027-08-01
+617927,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0662311591623498,2027-09-01,2027-09-01
+617928,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7348684853892921,2026-07-01,2026-03-01
+617929,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08642494438130516,2026-12-01,2020-05-01
+617930,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0838882988729074,2026-12-01,2025-12-01
+617931,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.06487305532354493,2027-03-01,2025-08-01
+617932,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1510078756994519,2026-10-01,2024-10-01
+617934,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3358980007546617,2026-08-01,2019-09-01
+617935,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2512069476950835,2026-11-01,2024-06-01
+617938,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14986930373196117,2027-03-01,2027-03-01
+617939,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.563662724778023,2026-08-01,2026-07-01
+617940,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8066464913224604,2026-07-01,2024-07-01
+617941,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01501530132534741,2028-02-01,2028-02-01
+617942,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08810508449877213,2026-10-01,2026-04-01
+617943,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.012113658965457168,2028-10-01,2028-10-01
+617945,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0872384237028155,2027-04-01,2027-04-01
+617946,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.19489581704809178,2025-12-01,2020-02-01
+617947,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.24244533919023067,2026-03-01,2019-11-01
+617948,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2396347944684662,2025-11-01,2019-11-01
+617950,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11231376480067873,2027-01-01,2027-01-01
+617951,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.044256608011616405,2027-07-01,2027-07-01
+617955,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10237865833560296,2026-12-01,2025-03-01
+617958,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.3569144915385489,2026-08-01,2024-11-01
+617960,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4643332034206511,2026-10-01,2018-11-01
+617961,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06747582498976258,2026-10-01,2019-11-01
+617962,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3339094828325309,2026-08-01,2026-08-01
+617963,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0626066316444364,2027-07-01,2027-01-01
+617964,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10111118476015958,2026-11-01,2026-11-01
+617965,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5204995012578175,2026-08-01,2024-07-01
+617966,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7528144635288172,2026-07-01,2019-10-01
+617967,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7831229468644885,2026-07-01,2025-07-01
+617968,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18320110698798944,2024-03-01,2020-02-01
+617969,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14480302088878694,2026-12-01,2026-07-01
+617971,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0895374921871581,2027-03-01,2027-03-01
+617976,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.43077048725620587,2026-08-01,2026-06-01
+617978,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04167704867122304,2027-05-01,2027-05-01
+617979,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14863870948489735,2026-11-01,2027-05-01
+617980,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.1690419029389311,2026-10-01,2020-07-01
+617983,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.803173233307679,2026-07-01,2024-07-01
+617984,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.057263513750148806,2027-03-01,2025-05-01
+617985,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08324914486115897,2027-05-01,2023-11-01
+617986,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08771281455334363,2026-12-01,2026-12-01
+617987,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05479680244502159,2027-09-01,2027-09-01
+617988,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11100628759715195,2027-07-01,2027-07-01
+617989,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06194955657644525,2027-04-01,2021-11-01
+617991,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2679439896525346,2026-12-01,2019-05-01
+617994,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16951466369993587,2025-12-01,2019-11-01
+617995,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04733860000427541,2026-12-01,2019-05-01
+617997,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.025934329362475896,2028-02-01,2028-02-01
+617998,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18115461951605685,2026-11-01,2025-02-01
+617999,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1065374941491564,2027-04-01,2026-05-01
+618000,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1220104803792792,2026-06-01,2024-02-01
+618001,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.47879300474542125,2026-06-01,2023-06-01
+618003,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7601261547715676,2026-07-01,2024-12-01
+618004,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15033928094963067,2027-12-01,2027-12-01
+618009,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.13429075030120172,2026-09-01,2022-04-01
+618010,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10774816961726263,2026-11-01,2026-11-01
+618011,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1461761339340044,2026-10-01,2024-05-01
+618012,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11802066225780355,2026-12-01,2026-02-01
+618013,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5948297262628559,2026-08-01,2025-11-01
+618014,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14767661731098128,2026-10-01,2026-10-01
+618015,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18840222765394207,2026-12-01,2026-01-01
+618016,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09112342001893389,2027-05-01,2027-05-01
+618017,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18840222765394207,2026-12-01,2026-01-01
+618018,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10553241847242273,2026-12-01,2025-07-01
+618019,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13624091598249968,2026-09-01,2025-05-01
+618020,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11489888978078197,2026-12-01,2025-02-01
+618021,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12046195720688699,2027-06-01,2027-06-01
+618022,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08806872386805396,2026-12-01,2025-08-01
+618024,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12444201973671185,2026-09-01,2025-04-01
+618025,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1955967522334209,2026-09-01,2019-12-01
+618027,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06332984981548875,2026-12-01,2026-03-01
+618028,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1331219434926536,2027-06-01,2027-06-01
+618029,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.31535887529846385,2027-03-01,2025-01-01
+618031,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3025511704587262,2026-08-01,2025-12-01
+618034,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5057621924376693,2026-08-01,2026-08-01
+618035,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09113980591729688,2026-12-01,2026-05-01
+618036,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07245749195561518,2027-03-01,2026-11-01
+618037,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.21468495704621446,2026-09-01,2024-05-01
+618042,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10928408702941922,2026-12-01,2025-05-01
+618043,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15805945986359696,2026-09-01,2026-07-01
+618047,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01974809306547575,2027-05-01,2027-05-01
+618049,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.36699358208338223,2026-08-01,2026-07-01
+618052,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06577552921743535,2027-08-01,2027-08-01
+618053,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11677503583788766,2027-08-01,2027-08-01
+618054,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.44105247625035243,2026-08-01,2026-02-01
+618055,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.19037975387988298,2026-09-01,2025-06-01
+618056,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2391637748863302,2026-12-01,2025-09-01
+618057,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.23780754157252693,2026-12-01,2025-05-01
+618059,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16926994272454723,2026-10-01,2025-08-01
+618060,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8013417091249943,2026-07-01,2024-07-01
+618061,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2301986031353472,2026-09-01,2026-09-01
+618063,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.15590934206991236,2026-09-01,2024-09-01
+618065,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.20162017422177925,2026-10-01,2025-09-01
+618066,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07721073730489737,2027-02-01,2027-02-01
+618067,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12149179234523377,2027-11-01,2027-11-01
+618068,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1702736546447298,2026-12-01,2025-10-01
+618069,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12923975557679168,2026-10-01,2026-10-01
+618070,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.38438935059127466,2026-06-01,2019-08-01
+618071,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2706163327704201,2026-12-01,2024-05-01
+618072,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13835990259720563,2026-03-01,2024-07-01
+618073,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09700247511063115,2027-02-01,2026-02-01
+618074,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3569144915385489,2026-08-01,2024-11-01
+618075,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.28424612166752805,2026-09-01,2026-02-01
+618079,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08573005174124139,2026-10-01,2026-10-01
+618080,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17733998814345558,2027-06-01,2026-11-01
+618081,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.2780893204649516,2026-09-01,2026-02-01
+618082,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14315840278611772,2026-09-01,2024-05-01
+618084,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.1034444008460092,2026-09-01,2023-08-01
+618085,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.5207313307112609,2026-08-01,2024-10-01
+618086,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1244667587631599,2027-01-01,2027-01-01
+618087,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.36923454004124884,2026-08-01,2024-07-01
+618088,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06548731282582898,2026-12-01,2026-12-01
+618089,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15618173142568223,2026-10-01,2025-04-01
+618091,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15269656550306449,2027-03-01,2026-02-01
+618092,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13485301849879894,2026-10-01,2026-10-01
+618094,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15684735810226724,2025-12-01,2019-12-01
+618095,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06761762591925595,2027-03-01,2026-03-01
+618096,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06708852326983025,2026-12-01,2026-04-01
+618097,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3211937614150017,2025-08-01,2019-06-01
+618098,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.41340897908886065,2026-08-01,2024-05-01
+618101,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.037240457716715004,2027-04-01,2027-04-01
+618103,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7804539152342281,2026-07-01,2026-04-01
+618104,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7990805713889978,2026-07-01,2025-07-01
+618105,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2336714681795136,2026-11-01,2025-10-01
+618106,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3278252529085979,2026-05-01,2025-01-01
+618107,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.026397873489066883,2028-06-01,2028-06-01
+618108,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16859920983848964,2026-12-01,2025-12-01
+618109,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1674992929722314,2026-11-01,2024-12-01
+618111,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8074088863876243,2026-07-01,2025-06-01
+618112,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.19243627304224653,2026-11-01,2026-11-01
+618113,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.12852673340015489,2026-11-01,2026-11-01
+618114,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.012829008942986367,2028-08-01,2028-08-01
+618116,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03380481764075058,2028-01-01,2028-01-01
+618117,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4535053132979048,2026-08-01,2026-05-01
+618120,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11188828356919692,2028-01-01,2028-01-01
+618121,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.13761882470603995,2026-09-01,2024-12-01
+618122,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09067480376438161,2026-10-01,2026-10-01
+618124,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.2436179607556841,2026-09-01,2025-08-01
+618125,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08504273007785818,2025-10-01,2020-03-01
+618126,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16947332665453288,2027-03-01,2026-12-01
+618127,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1016000439235654,2027-05-01,2027-05-01
+618129,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.02967034918901886,2026-12-01,2026-12-01
+618130,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.1514307882355723,2026-11-01,2026-05-01
+618133,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0861881865963845,2027-03-01,2024-05-01
+618134,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11693511091362181,2026-09-01,2026-09-01
+618137,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0884668191648222,2027-05-01,2027-05-01
+618138,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16033230787645297,2026-11-01,2026-11-01
+618139,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17157400772731354,2026-09-01,2026-09-01
+618140,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07837904594241552,2027-01-01,2027-01-01
+618141,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08183170270701555,2026-12-01,2024-12-01
+618146,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08355066730545929,2027-04-01,2026-04-01
+618147,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3865825403890025,2026-08-01,2025-09-01
+618148,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01754580582208858,2028-04-01,2028-04-01
+618149,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2202112020346215,2027-01-01,2027-01-01
+618150,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05130273426273125,2027-05-01,2027-05-01
+618152,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1847520462542864,2026-08-01,2019-07-01
+618153,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1809058843628367,2026-08-01,2019-08-01
+618154,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.29150315273907956,2026-06-01,2024-07-01
+618155,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2661590752037638,2026-09-01,2026-07-01
+618156,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17626932616410504,2026-10-01,2026-10-01
+618157,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07954527044869497,2026-12-01,2026-06-01
+618158,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05546153362493964,2026-12-01,2026-12-01
+618159,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10432657543407296,2027-03-01,2027-03-01
+618160,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.111290447638096,2027-12-01,2027-12-01
+618162,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07267931960328028,2028-01-01,2028-01-01
+618163,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.39982688029665214,2026-12-01,2025-12-01
+618164,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7919846372451086,2026-07-01,2026-06-01
+618166,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.6705030656035895,2026-07-01,2025-10-01
+618168,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.23720424564421785,2027-01-01,2026-01-01
+618169,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7631080515876646,2026-07-01,2025-11-01
+618170,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08802870585104458,2026-12-01,2025-09-01
+618171,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09213542777257842,2026-12-01,2026-01-01
+618172,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17399798589001408,2026-10-01,2019-06-01
+618173,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.39242875956319173,2026-08-01,2019-06-01
+618174,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.02255892956851719,2026-10-01,2026-10-01
+618177,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14878188099353004,2025-12-01,2019-12-01
+618178,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11263466272637893,2026-10-01,2026-06-01
+618180,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5987858068586455,2026-07-01,2019-12-01
+618182,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.718866553270147,2026-07-01,2026-07-01
+618183,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4140350885132999,2026-08-01,2026-08-01
+618184,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05597565211625982,2027-12-01,2026-02-01
+618185,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06554071173112946,2027-08-01,2027-08-01
+618186,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1180484585117319,2026-09-01,2024-12-01
+618187,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12149179234523377,2027-10-01,2027-10-01
+618188,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.6005164932454572,2026-07-01,2025-05-01
+618189,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01902931431924117,2027-11-01,2027-11-01
+618190,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8118928969340746,2026-07-01,2025-03-01
+618193,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16882583534207563,2026-12-01,2026-12-01
+618194,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1389483482485554,2025-09-01,2020-02-01
+618196,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06178543701912658,2026-12-01,2024-09-01
+618197,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13457588550915922,2026-12-01,2025-01-01
+618198,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4072684095085574,2026-08-01,2024-01-01
+618199,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16419562705829327,2026-10-01,2026-07-01
+618200,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18127337359685972,2026-11-01,2025-04-01
+618201,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.054600126612464356,2027-06-01,2026-11-01
+618202,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1422703425716987,2027-07-01,2026-09-01
+618203,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.30577849265776613,2027-02-01,2026-07-01
+618204,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0677835687447738,2027-07-01,2025-06-01
+618205,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.4558175753491818,2026-08-01,2025-08-01
+618207,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01874314470322303,2028-10-01,2027-10-01
+618209,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03142466417641857,2027-08-01,2025-09-01
+618210,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7897287335489256,2026-07-01,2023-12-01
+618211,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.10142500573503002,2026-11-01,2026-11-01
+618213,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7015747721267873,2026-07-01,2021-01-01
+618214,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07170226444613886,2024-06-01,2021-07-01
+618215,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0540358321817544,2027-06-01,2027-06-01
+618216,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09804530252157134,2027-09-01,2026-06-01
+618217,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07720701993628215,2027-08-01,2026-05-01
+618218,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.24189513899038664,2027-03-01,2025-05-01
+618219,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.24388065303247958,2026-12-01,2026-05-01
+618221,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07752208185546229,2027-07-01,2026-07-01
+618222,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.1253937755339539,2026-12-01,2026-01-01
+618223,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09855086271493037,2026-12-01,2023-09-01
+618224,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8510131660566173,2026-07-01,2024-08-01
+618225,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07540310206719077,2026-12-01,2024-07-01
+618226,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.13684981343996447,2026-09-01,2024-11-01
+618227,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16582309720068258,2027-03-01,2025-09-01
+618228,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.10151192468298385,2027-09-01,2024-09-01
+618230,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09397477564518635,2026-12-01,2025-04-01
+618231,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1049034520983502,2026-09-01,2024-12-01
+618232,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.29825312380692304,2026-12-01,2026-05-01
+618233,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.19808982762850702,2026-09-01,2024-02-01
+618234,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07038557517106732,2027-02-01,2024-06-01
+618235,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13380264217033325,2026-12-01,2026-12-01
+618236,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12267963672003156,2023-11-01,2018-05-01
+618238,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.29202649888014093,2026-09-01,2018-07-01
+618239,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.22304096582192562,2025-07-01,2018-09-01
+618240,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.6383176461089106,2026-07-01,2024-03-01
+618242,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13462917516679573,2027-01-01,2026-01-01
+618243,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1433533316565188,2027-06-01,2027-06-01
+618244,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1605303327160552,2027-05-01,2027-05-01
+618246,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.012560421704243735,2029-03-01,2027-05-01
+618247,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03566987275309379,2029-01-01,2029-01-01
+618248,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0693916603163539,2028-01-01,2028-01-01
+618249,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2476908950538219,2027-03-01,2027-03-01
+618250,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.035916742923764386,2028-12-01,2027-11-01
+618251,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.011785652227866058,2028-03-01,2028-03-01
+618252,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13021665600515783,2027-05-01,2027-05-01
+618253,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01383897478488765,2029-03-01,2029-03-01
+618254,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2025480106727632,2026-12-01,2026-07-01
+618255,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.183623604441867,2027-03-01,2025-11-01
+618256,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.8013417091249943,2026-07-01,2024-10-01
+618257,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5783977639421265,2026-07-01,2024-07-01
+618260,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10082579925787058,2027-11-01,2027-11-01
+618262,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09631449126191038,2027-07-01,2027-07-01
+618263,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4467861345783905,2026-08-01,2026-07-01
+618264,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.027116865762010677,2028-05-01,2028-05-01
+618265,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.5731072889864238,2026-08-01,2024-07-01
+618266,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.3579683598190908,2026-08-01,2024-11-01
+618267,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.011928259060882336,2028-05-01,2028-05-01
+618282,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.23618578211945668,2027-03-01,2026-06-01
+618283,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20760383167813062,2027-03-01,2026-06-01
+618284,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06867725186773155,2026-12-01,2026-12-01
+618286,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10774474519822015,2026-12-01,2024-11-01
+618287,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2076757442996646,2027-06-01,2027-06-01
+618288,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1290313578088904,2027-08-01,2027-08-01
+618289,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.25452761478763014,2026-03-01,2022-12-01
+618290,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13496721358020566,2026-12-01,2022-04-01
+618291,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0961277692177646,2026-12-01,2025-06-01
+618292,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.024343529833720148,2027-10-01,2022-10-01
+618293,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14699987217517077,2026-11-01,2026-11-01
+618294,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04638713088320225,2027-09-01,2027-09-01
+618295,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11726032413847247,2027-03-01,2027-03-01
+618296,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7794621869233678,2026-07-01,2025-11-01
+618297,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14179480025693342,2026-12-01,2026-01-01
+618298,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09211847131351288,2026-09-01,2023-01-01
+618299,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0833192908260518,2027-01-01,2026-06-01
+618300,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.43145290270146147,2026-08-01,2022-04-01
+618301,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.3048357137872878,2026-08-01,2026-08-01
+618302,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.35950284864090654,2026-08-01,2022-06-01
+618303,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3743441814221801,2026-08-01,2022-06-01
+618304,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11427884821550098,2027-02-01,2026-06-01
+618305,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.039044893545683454,2027-08-01,2026-12-01
+618306,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06830443193014236,2027-08-01,2027-03-01
+618307,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4031564887682455,2026-01-01,2025-01-01
+618308,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.12841051377429138,2027-02-01,2027-02-01
+618309,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1147279461674788,2027-08-01,2027-08-01
+618310,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06791817431917634,2027-02-01,2027-02-01
+618311,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06011345066986128,2027-03-01,2027-03-01
+618312,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11429698111946844,2027-10-01,2027-10-01
+618313,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10709899749310485,2027-09-01,2027-09-01
+618314,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.3866697368580047,2026-08-01,2026-08-01
+618315,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7862596641555698,2026-07-01,2026-07-01
+618316,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10047492104277246,2026-12-01,2027-01-01
+618317,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2094225770832389,2026-12-01,2027-01-01
+618318,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06374199733133731,2027-06-01,2027-07-01
+618319,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09648784355267268,2026-12-01,2027-01-01
+618326,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.178875215110557,2026-06-01,2025-11-01
+618328,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.6897324565500325,2026-07-01,2025-09-01
+618331,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05957582392140464,2028-01-01,2028-01-01
+618333,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05104690571860232,2026-12-01,2025-12-01
+618334,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.09715738074270223,2026-09-01,2025-02-01
+618335,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.4288933602520974,2026-08-01,2024-05-01
+618336,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8121382278726282,2026-07-01,2023-12-01
+618337,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18119779591271815,2026-03-01,2023-03-01
+618338,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.4475289514107831,2026-08-01,2026-03-01
+618340,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13346373140788167,2026-10-01,2025-05-01
+618344,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07553265374834248,2026-12-01,2023-08-01
+618345,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4658050673538386,2026-08-01,2022-08-01
+618346,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.5770533070507887,2026-07-01,2022-06-01
+618347,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.5770533070507887,2026-07-01,2022-06-01
+618348,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20720064362471277,2026-11-01,2026-11-01
+618349,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5389756007009414,2026-08-01,2026-08-01
+618350,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.35676956309274954,2027-03-01,2026-09-01
+618351,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.26882985225288836,2026-09-01,2025-08-01
+618352,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7791635855773293,2026-07-01,2025-08-01
+618353,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20489612598758486,2026-09-01,2025-08-01
+618354,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12454454417919045,2026-12-01,2026-03-01
+618355,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.24993961702934336,2026-03-01,2023-03-01
+618356,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3362708395680443,2026-04-01,2022-12-01
+618357,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20329788189447,2026-01-01,2023-05-01
+618358,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16735500337415682,2025-12-01,2023-05-01
+618359,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.025730147361905494,2027-03-01,2027-03-01
+618362,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2008451955864928,2026-11-01,2022-12-01
+618363,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14113636149134307,2026-12-01,2023-01-01
+618364,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1699938514489839,2026-02-01,2026-02-01
+618365,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1670467952573875,2026-02-01,2026-02-01
+618366,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1699938514489839,2026-02-01,2026-02-01
+618367,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1281316175865008,2027-06-01,2026-12-01
+618368,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07682225762085884,2027-05-01,2026-09-01
+618369,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0750447537734378,2027-03-01,2026-09-01
+618370,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04663297854357111,2027-04-01,2026-07-01
+618371,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06650165527136447,2026-11-01,2026-11-01
+618373,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01034166449104657,2028-09-01,2028-09-01
+618374,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10605334215182564,2026-11-01,2026-11-01
+618375,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20739527513771616,2026-10-01,2026-04-01
+618376,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07389612452242378,2026-12-01,2026-08-01
+618377,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18742237814921997,2026-06-01,2025-10-01
+618379,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2739963647940079,2026-06-01,2023-04-01
+618380,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2899278062260811,2026-06-01,2023-04-01
+618383,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1928100220279473,2026-06-01,2023-09-01
+618385,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13318009254527663,2026-03-01,2026-03-01
+618387,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10865191317968144,2026-12-01,2026-03-01
+618388,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.77467275644748,2026-07-01,2025-01-01
+618389,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3622814164428302,2026-08-01,2024-02-01
+618390,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1321029415922631,2027-03-01,2022-07-01
+618391,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0743101436110555,2027-02-01,2025-12-01
+618392,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11128101480128125,2027-01-01,2026-06-01
+618393,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3239708129100186,2024-02-01,2025-12-01
+618394,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10161954568135123,2026-10-01,2022-04-01
+618395,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20270218531382864,2026-10-01,2023-02-01
+618397,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11901469813589148,2025-12-01,2020-11-01
+618398,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.24950834885533524,2026-06-01,2022-04-01
+618399,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09056689813058069,2027-06-01,2023-08-01
+618400,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18092747672088516,2025-08-01,2022-12-01
+618401,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04281201689843068,2028-07-01,2028-07-01
+618402,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03399593226925419,2028-03-01,2028-02-01
+618403,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16775026147887306,2027-01-01,2027-01-01
+618404,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01849914807745822,2027-11-01,2027-11-01
+618405,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08690431032823012,2027-07-01,2027-07-01
+618406,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06566393450223669,2026-11-01,2021-07-01
+618407,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1547562128340723,2026-10-01,2025-01-01
+618408,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3949472169266774,2026-08-01,2023-01-01
+618409,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7866837702666083,2026-07-01,2023-01-01
+618410,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17006579870891986,2026-10-01,2023-01-01
+618411,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.5059854696409424,2026-08-01,2024-11-01
+618412,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.031190537691026587,2028-02-01,2026-09-01
+618413,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8127772440550589,2026-07-01,2025-06-01
+618414,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13896080664329866,2025-09-01,2025-09-01
+618415,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14019861689430468,2026-03-01,2022-12-01
+618416,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.047772907216218706,2027-03-01,2022-12-01
+618417,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10729117121244931,2027-03-01,2027-03-01
+618418,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10155641481520492,2026-12-01,2024-05-01
+618419,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12920638526412556,2026-09-01,2026-09-01
+618420,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12290055258319164,2026-09-01,2026-09-01
+618421,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17420560854673575,2026-09-01,2026-09-01
+618422,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5273404579424936,2026-07-01,2025-09-01
+618423,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11349544864622539,2026-03-01,2025-08-01
+618426,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09223540506157424,2026-12-01,2024-07-01
+618427,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8010951733609925,2026-07-01,2023-04-01
+618428,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.24695330014958305,2026-05-01,2023-04-01
+618429,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3231038574880256,2026-08-01,2022-04-01
+618430,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.35950284864090654,2026-08-01,2022-04-01
+618431,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7979623201011429,2026-07-01,2023-04-01
+618433,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13813442052512293,2026-04-01,2022-04-01
+618434,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16878820077320833,2026-10-01,2022-03-01
+618436,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17165015656289903,2025-07-01,2019-06-01
+618437,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07857795071444494,2025-08-01,2025-03-01
+618438,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1148498312569058,2025-08-01,2024-07-01
+618440,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8747826309903193,2026-07-01,2025-10-01
+618441,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7753615281089048,2026-07-01,2025-09-01
+618442,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.32204369807962463,2026-06-01,2024-08-01
+618445,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01965868341532198,2027-12-01,2027-12-01
+618446,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18797869251867472,2026-09-01,2024-05-01
+618447,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09859453321390238,2027-05-01,2024-02-01
+618448,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14001446872656997,2027-05-01,2023-12-01
+618449,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.19161644674447015,2026-09-01,2023-04-01
+618450,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0869361742405697,2026-12-01,2022-05-01
+618452,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1505813880544668,2027-07-01,2026-12-01
+618454,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2617003197027031,2024-09-01,2022-06-01
+618455,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12898426299504356,2024-09-01,2022-04-01
+618457,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.2716387462549302,2026-08-01,2023-05-01
+618458,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8478592486240851,2026-07-01,2024-01-01
+618459,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08769332009208472,2027-02-01,2024-08-01
+618462,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.31470344989462934,2026-06-01,2023-05-01
+618463,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7668572752007187,2026-07-01,2021-10-01
+618467,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20817938621503573,2027-07-01,2025-10-01
+618469,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8618118352680346,2026-07-01,2024-02-01
+618470,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8423505015208316,2026-07-01,2024-05-01
+618471,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8466848977788465,2026-07-01,2024-05-01
+618472,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8362062483225026,2026-07-01,2024-10-01
+618473,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8514722989634297,2026-07-01,2025-07-01
+618475,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12345636410451524,2026-10-01,2025-06-01
+618476,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3695373884252066,2026-08-01,2024-10-01
+618477,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.34452483127297645,2026-08-01,2024-05-01
+618478,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.39641316484186484,2026-08-01,2024-07-01
+618479,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07389684611729583,2027-12-01,2024-07-01
+618480,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2814266932326099,2026-10-01,2025-08-01
+618481,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2747379882573672,2026-10-01,2024-07-01
+618482,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7756482192470421,2026-07-01,2023-12-01
+618483,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.8688186644286192,2026-07-01,2024-01-01
+618486,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8274149782774554,2026-07-01,2024-05-01
+618489,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1500138918106624,2027-03-01,2024-07-01
+618492,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.19388064211459288,2027-06-01,2027-02-01
+618493,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04944508568151238,2028-03-01,2026-04-01
+618494,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20984606702207198,2026-12-01,2024-09-01
+618495,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.0849718400032076,2027-08-01,2025-06-01
+618496,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18544332364418667,2026-09-01,2024-09-01
+618497,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14534520161637868,2027-06-01,2025-11-01
+618499,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7686248277116982,2026-07-01,2025-07-01
+618500,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8455777143229228,2026-07-01,2024-03-01
+618503,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7287623338682668,2026-07-01,2023-07-01
+618504,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8117374959098596,2026-07-01,2023-12-01
+618505,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5044228441622949,2026-08-01,2024-06-01
+618506,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0888171891422534,2027-05-01,2027-05-01
+618507,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.6715176648768102,2026-07-01,2025-06-01
+618508,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1492184012403186,2027-06-01,2027-01-01
+618509,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.2481920594369306,2026-06-01,2023-10-01
+618511,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3270054525825896,2027-06-01,2027-06-01
+618512,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.23109702297561383,2026-10-01,2022-02-01
+618513,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.34993328049697214,2027-02-01,2025-01-01
+618514,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.47367857172729505,2026-12-01,2024-12-01
+618516,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.164610437920609,2027-05-01,2025-04-01
+618517,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13966656756309254,2027-05-01,2025-09-01
+618518,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.1541872339777486,2026-09-01,2020-07-01
+618519,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.21515335279516984,2026-12-01,2025-05-01
+618520,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.32336187406393535,2026-08-01,2023-04-01
+618521,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8277000009661937,2026-07-01,2021-02-01
+618522,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20808640594196576,2027-03-01,2026-10-01
+618523,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2033215606132661,2026-11-01,2021-09-01
+618524,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13209188676782208,2027-08-01,2027-03-01
+618525,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03334801401178195,2027-10-01,2027-10-01
+618526,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2905254807467711,2026-08-01,2021-07-01
+618529,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16277515476786658,2026-10-01,2022-02-01
+618530,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8055423420753374,2026-07-01,2014-03-01
+618531,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.21712560593646393,2026-12-01,2026-12-01
+618533,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3397345567941988,2026-08-01,2016-09-01
+618534,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.009619956252919623,2028-08-01,2028-08-01
+618535,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.022382349285229836,2028-03-01,2028-03-01
+618536,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1003211553000429,2027-06-01,2027-06-01
+618537,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.42125013595623223,2027-02-01,2026-06-01
+618538,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0789402625507698,2027-07-01,2027-07-01
+618539,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09400736364067064,2027-09-01,2027-09-01
+618540,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04367725387406238,2028-04-01,2027-10-01
+618541,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.27697156097322645,2026-10-01,2024-02-01
+618542,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.025528074427765664,2028-05-01,2028-05-01
+618543,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11763964743043823,2027-12-01,2025-08-01
+618544,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.23717088811584575,2026-09-01,2024-06-01
+618545,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13843795924066313,2027-06-01,2024-08-01
+618547,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18364650747165545,2027-06-01,2026-06-01
+618549,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13029227569083326,2026-12-01,2025-06-01
+618550,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3483849910271054,2026-12-01,2024-06-01
+618551,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0819467517017602,2027-07-01,2027-07-01
+618552,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13303701547731275,2027-06-01,2025-01-01
+618554,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3757698139740725,2026-08-01,2024-09-01
+618556,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8034850963372522,2026-07-01,2026-03-01
+618557,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7363169746064528,2026-07-01,2026-06-01
+618561,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.025965776290139457,2028-03-01,2028-03-01
+618563,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8234216288117354,2026-07-01,2022-03-01
+618564,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3389405154865381,2027-03-01,2025-12-01
+618566,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.31842598242270614,2027-01-01,2026-01-01
+618567,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.042852358108152036,2028-01-01,2028-01-01
+618568,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04686500801293373,2027-09-01,2027-09-01
+618571,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.1628425881809315,2026-10-01,2025-12-01
+618572,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08343232805505492,2027-11-01,2027-11-01
+618574,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09123488723878391,2027-06-01,2027-06-01
+618579,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.6893356645360071,2026-07-01,2021-07-01
+618580,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.8254449541836676,2026-07-01,2022-07-01
+618581,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1388615213501418,2027-01-01,2024-10-01
+618584,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04610037614815333,2027-12-01,2027-12-01
+618585,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09064823012692406,2027-11-01,2027-04-01
+618586,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4560787108726799,2026-08-01,2026-06-01
+618588,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7728887595653761,2026-07-01,2023-11-01
+618589,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.30431288561564473,2027-03-01,2025-07-01
+618590,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.31760805118775914,2027-03-01,2025-05-01
+618591,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17246706892273467,2026-12-01,2026-12-01
+618592,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09596943511148143,2027-10-01,2026-05-01
+618593,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.022653118461470934,2027-11-01,2027-11-01
+618594,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8032663736979724,2026-07-01,2024-10-01
+618595,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12895742149548364,2027-03-01,2024-04-01
+618596,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07545998609447528,2028-01-01,2024-05-01
+618597,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.02957655021283216,2028-03-01,2024-07-01
+618598,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7243545705469038,2026-07-01,2022-06-01
+618599,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7327294709885616,2026-07-01,2024-07-01
+618600,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7334195135003797,2026-07-01,2024-07-01
+618601,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04662166569829036,2027-06-01,2025-01-01
+618602,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04662166569829036,2027-06-01,2025-02-01
+618603,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13255106629111554,2027-05-01,2025-04-01
+618604,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16401283646151538,2026-12-01,2026-01-01
+618605,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11458229502265783,2027-05-01,2024-09-01
+618606,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.21531986231279734,2027-03-01,2025-02-01
+618607,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1644986824272194,2027-03-01,2024-10-01
+618608,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.24810610618474263,2026-11-01,2025-08-01
+618609,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1644136334877238,2027-05-01,2026-07-01
+618610,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.785073621483335,2026-07-01,2025-08-01
+618611,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8300407539418313,2026-07-01,2023-06-01
+618612,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7926189829397046,2026-07-01,2023-08-01
+618613,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7989813455390705,2026-07-01,2023-07-01
+618615,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8099015361079945,2026-07-01,2023-03-01
+618616,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16139226195667283,2027-02-01,2027-02-01
+618617,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07913238097836638,2027-12-01,2024-11-01
+618618,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10497996984459829,2027-07-01,2026-06-01
+618619,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08197575429931457,2028-01-01,2028-01-01
+618620,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15047986949395148,2027-03-01,2024-07-01
+618621,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.260592464444059,2026-10-01,2025-01-01
+618622,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.23705828721428301,2026-10-01,2024-04-01
+618623,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4402984827464398,2026-10-01,2026-01-01
+618626,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17276211562729318,2027-04-01,2026-10-01
+618627,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10928468316846486,2027-01-01,2027-01-01
+618628,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.513081349894139,2027-03-01,2025-10-01
+618629,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.21468343540054205,2026-09-01,2019-06-01
+618630,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.29717957253819116,2026-11-01,2025-06-01
+618631,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.27855202682086316,2026-08-01,2025-05-01
+618632,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.49808966042164987,2026-08-01,2025-01-01
+618633,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.019554783558288047,2028-03-01,2028-03-01
+618634,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.159544426095158,2026-09-01,2025-01-01
+618635,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0516904357923448,2027-12-01,2025-01-01
+618636,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2283473116209623,2027-06-01,2026-10-01
+618637,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07882886909021894,2026-12-01,2022-09-01
+618639,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8719159707395754,2026-07-01,2024-03-01
+618640,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4602116298404398,2026-08-01,2026-08-01
+618641,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.025187258397124636,2028-02-01,2028-02-01
+618642,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8078188894104144,2026-07-01,2024-03-01
+618644,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1758066777729763,2026-12-01,2025-06-01
+618645,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2373939760139775,2026-10-01,2025-06-01
+618646,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.011343654309644659,2029-04-01,2029-04-01
+618647,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2508024774861656,2026-10-01,2025-09-01
+618648,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.019802659538858014,2028-03-01,2028-03-01
+618649,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.44033596479510767,2027-06-01,2026-11-01
+618650,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.21867571228536867,2028-02-01,2027-04-01
+618651,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1835078631366037,2027-07-01,2027-02-01
+618653,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.054664068742053686,2026-12-01,2021-03-01
+618654,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07894024044489875,2027-08-01,2025-10-01
+618655,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.26051858741381123,2026-08-01,2026-08-01
+618661,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0734853338778236,2027-11-01,2027-11-01
+618662,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.023162879318599505,2028-03-01,2028-03-01
+618663,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17860816076985037,2026-12-01,2025-12-01
+618664,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2065047445121142,2026-12-01,2024-11-01
+618666,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.28420304813786884,2026-08-01,2026-08-01
+618667,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04407482861644897,2027-10-01,2027-10-01
+618668,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04832372464131661,2027-09-01,2027-09-01
+618669,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.22094086446701525,2027-01-01,2027-02-01
+618671,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03662389180609374,2027-12-01,2027-12-01
+618672,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.037178690734378086,2027-11-01,2027-11-01
+618673,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.212086589388924,2027-02-01,2024-09-01
+618674,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8057895265398974,2026-07-01,2025-01-01
+618675,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.30404129816174413,2027-03-01,2025-10-01
+618677,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12303719065873527,2026-11-01,2024-05-01
+618678,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8484084017238473,2026-07-01,2024-05-01
+618680,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8118457356758105,2026-07-01,2024-10-01
+618681,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8450978820667588,2026-07-01,2024-03-01
+618682,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8639783425123271,2026-07-01,2024-02-01
+618684,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2860378973981869,2027-03-01,2026-03-01
+618685,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3219301469220955,2026-12-01,2026-03-01
+618686,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2857041043495497,2026-11-01,2026-03-01
+618687,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.41231427809316196,2026-08-01,2025-03-01
+618688,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.032983096936275776,2027-10-01,2027-10-01
+618690,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.167548545679846,2027-03-01,2027-03-01
+618691,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06690972378032067,2027-08-01,2027-08-01
+618693,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4090990484317854,2026-08-01,2024-07-01
+618694,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8055844521033518,2026-07-01,2024-10-01
+618697,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11106758811459402,2027-10-01,2026-07-01
+618700,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10977267643885638,2026-09-01,2024-01-01
+618702,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.10592212303279284,2026-12-01,2023-11-01
+618704,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.5237184472424438,2026-07-01,2027-01-01
+618705,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.02416018395800777,2028-02-01,2028-02-01
+618706,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.6405464149946075,2026-07-01,2021-11-01
+618707,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.030443060916271532,2028-05-01,2028-01-01
+618708,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1980361524523364,2027-03-01,2025-06-01
+618709,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.038541769161602096,2028-04-01,2025-05-01
+618710,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7545615365569701,2026-07-01,2023-11-01
+618711,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8260400641515169,2026-07-01,2024-11-01
+618712,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2739747992389652,2027-03-01,2026-02-01
+618713,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14048102647852373,2027-11-01,2026-02-01
+618714,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.21690713637809303,2027-06-01,2026-02-01
+618715,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15612881593839864,2027-04-01,2026-02-01
+618716,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3056638793968793,2027-03-01,2026-03-01
+618717,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.26437008624167857,2027-02-01,2026-03-01
+618718,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14300021358605755,2027-12-01,2027-02-01
+618719,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11124298163480911,2027-07-01,2026-02-01
+618720,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15529881160552245,2027-04-01,2026-03-01
+618721,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10742406225936066,2027-08-01,2026-02-01
+618722,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3248975630023469,2027-03-01,2025-05-01
+618723,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3974113307070446,2027-02-01,2025-05-01
+618724,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09720685674570012,2027-06-01,2027-06-01
+618725,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06948803399713026,2027-09-01,2027-09-01
+618726,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07105086677340981,2027-10-01,2027-10-01
+618727,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06934959861971506,2027-10-01,2027-10-01
+618728,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2124143146449048,2027-05-01,2026-11-01
+618730,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.02723630134229007,2028-05-01,2028-05-01
+618732,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.022893869467008745,2028-05-01,2028-05-01
+618734,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1037586980917496,2027-09-01,2027-09-01
+618735,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1547717761167266,2026-09-01,2024-05-01
+618736,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3272884950169099,2027-03-01,2027-03-01
+618737,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07942800482065641,2027-12-01,2027-12-01
+618738,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06724334635117697,2029-03-01,2027-09-01
+618739,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.070949428351365,2027-07-01,2025-03-01
+618740,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09921645222238415,2027-11-01,2025-07-01
+618741,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0375160909059687,2028-03-01,2025-02-01
+618742,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01529548773902954,2028-04-01,2028-04-01
+618744,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7908923023437239,2026-07-01,2025-02-01
+618746,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16493082479960972,2026-10-01,2024-10-01
+618747,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.796675734253185,2026-07-01,2024-09-01
+618751,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12731683063694552,2027-03-01,2025-09-01
+618754,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0718358661789357,2027-06-01,2027-06-01
+618756,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8563943718916237,2026-07-01,2022-03-01
+618757,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.22927805698002593,2027-06-01,2026-03-01
+618758,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.27618681854850197,2026-09-01,2026-09-01
+618759,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.19531297749731208,2026-10-01,2025-09-01
+618761,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.831475612786121,2026-07-01,2025-02-01
+618762,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7805338239165961,2026-07-01,2020-02-01
+618764,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15853808899146088,2026-12-01,2024-12-01
+618765,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.48438035410902885,2026-08-01,2025-07-01
+618766,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0945288403987361,2027-04-01,2027-04-01
+618768,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03043424079820137,2028-11-01,2028-03-01
+618769,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1168098281340588,2027-09-01,2027-09-01
+618772,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10883684242316506,2026-09-01,2025-10-01
+618775,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1333869284511981,2027-04-01,2027-04-01
+618776,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1822919284735123,2026-09-01,2025-05-01
+618777,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.35936736588122054,2026-08-01,2025-11-01
+618778,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8412595087285218,2026-07-01,2025-01-01
+618782,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2812185203348413,2027-03-01,2026-03-01
+618783,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1002129191639067,2027-10-01,2026-03-01
+618784,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11258343771032277,2027-01-01,2026-04-01
+618785,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12935428085444897,2026-12-01,2025-02-01
+618786,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16989452746997274,2027-07-01,2027-03-01
+618787,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06813340703069055,2027-03-01,2025-06-01
+618788,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4647167496157657,2026-08-01,2025-05-01
+618790,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.164588290237922,2027-09-01,2027-04-01
+618791,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06340772270217707,2027-12-01,2027-12-01
+618792,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.29523279695503013,2026-08-01,2025-12-01
+618793,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.15222612253134551,2027-07-01,2026-04-01
+618794,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12267976864010335,2026-09-01,2023-09-01
+618795,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5033087256687556,2026-12-01,2024-08-01
+618796,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8007133001168063,2026-07-01,2021-04-01
+618797,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.043461747568821645,2027-12-01,2027-12-01
+618798,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2609548632428496,2026-09-01,2025-03-01
+618799,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.4750100006914613,2026-08-01,2022-12-01
+618800,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.044565387536634596,2029-03-01,2026-05-01
+618801,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.045460615536807705,2029-03-01,2026-05-01
+618803,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07826257606595646,2026-12-01,2025-08-01
+618804,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1288863636127832,2027-03-01,2020-12-01
+618805,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.02690247676950076,2028-02-01,2028-02-01
+618806,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1778904370155084,2026-12-01,2026-02-01
+618807,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18596599222992588,2027-01-01,2025-09-01
+618808,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16294069715813755,2027-12-01,2026-12-01
+618809,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10816765453690702,2027-05-01,2025-06-01
+618810,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20910871111910817,2027-03-01,2025-06-01
+618811,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15445096148871243,2028-01-01,2027-10-01
+618812,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12299391803326842,2027-12-01,2027-06-01
+618813,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15710054116884734,2027-10-01,2026-12-01
+618814,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.045013198643229384,2028-05-01,2027-06-01
+618815,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.28243837949536993,2027-03-01,2026-04-01
+618816,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18286259868414562,2027-07-01,2027-07-01
+618817,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16052778111315993,2027-06-01,2027-03-01
+618818,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1411988793437688,2027-12-01,2027-05-01
+618820,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.10884659965470975,2027-02-01,2025-12-01
+618821,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.4358955096194943,2026-08-01,2025-12-01
+618822,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.4528852695045777,2026-08-01,2025-12-01
+618823,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09814750815580976,2027-10-01,2026-02-01
+618824,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.19375895033886292,2027-06-01,2026-01-01
+618825,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12390943895790794,2026-09-01,2021-12-01
+618826,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.441335456078926,2026-08-01,2025-07-01
+618827,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2336802007823116,2026-12-01,2025-08-01
+618830,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14597197570583412,2027-03-01,2025-11-01
+618831,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.6072609053851231,2027-03-01,2026-10-01
+618832,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08818836536252553,2028-01-01,2028-01-01
+618836,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.292931740264084,2027-03-01,2025-05-01
+618837,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2368399199197523,2027-03-01,2025-05-01
+618838,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8054592217993753,2026-07-01,2024-08-01
+618840,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.22146589254245846,2026-10-01,2019-04-01
+618841,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3525556520798439,2026-08-01,2024-12-01
+618843,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11412439388844009,2027-09-01,2027-03-01
+618844,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1626870474956921,2026-09-01,2023-11-01
+618845,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11041956508600788,2026-09-01,2023-11-01
+618846,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09614751326886158,2026-09-01,2024-01-01
+618847,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08379971364225124,2026-12-01,2022-10-01
+618848,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09204577051840913,2027-09-01,2027-09-01
+618850,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7939503079024446,2026-07-01,2020-07-01
+618851,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05043412380017201,2027-03-01,2021-09-01
+618852,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7610143318600838,2026-07-01,2024-06-01
+618853,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.6833343486963086,2026-07-01,2026-07-01
+618856,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14519579399755828,2027-03-01,2025-11-01
+618858,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14717225891440622,2027-03-01,2026-01-01
+618859,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8223748152048422,2026-07-01,2024-10-01
+618861,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7891673963778787,2026-07-01,2023-07-01
+618862,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8218799332183795,2026-07-01,2024-06-01
+618863,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7182230932778058,2026-07-01,2024-08-01
+618866,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04974761651474352,2027-11-01,2027-11-01
+618867,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09760083999790584,2027-12-01,2027-05-01
+618868,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.314369376842781,2026-12-01,2026-06-01
+618869,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.019165587216198852,2028-06-01,2028-06-01
+618870,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12670416214262076,2028-01-01,2027-04-01
+618871,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.052538837271777585,2028-04-01,2027-12-01
+618872,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05428615566426835,2028-03-01,2027-04-01
+618873,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.048007893128755454,2028-03-01,2027-04-01
+618875,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.30606029854453765,2026-12-01,2024-02-01
+618878,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09670866846601703,2026-09-01,2025-09-01
+618879,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06304008963504981,2026-11-01,2026-11-01
+618880,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.22367680080760408,2027-04-01,2025-12-01
+618881,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08023245504180454,2027-09-01,2027-09-01
+618882,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.025483420610902422,2028-02-01,2028-02-01
+618883,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17417359123781972,2026-08-01,2025-07-01
+618884,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8591147927596685,2026-07-01,2025-10-01
+618885,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7758601987775668,2026-07-01,2025-06-01
+618886,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03770093199242414,2027-10-01,2027-10-01
+618887,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09028379232877347,2027-03-01,2023-10-01
+618888,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.40805191243536953,2026-08-01,2025-04-01
+618889,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14614220357610413,2026-09-01,2024-12-01
+618890,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.11303959283643977,2026-09-01,2025-10-01
+618891,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13195771989602273,2027-09-01,2027-05-01
+618892,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01263609677982636,2028-06-01,2028-06-01
+618893,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2346386729438909,2026-08-01,2019-10-01
+618894,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8524874807660751,2026-07-01,2022-12-01
+618895,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.4445522021603069,2026-08-01,2023-01-01
+618896,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12209455639609088,2027-04-01,2024-10-01
+618898,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14016620258595086,2027-06-01,2027-06-01
+618899,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.844452853942814,2026-07-01,2021-04-01
+618901,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.3505470855116041,2026-10-01,2025-03-01
+618902,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.25010392406507276,2026-09-01,2021-12-01
+618903,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11731325557407797,2026-09-01,2020-12-01
+618905,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.34634527048047825,2026-10-01,2026-08-01
+618906,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20403573150215407,2027-03-01,2024-06-01
+618907,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17494237107302832,2027-05-01,2027-05-01
+618908,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07533726764934812,2027-09-01,2025-01-01
+618909,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16496567225211153,2026-10-01,2022-08-01
+618911,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.23880130433876573,2027-02-01,2024-11-01
+618914,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10950717862741584,2027-08-01,2026-09-01
+618917,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3472466378805321,2026-09-01,2025-08-01
+618920,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5643773963224893,2027-03-01,2026-12-01
+618921,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11423286304506046,2027-07-01,2026-04-01
+618922,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09965274296320066,2027-12-01,2027-03-01
+618923,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.24429265044649953,2026-12-01,2026-05-01
+618924,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3806793218551401,2026-10-01,2025-09-01
+618925,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7640931771077404,2026-07-01,2023-05-01
+618926,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.036503491889310305,2028-11-01,2026-11-01
+618927,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2276017037804138,2027-06-01,2026-03-01
+618928,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4117000857639152,2027-03-01,2025-09-01
+618929,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12019708404819324,2026-12-01,2025-09-01
+618930,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06797532482186679,2027-11-01,2027-11-01
+618931,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.040800569352521056,2027-11-01,2027-11-01
+618932,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09386827336454345,2027-12-01,2027-12-01
+618933,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03174893681947592,2028-02-01,2028-02-01
+618934,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.02430257819845023,2030-01-01,2030-01-01
+618936,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.39166437088556627,2027-03-01,2025-02-01
+618937,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.29907701930031,2026-10-01,2023-10-01
+618939,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05363054627981319,2027-07-01,2027-07-01
+618941,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.22890816920353807,2026-12-01,2026-03-01
+618942,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4114978455613168,2027-03-01,2024-05-01
+618944,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2167483544737098,2027-05-01,2026-11-01
+618945,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8421682368082478,2026-07-01,2024-05-01
+618947,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.20546844620804078,2026-10-01,2023-07-01
+618948,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04643946614780855,2028-01-01,2028-01-01
+618949,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.47715507476752994,2026-08-01,2025-12-01
+618950,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.046882838718104086,2028-01-01,2028-01-01
+618951,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.85986030230453,2026-07-01,2024-02-01
+618952,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.1737757676933185,2026-12-01,2024-10-01
+618953,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07160299523113989,2027-03-01,2023-08-01
+618954,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09496639314021317,2027-07-01,2027-07-01
+618955,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.6402924867844159,2026-07-01,2021-11-01
+618956,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.03258086029999474,2028-03-01,2027-04-01
+618957,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8381931346753099,2026-07-01,2024-01-01
+618958,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06427815064031656,2027-07-01,2023-06-01
+618960,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.24515117278882642,2027-06-01,2026-06-01
+618961,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.02795548687480813,2027-12-01,2027-12-01
+618962,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.13559737780135872,2027-05-01,2027-08-01
+618963,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14588949541930135,2027-03-01,2027-03-01
+618964,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.055176151528396195,2028-01-01,2028-01-01
+618966,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12228802171587046,2027-08-01,2027-08-01
+618967,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16032350669982517,2027-03-01,2026-08-01
+618968,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.787681703479842,2026-07-01,2024-09-01
+618969,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2928461185578173,2026-09-01,2025-02-01
+618970,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7891840951739459,2026-07-01,2024-09-01
+618976,2026-06-01,Ministry of Power,Electricity Generation,0,0.03968790636746347,2030-05-01,2030-03-01
+618977,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.029099887632934883,2027-11-01,2027-10-01
+618982,2026-06-01,Ministry of Coal,Coal,0,0.014991369330672846,2026-12-01,2026-06-01
+619003,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1617806211344266,2026-11-01,2021-05-01
+619004,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06196043621777403,2027-12-01,2027-12-01
+619005,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.193204781968113,2026-01-01,2028-01-01
+619008,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.6737566989949997,2026-07-01,2027-07-01
+619009,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.013149777836225335,2028-03-01,2028-04-01
+619010,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.722697513632252,2026-07-01,2025-05-01
+619013,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7847240551631367,2026-07-01,2026-01-01
+619014,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.012047577053360162,2028-02-01,2028-02-01
+619029,2026-06-01,Ministry of Power,Transmission & Distribution,0,0.07056026433145372,2026-12-01,2026-03-01
+619038,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.19592741601772085,2026-03-01,2023-02-01
+619042,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.17828103804405418,2023-02-01,2026-02-01
+619045,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.04631812979887768,2029-03-01,2026-05-01
+619051,2026-06-01,Ministry of Power,Electricity Generation,0,0.064786057172574,2030-09-01,2030-07-01
+619056,2026-06-01,Ministry of Power,Electricity Generation,0,0.009502135897194819,2031-05-01,2031-01-01
+619057,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.37325370173081973,2026-08-01,2026-08-01
+619059,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1485987070284323,2026-12-01,2025-09-01
+619060,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.796078776466555,2026-07-01,2025-09-01
+619061,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.011851661770983934,2028-05-01,2028-05-01
+619064,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10046615560465197,2027-12-01,2024-03-01
+619065,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10986819249905042,2026-09-01,2023-09-01
+619066,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2182720012933258,2026-10-01,2024-09-01
+619068,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10708657687112717,2027-04-01,2025-06-01
+619069,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.07054536611287598,2026-10-01,2022-05-01
+619071,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.30908906779519335,2027-03-01,2025-08-01
+619072,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0950933991062828,2026-11-01,2025-02-01
+619073,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.31966536804826157,2026-08-01,2023-02-01
+619074,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7765714965667612,2026-07-01,2013-12-01
+619076,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16906448206277344,2026-09-01,2023-02-01
+619077,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8229826970953105,2026-07-01,2020-03-01
+619078,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14633401458206483,2026-12-01,2021-11-01
+619080,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3146304346169705,2026-09-01,2025-10-01
+619086,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.0457641586789257,2026-10-01,2013-03-01
+619087,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.270316117853473,2027-01-01,2025-09-01
+619089,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8610630284305923,2026-07-01,2026-01-01
+619090,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.21646461501589723,2026-06-01,2021-10-01
+619092,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7848197884068836,2026-07-01,2022-07-01
+619093,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.22703923025026423,2027-02-01,2025-12-01
+619094,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1275301271035163,2026-12-01,2023-12-01
+619095,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8563155808132037,2026-07-01,2024-05-01
+619096,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8117916102002689,2026-07-01,2016-08-01
+619097,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.6234002261179026,2026-07-01,2020-05-01
+619098,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8651594451154122,2026-07-01,2023-02-01
+619099,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14250386367089354,2027-06-01,2026-06-01
+619100,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.25439034186243853,2026-08-01,2023-08-01
+619101,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.4206614597616865,2026-10-01,2026-03-01
+619102,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.019958094288830098,2028-03-01,2028-03-01
+619103,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.9237905833913982,2026-07-01,2018-04-01
+619105,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06312164783474009,2027-09-01,2027-09-01
+619106,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10322284750358454,2027-08-01,2026-11-01
+619107,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10453847911375412,2028-04-01,2027-09-01
+619108,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.28311199900379896,2027-10-01,2027-06-01
+619109,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8889610465409025,2026-07-01,2024-04-01
+619111,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8182876863972203,2026-07-01,2024-03-01
+619112,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.14743955554209107,2026-12-01,2024-10-01
+619114,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12220358593345974,2027-11-01,2026-03-01
+619117,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.9069198110184937,2026-07-01,2019-03-01
+619118,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8781109816865701,2026-07-01,2019-08-01
+619119,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10478255309705956,2026-09-01,2020-07-01
+619120,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.636252741385638,2026-07-01,2022-06-01
+619123,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09818669187827206,2027-07-01,2026-02-01
+619124,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12838993785594974,2027-05-01,2026-02-01
+619125,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09246409064690528,2027-10-01,2026-02-01
+619126,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16028589348066483,2027-04-01,2026-02-01
+619127,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.050861314097160666,2028-03-01,2026-03-01
+619128,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8342421142728604,2026-07-01,2024-09-01
+619129,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1541457948117713,2027-01-01,2024-05-01
+619130,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1815975175475885,2027-03-01,2025-12-01
+619131,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3886018060057781,2026-06-01,2020-11-01
+619132,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.5157013523523495,2026-08-01,2023-11-01
+619134,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.28723685178853875,2026-09-01,2025-10-01
+619136,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7963465641188756,2026-07-01,2026-01-01
+619138,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.31352127502041605,2028-01-01,2024-03-01
+619139,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.047231628925542266,2029-03-01,2026-05-01
+619140,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13038240936857565,2027-10-01,2025-10-01
+619141,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2678671209583237,2026-03-01,2025-12-01
+619142,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1527866145046702,2027-04-01,2024-09-01
+619143,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16236630951687772,2027-06-01,2027-03-01
+619145,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.7213735758941822,2026-07-01,2019-08-01
+619149,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2104601140783992,2026-11-01,2024-11-01
+619150,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8691801899954342,2026-07-01,2019-08-01
+619152,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.5654763760814197,2026-07-01,2019-12-01
+619153,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.27635646939018726,2026-10-01,2024-05-01
+619154,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18102023563866293,2026-10-01,2025-08-01
+619155,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3506572851090914,2026-11-01,2024-10-01
+619156,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.01977900469343064,2028-06-01,2028-05-01
+619157,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.07862734969611314,2026-10-01,2021-08-01
+619158,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15390191597007608,2026-10-01,2022-08-01
+619160,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.11151248759381627,2026-01-01,2025-01-01
+619161,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.41594716348714117,2027-03-01,2026-12-01
+619162,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7986422885916983,2026-07-01,2024-06-01
+619163,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2146627248448229,2026-12-01,2023-09-01
+619164,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13513298620071182,2027-03-01,2021-09-01
+619165,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7576434024606672,2026-07-01,2023-02-01
+619166,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.3065943618092925,2026-08-01,2025-12-01
+619167,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8147079922361279,2026-07-01,2022-12-01
+619168,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8107555872558213,2026-07-01,2024-09-01
+619181,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.1376046926555129,2027-10-01,2026-10-01
+619183,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7767849852543243,2026-07-01,2026-06-01
+619184,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06206375463989117,2026-12-01,2025-09-01
+619185,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.05354748012495247,2027-03-01,2025-10-01
+619186,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.06514669867666337,2026-12-01,2026-02-01
+619187,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.02791847124032503,2027-06-01,2027-06-01
+619193,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8321628405350151,2026-07-01,2017-02-01
+619194,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.013194332278438217,2027-10-01,2027-10-01
+619197,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.33783106462261386,2026-06-01,2024-02-01
+619198,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.859193643585889,2026-07-01,2024-03-01
+619199,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.2753447235967964,2022-10-01,2024-10-01
+619200,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.10929604133662865,2027-10-01,2024-10-01
+619201,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.18517850706031963,2026-10-01,2025-08-01
+619202,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.23537274463083288,2026-06-01,2022-09-01
+619203,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8886861484779618,2026-07-01,2021-07-01
+619204,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.016832815129879025,2027-10-01,2027-10-01
+619205,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7759789069713892,2026-07-01,2024-05-01
+619206,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.1333452772472752,2027-03-01,2024-01-01
+619207,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.13669358955001987,2027-06-01,2025-03-01
+619208,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.21557133460426112,2027-05-01,2025-01-01
+619210,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.762173938737016,2026-07-01,2023-09-01
+619211,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.47680682298473137,2026-11-01,2025-10-01
+619212,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.15078926635105094,2027-04-01,2025-01-01
+619213,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8890441409891905,2026-07-01,2024-03-01
+619214,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.21742056804251653,2026-10-01,2023-01-01
+619215,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09861085481160403,2026-09-01,2020-09-01
+619216,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.29466848238866217,2026-12-01,2025-05-01
+619217,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7890992476498951,2026-07-01,2020-07-01
+619218,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8380879110853875,2026-07-01,2021-10-01
+619219,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.046732664036733935,2026-12-01,2021-10-01
+619220,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.09117301549941874,2026-12-01,2023-03-01
+619222,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.7014873376062487,2026-07-01,2024-09-01
+619253,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.015459883640783264,2027-10-01,2027-10-01
+619289,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.2725303665116867,2026-10-01,2024-03-01
+619292,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8797602491750193,2026-07-01,2025-02-01
+619293,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.08831795118176858,2027-04-01,2027-04-01
+619294,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.013511738490644678,2028-08-01,2028-08-01
+619295,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.040784681601831345,2027-11-01,2027-11-01
+619298,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.009019973628180095,2029-06-01,2029-06-01
+619299,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.009090475987971523,2028-06-01,2028-06-01
+619300,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.016922513609716517,2027-12-01,2027-12-01
+619301,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8106285622856417,2026-07-01,2021-05-01
+619305,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.16102127627098897,2026-12-01,2024-04-01
+619306,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8861850188720334,2026-07-01,2024-03-01
+619307,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.530967434337157,2026-08-01,2024-08-01
+619308,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.8351335078729677,2026-07-01,2023-10-01
+619317,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,1,0.3946525986201513,2026-08-01,2013-02-01
+619318,2026-06-01,Ministry of Road Transport & Highways,Roads & Highways,0,0.12797470380823955,2027-12-01,2024-12-01
+701101,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.029911206258274477,2026-08-01,2026-05-01
+701107,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,1,0.04391045954306729,2026-10-01,2022-09-01
+701113,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.008393978284779889,2027-07-01,2027-07-01
+701121,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,1,0.0985890820426077,2026-06-01,2025-08-01
+701122,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.018761312403127308,2026-11-01,2026-07-01
+701126,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,1,0.06907242588615527,2026-06-01,2026-06-01
+701127,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.06954929270162721,2026-06-01,2026-03-01
+701128,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.01778864387894147,2026-09-01,2026-03-01
+701167,2026-06-01,Ministry of Health & Family Welfare,Healthcare,0,0.007875939113218225,2026-12-01,2025-12-01
+701168,2026-06-01,Ministry of Health & Family Welfare,Healthcare,0,0.13007043262535908,2026-10-01,2022-08-01
+701170,2026-06-01,Ministry of Health & Family Welfare,Healthcare,0,0.022935111758701558,2026-12-01,2026-03-01
+701171,2026-06-01,Ministry of Health & Family Welfare,Healthcare,1,0.033867668219976596,2026-06-01,2026-06-01
+701173,2026-06-01,Ministry of Health & Family Welfare,Healthcare,0,0.006054849799108164,2026-12-01,2026-12-01
+701228,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.008239304780834757,2026-09-01,2012-12-01
+701289,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.0051065348257522385,2026-12-01,2024-09-01
+701324,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.01975553285039279,2026-08-01,2023-04-01
+701329,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.007836485405852672,2026-11-01,2024-08-01
+701344,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.018744751553092156,2026-09-01,2022-11-01
+701346,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.05210368461228871,2026-07-01,2024-03-01
+701349,2026-06-01,Ministry of Petroleum & Natural Gas,Energy Storage,0,0.00926919229037031,2026-10-01,2024-07-01
+701370,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.019902438782045576,2026-03-01,2022-12-01
+701372,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.005717446646795032,2026-03-01,2019-12-01
+701376,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.007952173258938522,2026-03-01,2019-12-01
+701377,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.008011533251790387,2026-03-01,2019-12-01
+701383,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.008634132698596583,2026-03-01,2019-12-01
+701386,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.0035040011625250456,2028-06-01,2019-12-01
+701391,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,1,0.010615301917725525,2025-12-01,2019-12-01
+701396,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.01060319682259857,2026-06-01,2019-12-01
+701398,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.008198869562754086,2026-06-01,2019-12-01
+701399,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.018929788074837674,2026-03-01,2025-12-01
+701400,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.0020111108087542593,2026-12-01,2019-12-01
+701402,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.015728961200799245,2026-03-01,2019-12-01
+701404,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.005263983750046084,2026-06-01,2019-12-01
+701405,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.02073289086461736,2025-12-01,2019-12-01
+701408,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.008343874757556161,2025-12-01,2019-12-01
+701410,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.013167686787563814,2026-06-01,2021-06-01
+701411,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.019572822969743293,2026-06-01,2022-06-01
+701412,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,1,0.023814496080330247,2026-03-01,2021-03-01
+701415,2026-06-01,"Department of Water Resources, River Development & GR",Water Resources,0,0.004281411879564074,2026-03-01,2022-04-01
+701565,2026-06-01,"Ministry of Ports, Shipping and Waterways",Inland Waterways,1,0.015440692875810584,2025-12-01,2023-12-01
+701570,2026-06-01,"Ministry of Ports, Shipping and Waterways",Shipping,0,0.009341991016167912,2025-03-01,2023-09-01
+701574,2026-06-01,"Ministry of Ports, Shipping and Waterways",Shipping,0,0.0024674610104499293,2028-10-01,2027-12-01
+701593,2026-06-01,Department of Telecommunications,Telecommunication,0,0.039472367950394466,2026-03-01,2024-03-01
+701597,2026-06-01,Department of Telecommunications,Telecommunication,0,0.0164967763751576,2026-09-01,2023-04-01
+701598,2026-06-01,Department of Telecommunications,Telecommunication,0,0.13055205839791686,2026-06-01,2022-03-01
+701599,2026-06-01,Department of Telecommunications,Telecommunication,0,0.008969799148628676,2026-11-01,2023-03-01
+701602,2026-06-01,Department of Telecommunications,Telecommunication,0,0.019841889862156313,2027-01-01,2023-11-01
+701657,2026-06-01,Department for Promotion of Industry & Internal Trade,Real Estate,0,0.012046558176425595,2027-09-01,2026-09-01
+701719,2026-06-01,Ministry of Housing & Urban Affairs,Real Estate,0,0.03501057056200195,2026-07-01,2022-07-01
+701766,2026-06-01,Ministry of Housing & Urban Affairs,Real Estate,0,0.004750166814828337,2026-12-01,2023-11-01
+701991,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.04725200943598236,2026-06-01,2023-07-01
+702625,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.0043411920868156465,2028-06-01,2022-11-01
+702626,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.0041161614220295364,2028-12-01,2022-11-01
+702627,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.00505716785716664,2027-06-01,2024-02-01
+702628,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.006828175077336967,2027-03-01,2024-05-01
+702629,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.008118658736476162,2027-06-01,2024-05-01
+702630,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.005689644571280193,2027-03-01,2024-03-01
+702632,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.013023399567110672,2026-12-01,2025-03-01
+702635,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.010393695780753982,2026-09-01,2021-03-01
+702637,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.01957896518982089,2025-08-01,2023-03-01
+702664,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.012083796947258094,2026-11-01,2026-11-01
+702665,2026-06-01,Ministry of Housing & Urban Affairs,Urban Public Transport,0,0.03041606399368264,2026-06-01,2026-06-01
+702674,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.065967289969645,2026-08-01,2023-03-01
+702699,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.05882376385899417,2026-06-01,2023-10-01
+702734,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.011870927284636857,2026-09-01,2023-09-01
+702741,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.06532699793070536,2026-06-01,2023-03-01
+702742,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.06883013530998625,2026-06-01,2023-10-01
+702746,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.06532699793070536,2026-06-01,2023-03-01
+702760,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.07350199985360732,2026-06-01,2023-07-01
+702793,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.10418427510382108,2026-06-01,2023-03-01
+702808,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.051084291886563965,2026-08-01,2024-03-01
+702810,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.07099564408706548,2026-06-01,2023-03-01
+702833,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.06443401343130188,2026-08-01,2023-10-01
+702949,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.043820546549503736,2026-08-01,2023-07-01
+702958,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.20824368603182183,2026-08-01,2023-03-01
+703021,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.054910779853357655,2026-08-01,2023-08-01
+703057,2026-06-01,Ministry of Housing & Urban Affairs,Waste & Water,0,0.047573987227189744,2026-08-01,2023-10-01
+703586,2026-06-01,Ministry of Railways,Railways,0,0.010585970013891784,2026-01-01,2024-03-01
+704495,2026-06-01,Department of Telecommunications,Telecommunication,0,0.042227848492758714,2026-06-01,2022-03-01
+705237,2026-06-01,Ministry of Railways,Railways,0,0.0033471860307931743,2025-12-01,2022-03-01
+705253,2026-06-01,Ministry of Railways,Railways,0,0.005469250097315568,2026-12-01,2020-12-01
+705356,2026-06-01,Ministry of Railways,Railways,0,0.004466202068605676,2026-03-01,2026-03-01
+705357,2026-06-01,Ministry of Railways,Railways,0,0.0012261702237800903,2027-03-01,2027-03-01
+705358,2026-06-01,Ministry of Railways,Railways,0,0.0019107235806884932,2026-12-01,2026-12-01
+705359,2026-06-01,Ministry of Railways,Railways,0,0.004182966597167192,2029-03-01,2025-03-01
+705366,2026-06-01,Ministry of Railways,Railways,0,0.004984992694201719,2027-06-01,2020-03-01
+705368,2026-06-01,Ministry of Railways,Railways,0,0.004530158284101844,2027-01-01,2024-03-01
+705373,2026-06-01,Ministry of Railways,Railways,0,0.008806390623351494,2025-08-01,2023-03-01
+705375,2026-06-01,Ministry of Railways,Railways,0,0.008505453155962192,2026-02-01,2025-02-01
+705385,2026-06-01,Ministry of Railways,Railways,0,0.0024131808345351047,2028-03-01,2028-03-01
+705391,2026-06-01,Ministry of Railways,Railways,0,0.0033888879173505195,2029-06-01,2026-12-01
+705392,2026-06-01,Ministry of Railways,Railways,0,0.003266213526428378,2029-12-01,2025-03-01
+705394,2026-06-01,Ministry of Railways,Railways,0,0.021024930965774062,2027-06-01,2011-11-01
+705401,2026-06-01,Ministry of Railways,Railways,0,0.003225338799678174,2026-12-01,2025-03-01
+705410,2026-06-01,Ministry of Railways,Railways,0,0.034738779741440615,2027-12-01,2025-12-01
+705419,2026-06-01,Ministry of Railways,Railways,0,0.01644057376468854,2026-02-01,2025-03-01
+705424,2026-06-01,Ministry of Railways,Railways,0,0.0034622957140307835,2026-12-01,2026-12-01
+705432,2026-06-01,Ministry of Railways,Railways,0,0.0047390450661840165,2027-12-01,2015-05-01
+705433,2026-06-01,Ministry of Railways,Railways,0,0.007987617225160813,2025-12-01,2025-09-01
+705444,2026-06-01,Ministry of Railways,Railways,0,0.004688958558495556,2026-12-01,2022-03-01
+705450,2026-06-01,Ministry of Railways,Railways,0,0.0033365242487543058,2026-12-01,2022-03-01
+705453,2026-06-01,Ministry of Railways,Railways,0,0.002020493742010311,2027-02-01,2027-02-01
+705454,2026-06-01,Ministry of Railways,Railways,0,0.0064599167151148,2025-12-01,2025-12-01
+705457,2026-06-01,Ministry of Railways,Railways,0,0.003926553504021837,2028-09-01,2027-03-01
+705458,2026-06-01,Ministry of Railways,Railways,0,0.0036171456205127315,2026-12-01,2021-03-01
+705479,2026-06-01,Ministry of Railways,Railways,0,0.0030379188689782797,2027-03-01,2027-03-01
+705480,2026-06-01,Ministry of Railways,Railways,0,0.009968650910867969,2027-12-01,2027-03-01
+705490,2026-06-01,Ministry of Railways,Railways,0,0.003916994139557853,2027-12-01,2027-03-01
+705491,2026-06-01,Ministry of Railways,Railways,0,0.015288237012969075,2026-06-01,2026-06-01
+705492,2026-06-01,Ministry of Railways,Railways,0,0.008345000396578576,2025-12-01,2025-06-01
+705493,2026-06-01,Ministry of Railways,Railways,0,0.015442858176035688,2030-03-01,2005-03-01
+705494,2026-06-01,Ministry of Railways,Railways,0,0.003860514446444336,2028-02-01,2015-09-01
+705495,2026-06-01,Ministry of Railways,Railways,0,0.0035501900517772938,2027-01-01,2027-03-01
+705496,2026-06-01,Ministry of Railways,Railways,0,0.0036113190381684705,2027-12-01,2019-03-01
+705498,2026-06-01,Ministry of Railways,Railways,0,0.0035768886428177897,2026-12-01,2026-12-01
+705500,2026-06-01,Ministry of Railways,Railways,0,0.004376273467232546,2026-10-01,2025-12-01
+705502,2026-06-01,Ministry of Railways,Railways,0,0.008891830637440692,2026-02-01,2025-12-01
+705504,2026-06-01,Ministry of Railways,Railways,0,0.009108467261586595,2026-03-01,2025-12-01
+705505,2026-06-01,Ministry of Railways,Railways,0,0.006621173411375747,2026-10-01,2025-12-01
+705506,2026-06-01,Ministry of Railways,Railways,0,0.014141772554952924,2025-11-01,2024-12-01
+705507,2026-06-01,Ministry of Railways,Railways,0,0.004176857884737946,2027-12-01,2027-03-01
+705510,2026-06-01,Ministry of Railways,Railways,0,0.012795195179393133,2026-01-01,2024-11-01
+705511,2026-06-01,Ministry of Railways,Railways,0,0.0037442857336286526,2026-12-01,2024-03-01
+705512,2026-06-01,Ministry of Railways,Railways,0,0.0029776992578883534,2028-03-01,2022-03-01
+705513,2026-06-01,Ministry of Railways,Railways,0,0.0028360246429888197,2028-03-01,2027-12-01
+705514,2026-06-01,Ministry of Railways,Railways,0,0.005167170408176387,2028-03-01,2018-11-01
+705515,2026-06-01,Ministry of Railways,Railways,0,0.007871968388078484,2026-03-01,2026-03-01
+705526,2026-06-01,Ministry of Railways,Railways,0,0.04172661667772189,2025-10-01,2025-03-01
+705527,2026-06-01,Ministry of Railways,Railways,0,0.008131191324712758,2025-12-01,2025-12-01
+705528,2026-06-01,Ministry of Railways,Railways,0,0.017808882450620865,2026-06-01,2024-06-01
+705562,2026-06-01,Ministry of Railways,Railways,0,0.014715248180487828,2026-05-01,2025-02-01
+705567,2026-06-01,Ministry of Railways,Railways,0,0.014836813437468633,2026-05-01,2025-03-01
+705572,2026-06-01,Ministry of Railways,Railways,0,0.008666991591800675,2026-03-01,2026-03-01
+705583,2026-06-01,Ministry of Railways,Railways,0,0.0035526339184860064,2027-12-01,2023-03-01
+705588,2026-06-01,Ministry of Railways,Railways,0,0.008457019601462452,2026-03-01,2025-03-01
+705598,2026-06-01,Ministry of Railways,Railways,0,0.012590543349946812,2026-03-01,2022-03-01
+705608,2026-06-01,Ministry of Railways,Railways,0,0.011683369927610189,2026-03-01,2026-03-01
+705610,2026-06-01,Ministry of Railways,Railways,0,0.007992891370561488,2026-03-01,2025-12-01
+705616,2026-06-01,Ministry of Railways,Railways,0,0.012187226364312567,2026-03-01,2024-10-01
+705617,2026-06-01,Ministry of Railways,Railways,0,0.011654125725669021,2026-06-01,2024-12-01
+705628,2026-06-01,Ministry of Railways,Railways,0,0.013840841987366764,2026-06-01,2025-06-01
+705629,2026-06-01,Ministry of Railways,Railways,0,0.004221109340303531,2027-01-01,2025-12-01
+705632,2026-06-01,Ministry of Railways,Railways,0,0.010044843846409352,2025-12-01,2025-01-01
+705635,2026-06-01,Ministry of Railways,Railways,0,0.0027561231582323054,2028-06-01,2025-03-01
+705638,2026-06-01,Ministry of Railways,Railways,0,0.009531044309538873,2027-03-01,2027-03-01
+705639,2026-06-01,Ministry of Railways,Railways,0,0.00837457162216032,2027-02-01,2028-03-01
+705659,2026-06-01,Ministry of Railways,Railways,0,0.008035087413665295,2026-03-01,2026-03-01
+705661,2026-06-01,Ministry of Railways,Railways,0,0.006114044563461275,2026-09-01,2024-09-01
+705663,2026-06-01,Ministry of Railways,Railways,0,0.01296824029937478,2026-02-01,2026-02-01
+705667,2026-06-01,Ministry of Railways,Railways,0,0.00298395223494822,2026-12-01,2024-12-01
+705668,2026-06-01,Ministry of Railways,Railways,0,0.011654125725669021,2026-06-01,2025-03-01
+705728,2026-06-01,Ministry of Railways,Railways,0,0.002622340074728622,2029-12-01,2027-08-01
+705735,2026-06-01,Ministry of Railways,Railways,0,0.0027441713965901554,2028-03-01,2027-03-01
+705741,2026-06-01,Ministry of Railways,Railways,0,0.0036231349744523895,2029-12-01,2028-07-01
+705752,2026-06-01,Ministry of Railways,Railways,0,0.002521613238568553,2026-11-01,2026-11-01
+705761,2026-06-01,Ministry of Railways,Railways,0,0.003318284698413908,2028-06-01,2027-12-01
+705764,2026-06-01,Ministry of Railways,Railways,0,0.010393379875637612,2026-06-01,2026-03-01
+705765,2026-06-01,Ministry of Railways,Railways,0,0.0075863894279543,2026-03-01,2026-03-01
+705766,2026-06-01,Ministry of Railways,Railways,0,0.010779968149936495,2026-01-01,2024-12-01
+705772,2026-06-01,Ministry of Railways,Railways,0,0.0035640922507180718,2027-03-01,2026-12-01
+705774,2026-06-01,Ministry of Railways,Railways,0,0.003266153038630037,2027-03-01,2025-01-01
+705777,2026-06-01,Ministry of Railways,Railways,0,0.0047102940862163946,2027-02-01,2026-02-01
+705780,2026-06-01,Ministry of Railways,Railways,0,0.010901334832853004,2026-06-01,2024-12-01
+705782,2026-06-01,Ministry of Railways,Railways,0,0.011632212122298355,2026-08-01,2025-03-01
+705783,2026-06-01,Ministry of Railways,Railways,0,0.0036751427475823855,2027-02-01,2025-03-01
+705785,2026-06-01,Ministry of Railways,Railways,0,0.00443849538242877,2027-05-01,2026-06-01
+705793,2026-06-01,Ministry of Railways,Railways,0,0.011891187410024697,2026-03-01,2024-03-01
+705919,2026-06-01,Ministry of Railways,Railways,0,0.003776648087669932,2027-06-01,2027-06-01
+705933,2026-06-01,Ministry of Railways,Railways,0,0.002992904036709048,2027-10-01,2027-10-01
+705941,2026-06-01,Ministry of Railways,Railways,0,0.0160913651930166,2030-03-01,2026-12-01
+706718,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.006361076180494993,2026-12-01,2024-07-01
+706724,2026-06-01,Ministry of Civil Aviation,Aviation & Aviation Infrastructure,0,0.03708141781434304,2026-06-01,2025-03-01
+706759,2026-06-01,Ministry of Railways,Railways,0,0.013790106786170118,2025-12-01,2024-12-01
+706763,2026-06-01,Ministry of Railways,Railways,0,0.011435560640659396,2026-06-01,2026-10-01
+706775,2026-06-01,Department of Telecommunications,Telecommunication,0,0.004470775351318959,2027-03-01,2023-08-01
+706811,2026-06-01,Ministry of Steel,Steel,1,0.025785234955091905,2026-05-01,2023-06-01
+706837,2026-06-01,Ministry of Railways,Railways,0,0.002595921115140757,2027-11-01,2027-11-01
+706854,2026-06-01,Ministry of Railways,Railways,0,0.0032332463590835437,2030-06-01,2030-06-01
+706860,2026-06-01,Ministry of Railways,Railways,0,0.008228338263169314,2026-10-01,2025-08-01
+706866,2026-06-01,Ministry of Railways,Railways,0,0.004905154683308718,2027-05-01,2026-03-01
+707215,2026-06-01,"Ministry of Ports, Shipping and Waterways","Tourism, Hospitality & Wellness",0,0.00850366311729913,2026-03-01,2024-03-01
+707229,2026-06-01,Ministry of Housing & Urban Affairs,Real Estate,0,0.21761422504058225,2025-10-01,2023-05-01
+707410,2026-06-01,Department for Promotion of Industry & Internal Trade,Logistics Infrastructure,0,0.01036954392231483,2028-05-01,2023-12-01
+709747,2026-06-01,Ministry of Power,Electricity Generation,0,0.02139505362604809,2025-12-01,2025-12-01
+709750,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.016811185816544623,2026-12-01,2025-09-01
+709752,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.00451808752743955,2027-02-01,2024-06-01
+709753,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.04469395604339004,2026-08-01,2025-11-01
+709774,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.006484415991613369,2027-06-01,2025-12-01
+709777,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.013083838371758246,2027-06-01,2025-04-01
+709778,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.0064750342570862,2026-12-01,2025-08-01
+709779,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.008014019529334863,2027-07-01,2026-03-01
+709781,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.006433617138250895,2026-12-01,2027-06-01
+709783,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.06548685850356442,2026-06-01,2023-06-01
+709785,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.007737586548462783,2027-03-01,2026-02-01
+709800,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.0768095477291594,2026-06-01,2026-03-01
+709812,2026-06-01,Ministry of Railways,Railways,0,0.0030193110691598894,2030-06-01,2030-06-01
+709813,2026-06-01,Ministry of Railways,Railways,0,0.0037272084498484234,2027-10-01,2028-06-01
+709815,2026-06-01,Ministry of Railways,Railways,0,0.004636720786397841,2027-12-01,2027-01-01
+709816,2026-06-01,Ministry of Railways,Railways,0,0.005037571003819329,2027-02-01,2027-02-01
+709818,2026-06-01,Ministry of Railways,Railways,0,0.0035910486899218426,2027-01-01,2027-01-01
+709819,2026-06-01,Ministry of Railways,Railways,0,0.003633348519422819,2026-12-01,2026-12-01
+709826,2026-06-01,Ministry of Steel,Steel,0,0.004648552800629635,2027-07-01,2026-01-01
+709831,2026-06-01,Ministry of Mines,Metals & Mining,0,0.03270669236275968,2026-06-01,2025-05-01
+709832,2026-06-01,Ministry of Mines,Metals & Mining,0,0.07422065325044985,2026-03-01,2025-03-01
+709837,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.06599375321280936,2026-08-01,2024-05-01
+709838,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.006817266024695041,2027-05-01,2024-11-01
+709839,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.005492817395454607,2026-12-01,2025-10-01
+709841,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.06277353510867853,2026-07-01,2025-07-01
+709847,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.006645102300260477,2027-04-01,2026-04-01
+709848,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.005129292142334876,2026-12-01,2026-05-01
+709849,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.005704085980786588,2026-12-01,2026-02-01
+709850,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,1,0.025412064117373904,2026-09-01,2026-05-01
+709856,2026-06-01,Department of Telecommunications,Telecommunication,1,0.05486111970326499,2026-06-01,2024-08-01
+709857,2026-06-01,Department of Telecommunications,Telecommunication,0,0.011143937062739279,2026-09-01,2025-06-01
+709859,2026-06-01,Department of Telecommunications,Telecommunication,1,0.035563344077797085,2026-06-01,2020-02-01
+709864,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.006717033649707261,2027-03-01,2024-07-01
+709865,2026-06-01,Ministry of Petroleum & Natural Gas,Oil & Gas,0,0.006167765428877938,2026-12-01,2024-12-01
+900874,2026-06-01,Ministry of Railways,Railways,0,0.004389172912132077,2030-01-01,2028-03-01

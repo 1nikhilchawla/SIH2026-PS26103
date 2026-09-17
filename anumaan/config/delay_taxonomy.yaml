@@ -1,0 +1,76 @@
+# Delay-cause taxonomy for SIH26103.
+#
+# Provenance of the vocabulary (say this on your slide -- it is a credibility win):
+#   1. The free-text "Reasons for Delay" column in OCMS-era MoSPI flash reports.
+#   2. The causes the government itself names. MoSPI, quoted in Business Standard,
+#      20 Jul 2026: "land acquisition issues, forest, wildlife and environmental
+#      clearances, law and order problems, utility shifting, and delays in civil works."
+#      https://www.business-standard.com/industry/news/line-ministries-are-being-apprised-of-project-spillages-in-real-time-mospi-126072001234_1.html
+#
+# Every label maps to the authority that can actually unblock it -- a cause with no
+# owner is a statistic; a cause with an owner is an action.
+#
+# This file is meant to be reviewed by a domain person, not only by code. Before you
+# add a label, check it is not already covered: an over-split taxonomy looks thorough
+# and classifies badly.
+
+version: 0.1
+
+labels:
+  land_acquisition:
+    description: Acquisition, compensation, possession or R&R of land incomplete.
+    owner: State revenue department / district collector
+    escalation: State nodal authority -> PMG (DPIIT) if inter-agency
+  forest_environment_clearance:
+    description: Forest, environment, wildlife or coastal-zone clearance pending.
+    owner: MoEFCC / state forest department
+    escalation: Check PARIVESH status -> PMG
+  right_of_way_utilities:
+    description: Encroachment, utility shifting, crossing permissions.
+    owner: Implementing agency + local body + utility owner
+    escalation: District administration
+  contractor_performance:
+    description: Contractor slow, insolvent, terminated, or re-tendering underway.
+    owner: Implementing agency contracts wing
+    escalation: Ministry project division
+  funds_and_payments:
+    description: Budget constraint, delayed release, pending bills, cash flow.
+    owner: Ministry finance wing / state finance department
+    escalation: Ministry secretary
+  litigation:
+    description: Court stay, arbitration, contractual dispute.
+    owner: Legal cell of the implementing agency
+    escalation: Ministry legal division
+  law_and_order:
+    description: Local agitation, security situation, protests at site.
+    owner: District administration / state police
+    escalation: State chief secretary
+  design_scope_change:
+    description: Design revision, scope or alignment change, revised cost estimate.
+    owner: Implementing agency engineering wing
+    escalation: Competent approving authority
+  geology_site_conditions:
+    description: Unforeseen strata, hydrology, weather, terrain.
+    owner: Implementing agency
+    escalation: Technical committee
+  supply_chain_equipment:
+    description: Equipment delivery, imports, material shortage, logistics.
+    owner: Implementing agency procurement
+    escalation: Ministry
+  statutory_other_clearance:
+    description: Railway, aviation, defence, heritage or other statutory approval.
+    owner: Concerned statutory authority
+    escalation: PMG
+  covid_force_majeure:
+    description: Pandemic, disaster or declared force majeure.
+    owner: n/a
+    escalation: n/a
+  unclassified:
+    description: Text empty, generic, or not mappable to any label above.
+    owner: n/a
+    escalation: Human review queue
+
+rules:
+  allow_multi_label: true
+  min_confidence: 0.6
+  below_confidence_label: unclassified

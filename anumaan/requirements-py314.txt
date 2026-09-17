@@ -1,0 +1,13 @@
+# Python 3.14 requirements - now just an alias for the main file.
+#
+# History: this file existed because requirements.txt pinned versions with no
+# wheels for 3.14, so the Makefile switched to these floors instead. That left
+# two dependency files which then drifted: neither listed fastapi or uvicorn,
+# both of which app/main.py imports, and this one still carried pandera and
+# rapidfuzz, which nothing imports.
+#
+# requirements.txt now pins the exact versions running on Python 3.14 in this
+# project's .venv, so the split has no reason to exist. Kept as an alias so the
+# Makefile's version switch and the error messages in scripts/parse_paimana.py
+# and scripts/parse_report.py keep working.
+-r requirements.txt

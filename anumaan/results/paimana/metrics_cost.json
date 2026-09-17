@@ -1,0 +1,404 @@
+{
+ "target": "cost_up_next",
+ "target_definition": "1 if the revised cost in the next monthly report exceeds this month's revised cost by more than 0.5%",
+ "what_it_is_not": "not a prediction of the final cost, not the current overrun ratio restated, and not defined where the next report is missing",
+ "data_source": "paimana",
+ "panel_file": "results/paimana/panel.csv",
+ "n_projects": 2195,
+ "n_months": 11,
+ "panel_span": "2025-09 to 2026-07",
+ "labelled_rows": 14790,
+ "overall_base_rate": 0.007707910750507099,
+ "splits": "walk-forward by report month; no random split",
+ "folds": [
+  {
+   "test_month": "2025-10",
+   "train_months": [
+    "2025-09"
+   ],
+   "n_train": 785,
+   "n_test": 800,
+   "test_base_rate": 0.01625,
+   "test_positives": 13,
+   "models": {
+    "always_base_rate": {
+     "pr_auc": 0.01625,
+     "brier": 0.016140401233315747
+    },
+    "cost_revised_this_month": {
+     "pr_auc": 0.03423076923076923,
+     "brier": 0.01875
+    },
+    "ministry_base_rate": {
+     "pr_auc": 0.025208388479029453,
+     "brier": 0.016126461641951258
+    },
+    "logistic": {
+     "pr_auc": 0.026069474737176974,
+     "brier": 0.09244369040665791
+    },
+    "lightgbm": {
+     "pr_auc": 0.012910817611044246,
+     "brier": 0.01843044163104727
+    }
+   },
+   "leakage_check": {
+    "real_pr_auc": 0.012910817611044246,
+    "shuffled_labels_pr_auc": 0.014688409989642574,
+    "with_planted_leak_pr_auc": 0.9999999999999998,
+    "planted_leak_importance": 46,
+    "note": "shuffled must fall towards the base rate; planted leak must jump towards 1.0. If shuffled stays high, a feature sees the future. Planted uses min_child_samples=1 because positive class is rare."
+   }
+  },
+  {
+   "test_month": "2025-11",
+   "train_months": [
+    "2025-09",
+    "2025-10"
+   ],
+   "n_train": 1585,
+   "n_test": 788,
+   "test_base_rate": 0.0038071065989847717,
+   "test_positives": 3,
+   "models": {
+    "always_base_rate": {
+     "pr_auc": 0.0038071065989847717,
+     "brier": 0.0038321455796889252
+    },
+    "cost_revised_this_month": {
+     "pr_auc": 0.0038071065989847717,
+     "brier": 0.024111675126903553
+    },
+    "ministry_base_rate": {
+     "pr_auc": 0.005506606437232495,
+     "brier": 0.004649558972180441
+    },
+    "logistic": {
+     "pr_auc": 0.004188059196837287,
+     "brier": 0.40237874691545544
+    },
+    "lightgbm": {
+     "pr_auc": 0.014740010946907498,
+     "brier": 0.005537458066647735
+    }
+   },
+   "leakage_check": {
+    "real_pr_auc": 0.014740010946907498,
+    "shuffled_labels_pr_auc": 0.008025479308749271,
+    "with_planted_leak_pr_auc": 1.0,
+    "planted_leak_importance": 180,
+    "note": "shuffled must fall towards the base rate; planted leak must jump towards 1.0. If shuffled stays high, a feature sees the future. Planted uses min_child_samples=1 because positive class is rare."
+   }
+  },
+  {
+   "test_month": "2025-12",
+   "train_months": [
+    "2025-09",
+    "2025-10",
+    "2025-11"
+   ],
+   "n_train": 2373,
+   "n_test": 1388,
+   "test_base_rate": 0.005763688760806916,
+   "test_positives": 8,
+   "models": {
+    "always_base_rate": {
+     "pr_auc": 0.005763688760806916,
+     "brier": 0.0057354999428421705
+    },
+    "cost_revised_this_month": {
+     "pr_auc": 0.017543227665706054,
+     "brier": 0.011527377521613832
+    },
+    "ministry_base_rate": {
+     "pr_auc": 0.004421022641020031,
+     "brier": 0.005977826458591815
+    },
+    "logistic": {
+     "pr_auc": 0.011305393470273446,
+     "brier": 0.09731439273268881
+    },
+    "lightgbm": {
+     "pr_auc": 0.005918729525558206,
+     "brier": 0.006579062991553012
+    }
+   },
+   "leakage_check": {
+    "real_pr_auc": 0.005918729525558206,
+    "shuffled_labels_pr_auc": 0.011605344000589374,
+    "with_planted_leak_pr_auc": 1.0,
+    "planted_leak_importance": 173,
+    "note": "shuffled must fall towards the base rate; planted leak must jump towards 1.0. If shuffled stays high, a feature sees the future. Planted uses min_child_samples=1 because positive class is rare."
+   }
+  },
+  {
+   "test_month": "2026-01",
+   "train_months": [
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+   ],
+   "n_train": 3761,
+   "n_test": 1678,
+   "test_base_rate": 0.0,
+   "test_positives": 0,
+   "models": {
+    "always_base_rate": {
+     "pr_auc": NaN,
+     "brier": 5.153720494861836e-05
+    },
+    "cost_revised_this_month": {
+     "pr_auc": NaN,
+     "brier": 0.004171632896305125
+    },
+    "ministry_base_rate": {
+     "pr_auc": NaN,
+     "brier": 0.00019813261277934976
+    },
+    "logistic": {
+     "pr_auc": NaN,
+     "brier": 0.1777194386731354
+    },
+    "lightgbm": {
+     "pr_auc": NaN,
+     "brier": 0.0003769862051836513
+    }
+   },
+   "leakage_check": {
+    "real_pr_auc": NaN,
+    "shuffled_labels_pr_auc": NaN,
+    "with_planted_leak_pr_auc": NaN,
+    "planted_leak_importance": 173,
+    "note": "shuffled must fall towards the base rate; planted leak must jump towards 1.0. If shuffled stays high, a feature sees the future. Planted uses min_child_samples=1 because positive class is rare."
+   }
+  },
+  {
+   "test_month": "2026-02",
+   "train_months": [
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01"
+   ],
+   "n_train": 5439,
+   "n_test": 1919,
+   "test_base_rate": 0.0010422094841063053,
+   "test_positives": 2,
+   "models": {
+    "always_base_rate": {
+     "pr_auc": 0.0010422094841063053,
+     "brier": 0.0010565048838182206
+    },
+    "cost_revised_this_month": {
+     "pr_auc": 0.0010422094841063053,
+     "brier": 0.0010422094841063053
+    },
+    "ministry_base_rate": {
+     "pr_auc": 0.006089532587228439,
+     "brier": 0.0010725275355696286
+    },
+    "logistic": {
+     "pr_auc": 0.0123820381278105,
+     "brier": 0.08124068445263419
+    },
+    "lightgbm": {
+     "pr_auc": 0.004499898764932172,
+     "brier": 0.0010421751960310768
+    }
+   },
+   "leakage_check": {
+    "real_pr_auc": 0.004499898764932172,
+    "shuffled_labels_pr_auc": 0.001435143395569069,
+    "with_planted_leak_pr_auc": 1.0,
+    "planted_leak_importance": 144,
+    "note": "shuffled must fall towards the base rate; planted leak must jump towards 1.0. If shuffled stays high, a feature sees the future. Planted uses min_child_samples=1 because positive class is rare."
+   }
+  },
+  {
+   "test_month": "2026-03",
+   "train_months": [
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02"
+   ],
+   "n_train": 7358,
+   "n_test": 1924,
+   "test_base_rate": 0.005717255717255718,
+   "test_positives": 11,
+   "models": {
+    "always_base_rate": {
+     "pr_auc": 0.005717255717255718,
+     "brier": 0.005687722764253968
+    },
+    "cost_revised_this_month": {
+     "pr_auc": 0.005717255717255718,
+     "brier": 0.006756756756756757
+    },
+    "ministry_base_rate": {
+     "pr_auc": 0.0336862385519321,
+     "brier": 0.005642522708381889
+    },
+    "logistic": {
+     "pr_auc": 0.022625129308124763,
+     "brier": 0.05389680710661524
+    },
+    "lightgbm": {
+     "pr_auc": 0.016709197351492188,
+     "brier": 0.005716854287163067
+    }
+   },
+   "leakage_check": {
+    "real_pr_auc": 0.016709197351492188,
+    "shuffled_labels_pr_auc": 0.01091487936417003,
+    "with_planted_leak_pr_auc": 1.0,
+    "planted_leak_importance": 120,
+    "note": "shuffled must fall towards the base rate; planted leak must jump towards 1.0. If shuffled stays high, a feature sees the future. Planted uses min_child_samples=1 because positive class is rare."
+   }
+  },
+  {
+   "test_month": "2026-04",
+   "train_months": [
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03"
+   ],
+   "n_train": 9282,
+   "n_test": 1951,
+   "test_base_rate": 0.0015376729882111738,
+   "test_positives": 3,
+   "models": {
+    "always_base_rate": {
+     "pr_auc": 0.0015376729882111738,
+     "brier": 0.0015429911097267948
+    },
+    "cost_revised_this_month": {
+     "pr_auc": 0.0015376729882111738,
+     "brier": 0.009738595592004101
+    },
+    "ministry_base_rate": {
+     "pr_auc": 0.008719877960492296,
+     "brier": 0.0015413328462728123
+    },
+    "logistic": {
+     "pr_auc": 0.009885440828344843,
+     "brier": 0.10895566350412007
+    },
+    "lightgbm": {
+     "pr_auc": 0.0054828526100103876,
+     "brier": 0.0017223615938586887
+    }
+   },
+   "leakage_check": {
+    "real_pr_auc": 0.0054828526100103876,
+    "shuffled_labels_pr_auc": 0.001410391449015739,
+    "with_planted_leak_pr_auc": 1.0,
+    "planted_leak_importance": 135,
+    "note": "shuffled must fall towards the base rate; planted leak must jump towards 1.0. If shuffled stays high, a feature sees the future. Planted uses min_child_samples=1 because positive class is rare."
+   }
+  },
+  {
+   "test_month": "2026-05",
+   "train_months": [
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04"
+   ],
+   "n_train": 11233,
+   "n_test": 1825,
+   "test_base_rate": 0.000547945205479452,
+   "test_positives": 1,
+   "models": {
+    "always_base_rate": {
+     "pr_auc": 0.000547945205479452,
+     "brier": 0.0005584037653706018
+    },
+    "cost_revised_this_month": {
+     "pr_auc": 0.000547945205479452,
+     "brier": 0.006575342465753425
+    },
+    "ministry_base_rate": {
+     "pr_auc": 0.002793296089385475,
+     "brier": 0.000581307912806388
+    },
+    "logistic": {
+     "pr_auc": 0.0021231422505307855,
+     "brier": 0.11885275666010423
+    },
+    "lightgbm": {
+     "pr_auc": 0.002028397565922921,
+     "brier": 0.0006345931371293356
+    }
+   },
+   "leakage_check": {
+    "real_pr_auc": 0.002028397565922921,
+    "shuffled_labels_pr_auc": 0.002976190476190476,
+    "with_planted_leak_pr_auc": 1.0,
+    "planted_leak_importance": 122,
+    "note": "shuffled must fall towards the base rate; planted leak must jump towards 1.0. If shuffled stays high, a feature sees the future. Planted uses min_child_samples=1 because positive class is rare."
+   }
+  },
+  {
+   "test_month": "2026-06",
+   "train_months": [
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05"
+   ],
+   "n_train": 13058,
+   "n_test": 1732,
+   "test_base_rate": 0.04041570438799076,
+   "test_positives": 70,
+   "models": {
+    "always_base_rate": {
+     "pr_auc": 0.04041570438799076,
+     "brier": 0.04015469042076299
+    },
+    "cost_revised_this_month": {
+     "pr_auc": 0.04041570438799076,
+     "brier": 0.044457274826789836
+    },
+    "ministry_base_rate": {
+     "pr_auc": 0.11193397408971392,
+     "brier": 0.040085701367946584
+    },
+    "logistic": {
+     "pr_auc": 0.09565299546799541,
+     "brier": 0.10799379689988245
+    },
+    "lightgbm": {
+     "pr_auc": 0.09233707381990866,
+     "brier": 0.04039013056681885
+    }
+   },
+   "leakage_check": {
+    "real_pr_auc": 0.09233707381990866,
+    "shuffled_labels_pr_auc": 0.031099355214971855,
+    "with_planted_leak_pr_auc": 1.0,
+    "planted_leak_importance": 106,
+    "note": "shuffled must fall towards the base rate; planted leak must jump towards 1.0. If shuffled stays high, a feature sees the future. Planted uses min_child_samples=1 because positive class is rare."
+   }
+  }
+ ],
+ "generated_at": "2026-09-17T17:31:08+05:30",
+ "generated_by": "python scripts/train_cost.py"
+}

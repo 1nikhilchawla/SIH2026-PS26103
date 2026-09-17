@@ -1,0 +1,54 @@
+# Keep the build context small and the image free of things the service never
+# reads. Without this, `docker build` and `railway up` would upload ~800 MB:
+# data/raw is 142 MB of source PDFs and .venv is 657 MB of local wheels.
+
+# Local environment
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Source corpus - the PDF-to-panel pipeline runs locally, not in the container.
+# The panel it produces is copied in explicitly by the Dockerfile.
+data/
+
+# Generated artefacts. The Dockerfile copies the five files the app actually
+# reads; everything else under results/ is local working output (logs, probes,
+# plots) that the service never opens.
+results/*
+!results/paimana/
+results/paimana/*
+!results/paimana/panel.csv
+!results/paimana/panel_provenance.json
+!results/paimana/manifest_verification.json
+!results/paimana/reconciliation_meta.json
+!results/paimana/cost_target_diagnostic.json
+
+# Static demo pages are built locally and are not served by the app
+demo/
+
+# Docs, decks and notes
+docs/
+*.pptx
+*.md
+!DEPLOY.md
+
+# Tests do not run in the image
+tests/
+
+# Editor, VCS and OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.git/
+.claude/
+Makefile
+makefile
+run.ps1
