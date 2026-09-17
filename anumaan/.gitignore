@@ -41,6 +41,28 @@ results/d1_*.json
 !results/paimana/shap_slip.json
 !results/paimana/cost_target_diagnostic.json
 
+# Decks, documents and exports. The SIH deck currently lives one level up in
+# Desktop/SIH/, outside this repo, so it is already out of scope - these
+# patterns are here so it stays out if it is ever moved in. Nothing in the
+# deploy needs a .pdf or .pptx; the PAIMANA source PDFs are ignored above.
+*.pptx
+*.potx
+*.ppt
+*.docx
+*.doc
+*.pdf
+*.xlsx
+
+# Agent and assistant state
+.claude/
+.cursor/
+.aider*
+
+# Scratch probes from debugging sessions. Kept on disk because they document
+# how the parser bugs were found, but nothing imports them and they are not
+# part of the pipeline - see run.ps1 for the real entry point.
+probe_*.py
+
 # Editor and OS
 .vscode/
 .idea/
