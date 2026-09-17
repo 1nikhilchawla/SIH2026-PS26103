@@ -1,0 +1,26 @@
+# Repository root. The project itself lives in anumaan/ and carries its own
+# .gitignore; a .gitignore only governs its own directory downwards, so rules
+# for files sitting HERE, beside anumaan/, have to live in this file.
+
+# The SIH deck. Kept on disk, deliberately out of the repository: a 1.2 MB
+# binary pair that changes wholesale on every edit and is not part of the
+# software being reviewed.
+ANUMAAN_SIH26103_Idea.pptx
+ANUMAAN_SIH26103_Idea.pdf
+*.pptx
+*.potx
+*.ppt
+*.docx
+*.doc
+*.pdf
+
+# Local assistant and editor state
+.claude/
+.cursor/
+.vscode/
+.idea/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini

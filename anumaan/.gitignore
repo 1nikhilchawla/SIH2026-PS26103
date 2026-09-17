@@ -25,6 +25,27 @@ results/*.err
 results/paimana/_*.log
 results/d1_*.json
 
+# Synthetic-era artefacts. The synthetic panel was a method demonstration
+# before the real PAIMANA corpus parsed; nothing in the deploy reads any of
+# it, and shipping it next to the real results is what produces a mixed
+# screen where a reviewer cannot tell which numbers are real.
+# All of it regenerates locally in one line:
+#     python scripts/synth_panel.py && python scripts/train_t1.py \
+#       && python scripts/build_demo.py
+data/synthetic/
+demo/index.html
+demo/audit.html
+demo/honesty.html
+results/metrics.json
+results/predictions.csv
+results/lead_time.csv
+results/lead_time.png
+results/baseline_comparison.png
+results/reliability_logistic.csv
+results/reliability_lightgbm.csv
+results/reliability_logistic.png
+results/reliability_lightgbm.png
+
 # KEEP the artefacts below: the deploy copies them into the image, and the
 # demo pages and the rubric quote them. They are small, and without
 # panel.csv the container cannot build at all (the Dockerfile's schema check
@@ -58,10 +79,13 @@ results/d1_*.json
 .cursor/
 .aider*
 
-# Scratch probes from debugging sessions. Kept on disk because they document
-# how the parser bugs were found, but nothing imports them and they are not
-# part of the pipeline - see run.ps1 for the real entry point.
-probe_*.py
+# Scratch probes from debugging sessions, at the project root only. Kept on
+# disk because they document how the parser bugs were found, but nothing
+# imports them and they are not part of the pipeline - see run.ps1.
+# The leading slash matters: scripts/probe_endpoints.py and scripts/probe_v2.py
+# are cited in results/EVIDENCE.md as the record of how the portal's JSON
+# endpoints were discovered, and must stay tracked.
+/probe_*.py
 
 # Editor and OS
 .vscode/
