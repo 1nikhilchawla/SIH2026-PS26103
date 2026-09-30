@@ -42,6 +42,13 @@ docs/
 # Tests do not run in the image
 tests/
 
+# Secrets must never be baked into an image layer
+.env
+.env.*
+*.key
+*.pem
+secrets/
+
 # Editor, VCS and OS noise
 .vscode/
 .idea/
@@ -52,3 +59,9 @@ Thumbs.db
 Makefile
 makefile
 run.ps1
+
+# Not part of the core image: the Laya sidecar builds from its own
+# directory, deployment manifests and generated offline files stay out.
+laya-sidecar/
+deploy/
+docker-compose.yml

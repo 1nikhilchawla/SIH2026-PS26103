@@ -43,6 +43,13 @@ except ImportError:  # pragma: no cover - fail loudly, never silently
     sys.exit("pdfplumber missing: pip install -r requirements-py314.txt")
 
 ROOT = Path(__file__).resolve().parents[1]
+# Run-from-anywhere bootstrap, as in parse_report.py: `python scripts/...`
+# puts scripts/ on sys.path, not the repo root.
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from scripts.reconciliation_meta import write_meta  # noqa: E402
+
 RAW = ROOT / "data" / "raw"
 INTERIM = ROOT / "data" / "interim" / "paimana"
 RESULTS = ROOT / "results" / "paimana"
@@ -461,6 +468,22 @@ def process(path: Path) -> dict:
     return out
 
 
+def manifest_listed() -> list[Path]:
+    """--all means every report PINNED in data/raw/manifest.csv, not every
+    PDF that happens to be in the folder. A file dropped into data/raw
+    without a manifest row is never parsed, so it can never reach the panel.
+    Hashes are checked by scripts/verify_corpus.py, which run.ps1 runs first."""
+    manifest = RAW / "manifest.csv"
+    if not manifest.exists():
+        raise SystemExit(f"{manifest} missing - run scripts/harvest_paimana.py")
+    with manifest.open(newline="", encoding="utf-8") as fh:
+        names = [r["filename"] for r in csv.DictReader(fh)]
+    stray = sorted(p.name for p in RAW.glob("*.pdf") if p.name not in set(names))
+    if stray:
+        raise SystemExit("unlisted PDFs in data/raw, refusing to parse: " + ", ".join(stray))
+    return sorted(RAW / n for n in names)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -468,7 +491,7 @@ def main() -> int:
     ap.add_argument("--all", action="store_true")
     args = ap.parse_args()
 
-    targets = [args.file] if args.file else sorted(RAW.glob("*.pdf")) if args.all else []
+    targets = [args.file] if args.file else manifest_listed() if args.all else []
     if not targets:
         ap.print_help()
         return 2
@@ -509,6 +532,11 @@ def main() -> int:
     print(f"\nPAIMANA-era reports: {len(paimana)} | reconciled: {len(passed)} "
           f"| rows: {sum(r['parsed_rows'] for r in paimana)}")
     print(f"wrote {RESULTS / 'reconciliation.csv'}")
+    # The Data Pipeline tab reads this summary. Rebuilding it here, from the
+    # CSV just written, is what keeps it from going stale again.
+    write_meta(generated_by="python scripts/parse_paimana.py --all "
+                            "-> scripts/reconciliation_meta.write_meta")
+    print(f"wrote {RESULTS / 'reconciliation_meta.json'}")
     return 0 if paimana and len(passed) == len(paimana) else 1
 
 

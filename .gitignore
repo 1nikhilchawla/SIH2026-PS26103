@@ -24,3 +24,30 @@ ANUMAAN_SIH26103_Idea.pdf
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Deck figures generated for the slides (fig01-fig13). Same reason as the
+# deck itself: presentation material, not the software.
+deck-assets/
+
+# Secrets and local dependencies, anywhere in the tree. The project's own
+# .gitignore has these too; repeating them here guards any new folder.
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Audit logs (ANUMAAN_AUDIT_FILE) hold who viewed and exported what. They stay
+# on the server's volume, never in git.
+*.jsonl
+
+# Logs
+*.log
+npm-debug.log*

@@ -34,6 +34,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ ./app/
 COPY scripts/ ./scripts/
 COPY config/ ./config/
+# The integrity manifest, and the two build files it also covers, so the
+# container can prove at build time and at every start that it is running
+# exactly the sealed file set (scripts/integrity.py, SECURITY.md).
+COPY integrity/ ./integrity/
+COPY Dockerfile railway.json ./
 
 # Derived artefacts the service reads at startup and serves on /api/pipeline.
 # panel.csv is the model's training data; the JSON files carry provenance and
@@ -49,15 +54,33 @@ COPY results/paimana/cost_target_diagnostic.json ./results/paimana/
 # "SYNTHETIC DATA" banner in production is worse than a build error.
 RUN python -c "import sys, pandas as pd; df = pd.read_csv('results/paimana/panel.csv', nrows=5); missing = {'report_month','slip_next','entity_id'} - set(df.columns); sys.exit('panel.csv missing columns: ' + ', '.join(sorted(missing))) if missing else print('panel schema ok:', len(df.columns), 'columns')"
 
-# Run as a non-root user. The service only ever reads from disk.
-RUN useradd --create-home --uid 10001 anumaan && chown -R anumaan:anumaan /app
+# Fail the BUILD if any sealed file differs from integrity/MANIFEST.json.
+# Hashes only here - the signature needs the key, which is a runtime secret
+# and must never be passed as a build argument (build args land in the image
+# history). The signature is checked at every start instead.
+RUN python scripts/integrity.py verify
+
+# Run as a non-root user that can READ the code but not change it. /app stays
+# owned by root and every write bit is removed, so even code running inside
+# the service - an injected payload, a compromised dependency - cannot
+# rewrite app/, scripts/ or the panel. Nothing under /app is ever written.
+# /var/lib/anumaan is the one writable place: the hash-chained audit log
+# (ANUMAAN_AUDIT_FILE), normally a mounted volume.
+RUN useradd --create-home --uid 10001 anumaan \
+ && chmod -R a-w /app \
+ && mkdir -p /var/lib/anumaan && chown anumaan:anumaan /var/lib/anumaan
 USER anumaan
 
-ENV ANUMAAN_PANEL=/app/results/paimana/panel.csv \
+# Secure by default. With ANUMAAN_ENV=production the service refuses to start
+# unless ANUMAAN_VIEW_USER / ANUMAAN_VIEW_PASSWORD, ANUMAAN_ADMIN_TOKEN,
+# ANUMAAN_INTEGRITY_KEY and ANUMAAN_ALLOWED_HOSTS are set and the manifest
+# signature verifies. See DEPLOY.md for the variables.
+ENV ANUMAAN_ENV=production \
     PORT=8000
 EXPOSE 8000
 
 # Shell form so ${PORT} is expanded: Railway assigns the port at runtime and
 # the process must bind 0.0.0.0, not localhost, or the health check never
-# reaches it.
-CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT}
+# reaches it. No server banner; the app writes its own audit line per
+# request, so uvicorn's access log would only duplicate it.
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT} --no-server-header --no-access-log --timeout-keep-alive 5 --limit-concurrency 64

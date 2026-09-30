@@ -1,0 +1,95 @@
+# ANUMAAN on any Linux host with Docker: an NIC / MeghRaj cloud VM, a State
+# data-centre VM, or any cloud VM. Everything runs on the one host; nothing
+# calls a service outside it.
+#
+#   core only:        docker compose up -d --build
+#   core + Laya:      docker compose --profile laya up -d --build
+#
+# Before the first start (see DEPLOY-CLOUD.md):
+#   1. python scripts/users.py add ...            -> secrets/users.json
+#   2. python scripts/integrity.py seal --prompt-key; commit the manifest
+#   3. put ANUMAAN_ALLOWED_HOSTS, ANUMAAN_ADMIN_TOKEN, ANUMAAN_INTEGRITY_KEY
+#      (and LAYA_TOKEN, LAYA_MODEL_DIR for the Laya profile) in a .env file
+#      next to this one - .env is git- and docker-ignored.
+#   4. put a TLS reverse proxy (the host's nginx, or NIC's load balancer) in
+#      front of 127.0.0.1:8000. The app is published on loopback only.
+name: anumaan
+
+services:
+  anumaan:
+    build: .
+    image: anumaan:local
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      PORT: "8000"
+      ANUMAAN_ALLOWED_HOSTS: ${ANUMAAN_ALLOWED_HOSTS:?set ANUMAAN_ALLOWED_HOSTS in .env}
+      ANUMAAN_ADMIN_TOKEN: ${ANUMAAN_ADMIN_TOKEN:?set ANUMAAN_ADMIN_TOKEN in .env}
+      ANUMAAN_INTEGRITY_KEY: ${ANUMAAN_INTEGRITY_KEY:?set ANUMAAN_INTEGRITY_KEY in .env}
+      ANUMAAN_USERS_FILE: /run/secrets/users.json
+      ANUMAAN_AUDIT_FILE: /var/lib/anumaan/audit.jsonl
+      ANUMAAN_LAYA_URL: ${ANUMAAN_LAYA_URL:-}
+      ANUMAAN_LAYA_TOKEN: ${LAYA_TOKEN:-}
+    secrets:
+      - users.json
+    volumes:
+      - audit:/var/lib/anumaan
+    # Hardening: nothing in the container is writable except the audit
+    # volume and tmpfs scratch; no privilege escalation; no capabilities.
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+      - /home/anumaan:size=64m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    mem_limit: 1g
+    pids_limit: 256
+    networks:
+      - edge
+      - internal
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=3).status == 200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      start_period: 60s
+      retries: 3
+
+  laya:
+    profiles: ["laya"]
+    build: ./laya-sidecar
+    image: anumaan-laya:local
+    restart: unless-stopped
+    environment:
+      LAYA_TOKEN: ${LAYA_TOKEN:?set LAYA_TOKEN in .env for the laya profile}
+    volumes:
+      # The bundle fetched and verified on the host with fetch-model.mjs;
+      # the server re-verifies every file's SHA-256 at start.
+      - ${LAYA_MODEL_DIR:?set LAYA_MODEL_DIR in .env for the laya profile}:/models:ro
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    mem_limit: 3g
+    pids_limit: 256
+    # Internal network only: no published port and no route to the
+    # internet, so the model cannot send anything anywhere.
+    networks:
+      - internal
+
+networks:
+  edge: {}
+  internal:
+    internal: true
+
+volumes:
+  audit: {}
+
+secrets:
+  users.json:
+    file: ./secrets/users.json

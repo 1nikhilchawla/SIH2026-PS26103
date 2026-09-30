@@ -1,0 +1,28 @@
+{
+  "comment": "Pinned Laya ONNX bundle. revision is a Hugging Face commit, not the moving 'main' branch. sha256 for laya.onnx and laya.onnx.data are the values Hugging Face publishes for those LFS files; the three small files are pinned from the first verified download (fetch-model.mjs --pin). The server refuses to start if any file differs.",
+  "repo": "receptron/laya-onnx",
+  "revision": "68f27dfe5a27a54fb2b1fefc432f43f972e90868",
+  "license": "apache-2.0",
+  "files": {
+    "laya.onnx": {
+      "size": 3807291,
+      "sha256": "a874eb254b58b0fcb1e7ad56fbb188c29d64e08c9a46b689433e1f52c66dba1e"
+    },
+    "laya.onnx.data": {
+      "size": 1685258240,
+      "sha256": "487746363a8da57bcadb4345352997d22a0fb90d70aa22c6856668d023242aba"
+    },
+    "laya_config.json": {
+      "size": 369,
+      "sha256": "5049005dc6ae3ca5e82cc7d85c421357d5c543817300c8e8c5281ddbc69bb561"
+    },
+    "tokenizer/tokenizer.json": {
+      "size": 3583228,
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+    },
+    "tokenizer/tokenizer_config.json": {
+      "size": 308,
+      "sha256": "50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12"
+    }
+  }
+}

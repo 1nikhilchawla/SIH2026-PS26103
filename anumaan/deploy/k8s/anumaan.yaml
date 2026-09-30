@@ -1,0 +1,119 @@
+# ANUMAAN on Kubernetes (e.g. a MeghRaj-hosted cluster). Apply after creating
+# the secret:
+#   kubectl -n anumaan create secret generic anumaan-secrets \
+#     --from-literal=ANUMAAN_ADMIN_TOKEN=... --from-literal=ANUMAAN_INTEGRITY_KEY=... \
+#     --from-file=users.json=secrets/users.json
+#   kubectl apply -f deploy/k8s/anumaan.yaml
+# Image: build from the repository Dockerfile and push to the cluster's own
+# registry; set the image below to its digest (@sha256:...), not a tag.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: anumaan
+  labels:
+    pod-security.kubernetes.io/enforce: restricted
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: anumaan-audit
+  namespace: anumaan
+spec:
+  accessModes: ["ReadWriteOnce"]
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anumaan
+  namespace: anumaan
+spec:
+  replicas: 1          # rate limits and the auth cache are per process; see SECURITY.md
+  selector:
+    matchLabels: {app: anumaan}
+  template:
+    metadata:
+      labels: {app: anumaan}
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        fsGroup: 10001
+        seccompProfile: {type: RuntimeDefault}
+      containers:
+        - name: anumaan
+          image: REGISTRY/anumaan@sha256:REPLACE_WITH_DIGEST
+          ports: [{containerPort: 8000}]
+          env:
+            - {name: PORT, value: "8000"}
+            - {name: ANUMAAN_ALLOWED_HOSTS, value: "anumaan.example.gov.in"}
+            - {name: ANUMAAN_USERS_FILE, value: /run/secrets/anumaan/users.json}
+            - {name: ANUMAAN_AUDIT_FILE, value: /var/lib/anumaan/audit.jsonl}
+            - name: ANUMAAN_ADMIN_TOKEN
+              valueFrom: {secretKeyRef: {name: anumaan-secrets, key: ANUMAAN_ADMIN_TOKEN}}
+            - name: ANUMAAN_INTEGRITY_KEY
+              valueFrom: {secretKeyRef: {name: anumaan-secrets, key: ANUMAAN_INTEGRITY_KEY}}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: ["ALL"]}
+          resources:
+            requests: {cpu: "500m", memory: "512Mi"}
+            limits: {cpu: "2", memory: "1Gi"}
+          readinessProbe:
+            httpGet: {path: /api/health, port: 8000, httpHeaders: [{name: Host, value: "anumaan.example.gov.in"}]}
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: {path: /api/health, port: 8000, httpHeaders: [{name: Host, value: "anumaan.example.gov.in"}]}
+            initialDelaySeconds: 60
+            periodSeconds: 30
+          volumeMounts:
+            - {name: secrets, mountPath: /run/secrets/anumaan, readOnly: true}
+            - {name: audit, mountPath: /var/lib/anumaan}
+            - {name: tmp, mountPath: /tmp}
+            - {name: home, mountPath: /home/anumaan}
+      volumes:
+        - name: secrets
+          secret:
+            secretName: anumaan-secrets
+            items: [{key: users.json, path: users.json}]
+        - name: audit
+          persistentVolumeClaim: {claimName: anumaan-audit}
+        - name: tmp
+          emptyDir: {sizeLimit: 64Mi}
+        - name: home
+          emptyDir: {sizeLimit: 64Mi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: anumaan
+  namespace: anumaan
+spec:
+  selector: {app: anumaan}
+  ports: [{port: 80, targetPort: 8000}]
+---
+# Default-deny: the pod accepts traffic only from the ingress controller's
+# namespace and may open no outbound connections at all (DNS excepted).
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: anumaan-lockdown
+  namespace: anumaan
+spec:
+  podSelector: {matchLabels: {app: anumaan}}
+  policyTypes: ["Ingress", "Egress"]
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels: {kubernetes.io/metadata.name: ingress-nginx}
+      ports: [{port: 8000}]
+  egress:
+    - to:
+        - namespaceSelector: {}
+          podSelector: {matchLabels: {k8s-app: kube-dns}}
+      ports: [{port: 53, protocol: UDP}]

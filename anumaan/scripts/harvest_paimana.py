@@ -30,7 +30,7 @@ import sys
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from urllib.parse import unquote, urljoin
+from urllib.parse import unquote, urljoin, urlparse
 
 import requests
 
@@ -39,6 +39,18 @@ RAW = ROOT / "data" / "raw"
 UA = "ANUMAAN-SIH26103/0.1 (research; contact: nik@anumaan.example.in)"
 BASE = "https://paimana-proj.mospi.gov.in"
 DELAY = 2.0
+PORTAL_HOST = urlparse(BASE).hostname
+
+# The listing is data from a server, so everything taken from it is checked
+# before it touches the disk. A filename must be a plain PDF name - no path
+# separators, no leading dot, no "..". The largest report in the corpus is
+# well under this cap; anything bigger is refused, not streamed to disk.
+SAFE_FILENAME_RE = re.compile(r"^[A-Za-z0-9_][A-Za-z0-9_ ().-]{0,150}\.pdf$", re.IGNORECASE)
+MAX_PDF_BYTES = 64 * 1024 * 1024
+
+
+class UnsafeDownload(ValueError):
+    """Raised when the listing or the response is not something we will write."""
 
 LINK_RE = re.compile(
     r"ViewPdf\?id=(\d+)(?:&amp;)?&path=([^\"'<>]+)",
@@ -164,7 +176,12 @@ def download_one(rec: dict, dest_dir: Path, session: requests.Session) -> dict:
     Returns {report_id, path, full_url, status, sha256, bytes, error?}.
     Status values: ok, already_have, downloaded, invalid_pdf, http_error.
     """
-    out_path = dest_dir / Path(rec["path"]).name
+    name = Path(rec["path"]).name
+    if not SAFE_FILENAME_RE.fullmatch(name) or ".." in name:
+        raise UnsafeDownload(f"refusing unsafe filename from the listing: {name!r}")
+    out_path = dest_dir / name
+    if out_path.resolve().parent != dest_dir.resolve():
+        raise UnsafeDownload(f"refusing path outside {dest_dir}: {name!r}")
     if out_path.exists() and looks_like_pdf(out_path):
         return {"report_id": rec["report_id"], "path": rec["path"],
                 "filename": out_path.name, "url": rec["full_url"],
@@ -175,14 +192,28 @@ def download_one(rec: dict, dest_dir: Path, session: requests.Session) -> dict:
     r = session.get(rec["full_url"], timeout=180, stream=True,
                     headers={"User-Agent": UA})
     r.raise_for_status()
+    # A redirect is followed by requests; make sure it did not leave the
+    # portal or drop to plain HTTP before a single byte is written.
+    final = urlparse(r.url)
+    if final.scheme != "https" or final.hostname != PORTAL_HOST:
+        r.close()
+        raise UnsafeDownload(f"download redirected off the portal: {final.scheme}://{final.hostname}")
     cl = r.headers.get("Content-Length")
+    if cl is not None and (not cl.isdigit() or int(cl) > MAX_PDF_BYTES):
+        r.close()
+        raise UnsafeDownload(f"Content-Length {cl!r} is not a size we accept (cap {MAX_PDF_BYTES})")
     bytes_written = 0
     try:
         with open(part_path, "wb") as fh:
             for chunk in r.iter_content(chunk_size=65536):
                 if chunk:
-                    fh.write(chunk)
                     bytes_written += len(chunk)
+                    if bytes_written > MAX_PDF_BYTES:
+                        raise UnsafeDownload(f"body exceeded {MAX_PDF_BYTES} bytes")
+                    fh.write(chunk)
+    except UnsafeDownload:
+        part_path.unlink(missing_ok=True)
+        raise
     except requests.RequestException as exc:
         if part_path.exists():
             part_path.unlink()
@@ -190,6 +221,14 @@ def download_one(rec: dict, dest_dir: Path, session: requests.Session) -> dict:
                 "filename": out_path.name, "url": rec["full_url"],
                 "status": "http_error",
                 "error": repr(exc), "bytes": bytes_written}
+
+    if cl is not None and int(cl) != bytes_written:
+        part_path.unlink()
+        return {"report_id": rec["report_id"], "path": rec["path"],
+                "filename": out_path.name, "url": rec["full_url"],
+                "status": "invalid_pdf",
+                "error": f"truncated: Content-Length {cl}, received {bytes_written}",
+                "content_length": cl, "bytes": bytes_written}
 
     if not looks_like_pdf(part_path):
         part_path.unlink()
@@ -326,6 +365,8 @@ def main() -> int:
                 result = download_one(rec, RAW, session)
             except requests.RequestException as exc:
                 result = {"status": "http_error", "error": repr(exc)}
+            except UnsafeDownload as exc:
+                result = {"status": "refused", "error": str(exc)}
             if result["status"] == "already_have":
                 print(f"already have ({result['bytes']} bytes, sha256={result['sha256'][:12]}...)")
                 per_fy["already_have"] += 1

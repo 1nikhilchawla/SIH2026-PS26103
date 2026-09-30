@@ -74,6 +74,14 @@ results/reliability_lightgbm.png
 *.pdf
 *.xlsx
 
+# Secrets. Keys and passwords live in the deploy platform's secret store,
+# never in the repository - see SECURITY.md.
+.env
+.env.*
+*.key
+*.pem
+secrets/
+
 # Agent and assistant state
 .claude/
 .cursor/
@@ -92,3 +100,29 @@ results/reliability_lightgbm.png
 .idea/
 .DS_Store
 Thumbs.db
+
+# Laya sidecar: dependencies are restored from package-lock.json, and the
+# 1.7 GB model lives outside the repo (fetch-model.mjs, pinned by hash).
+laya-sidecar/node_modules/
+
+# Offline bundles are generated per ministry and carry project data.
+demo/offline/
+
+# Demo-video render scratch. The video, poster, plan and the scripts that
+# make them (brag-output/work/*.py, *.mjs, *.html) are kept; the 690 frames,
+# review stills, synthesised audio and the headless-Chrome profile regenerate.
+brag-output/work/frames/
+brag-output/work/stills/
+brag-output/work/chrome-profile/
+brag-output/work/*.wav
+
+# Runtime output. The hash-chained audit log (ANUMAAN_AUDIT_FILE) records who
+# viewed and exported what: it belongs on the server's volume, never in git.
+*.jsonl
+
+# Test coverage and packaging output
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/

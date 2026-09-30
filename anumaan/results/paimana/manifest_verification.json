@@ -20,6 +20,6 @@
  "era_column_note": "manifest 'era' is assigned by a filename/FY heuristic and is NOT verified against PDF content; parse_paimana.py detects era from the document itself",
  "failures": [],
  "ok": true,
- "generated_at": "2026-09-17T17:04:18+05:30",
+ "generated_at": "2026-09-28T08:45:32+05:30",
  "generated_by": "python scripts/verify_corpus.py"
 }

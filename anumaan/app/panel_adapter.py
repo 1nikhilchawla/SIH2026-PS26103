@@ -80,15 +80,38 @@ def _months_between(a, b):
     return (b.year - a.year) * 12 + (b.month - a.month)
 
 
+def _to_dates(out: pd.DataFrame, cols: tuple[str, ...]) -> None:
+    """Parse date columns in place, and fail if parsing turns any printed
+    value into NaT. errors="coerce" alone would hide a malformed or tampered
+    date as "missing"; the count makes that impossible to miss."""
+    for c in cols:
+        if c not in out.columns:
+            continue
+        raw = out[c]
+        parsed = pd.to_datetime(raw, errors="coerce")
+        lost = int((raw.notna() & parsed.isna()).sum())
+        if lost:
+            raise ValueError(f"{c}: {lost} non-empty value(s) are not dates")
+        out[c] = parsed
+
+
+def _display_path(path: Path) -> str:
+    """Path as shown to API clients: relative to the project, never the
+    absolute location on the host or in the container."""
+    root = Path(__file__).resolve().parents[1]
+    try:
+        return Path(path).resolve().relative_to(root).as_posix()
+    except ValueError:
+        return Path(path).name
+
+
 def is_real(df: pd.DataFrame) -> bool:
     return "report_month" in df.columns and "slip_next" in df.columns
 
 
 def _load_real(df: pd.DataFrame, path: Path) -> tuple[pd.DataFrame, PanelMeta]:
     out = df.copy()
-    for c in ("report_month", "original_doc", "target_doc", "approval_month"):
-        if c in out.columns:
-            out[c] = pd.to_datetime(out[c], errors="coerce")
+    _to_dates(out, ("report_month", "original_doc", "target_doc", "approval_month"))
     out["month"] = out["report_month"]
     out["stated_doc"] = out["target_doc"]
     out["target"] = out["slip_next"]
@@ -111,7 +134,7 @@ def _load_real(df: pd.DataFrame, path: Path) -> tuple[pd.DataFrame, PanelMeta]:
 
     meta = PanelMeta(
         data_source="paimana",
-        panel_file=str(path).replace("\\", "/").split("anumaan/")[-1],
+        panel_file=_display_path(path),
         target_name="slip_next",
         horizon_months=1,
         horizon_label="next monthly report",
@@ -138,9 +161,7 @@ def _load_real(df: pd.DataFrame, path: Path) -> tuple[pd.DataFrame, PanelMeta]:
 
 def _load_synth(df: pd.DataFrame, path: Path) -> tuple[pd.DataFrame, PanelMeta]:
     out = df.copy()
-    for c in ("month", "original_doc", "stated_doc", "approval_month"):
-        if c in out.columns:
-            out[c] = pd.to_datetime(out[c], errors="coerce")
+    _to_dates(out, ("month", "original_doc", "stated_doc", "approval_month"))
     out["target"] = out["slip_12m"]
     out = out.sort_values(["entity_id", "month"]).reset_index(drop=True)
 
@@ -156,7 +177,7 @@ def _load_synth(df: pd.DataFrame, path: Path) -> tuple[pd.DataFrame, PanelMeta]:
     months = sorted(out["month"].dropna().dt.strftime("%Y-%m").unique())
     meta = PanelMeta(
         data_source="synthetic",
-        panel_file=str(path).replace("\\", "/").split("anumaan/")[-1],
+        panel_file=_display_path(path),
         target_name="slip_12m",
         horizon_months=12,
         horizon_label="next 12 months",

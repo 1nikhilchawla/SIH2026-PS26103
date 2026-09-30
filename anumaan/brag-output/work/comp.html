@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ANUMAAN launch video</title>
+<style>
+  /* ANUMAAN's own palette and type, copied from app/static/index.html */
+  :root {
+    --navy:#1f3864; --blue:#0f62a8; --orange:#e87722; --green:#1e7a46; --red:#b3261e;
+    --ink:#1a1a1a; --mute:#5b6575; --line:#dde4ee; --card:#f4f7fb;
+  }
+  * { box-sizing:border-box; }
+  html, body { margin:0; width:1920px; height:1080px; overflow:hidden; background:#fff; }
+  body { font-family:Calibri,"Segoe UI",system-ui,sans-serif; color:var(--ink); }
+  .scene { position:absolute; inset:0; overflow:hidden; }
+  .navybg { background:radial-gradient(1400px 900px at 30% 20%, #274a82 0%, var(--navy) 55%, #172b4f 100%); color:#fff; }
+  .whitebg { background:#fff; }
+  .abs { position:absolute; will-change:transform,opacity; }
+
+  /* ---------- date card (S1, S6) ---------- */
+  .datecard { width:600px; height:400px; border-radius:28px; background:#fff; overflow:hidden;
+              box-shadow:0 30px 80px rgba(20,35,70,.22), 0 2px 0 rgba(0,0,0,.04); border:1px solid var(--line); }
+  .datecard .top { height:92px; background:var(--navy); color:#dbe6f6; display:flex; align-items:center;
+                   justify-content:center; font-size:30px; letter-spacing:.18em; font-weight:700; }
+  .datecard .win { position:absolute; top:92px; left:0; right:0; height:220px; overflow:hidden; }
+  .datecard .mo { position:absolute; left:0; right:0; top:40px; text-align:center; font-size:132px; font-weight:700; color:var(--navy); line-height:1; }
+  .datecard .rep { position:absolute; left:0; right:0; bottom:34px; text-align:center; font-size:30px; color:var(--mute); }
+  .badge { background:var(--orange); color:#fff; font-weight:700; border-radius:40px; padding:10px 26px; font-size:34px; }
+
+  /* ---------- S1 ---------- */
+  #s1 .eyebrow { left:140px; top:150px; font-size:30px; color:var(--mute); letter-spacing:.14em; font-weight:700; }
+  #s1 .title { left:136px; top:205px; font-size:112px; font-weight:700; color:var(--navy); line-height:1.02; }
+  #s1 .place { left:142px; top:335px; font-size:36px; color:var(--mute); }
+  #s1 .fact { left:140px; font-size:60px; color:var(--ink); }
+  #s1 .fact b { font-weight:700; }
+  #s1 .f1 { top:440px; } #s1 .f2 { top:530px; }
+  #s1 .caption { left:140px; top:860px; font-size:60px; font-weight:700; color:var(--ink); }
+  #s1 .caption em { font-style:normal; color:var(--orange); }
+  #s1 .card1 { left:1200px; top:390px; }
+  #s1 .plus { left:1660px; top:356px; }
+
+  /* ---------- S2 ---------- */
+  #s2 .word { left:0; right:0; top:300px; text-align:center; font-size:230px; font-weight:700; letter-spacing:.08em; line-height:1; }
+  #s2 .deva { left:0; right:0; top:560px; text-align:center; font-size:48px; color:#aac4ea; font-family:"Nirmala UI",Calibri,sans-serif; }
+  #s2 .tag { left:0; right:0; top:660px; text-align:center; font-size:66px; font-weight:700; }
+  #s2 .tag em { font-style:normal; color:#ffb070; }
+  #s2 .foot { left:0; right:0; top:800px; text-align:center; font-size:32px; color:#aac4ea; }
+
+  /* ---------- S3: the real alerts screen, scaled ---------- */
+  #s3 .cam { position:absolute; left:0; top:0; width:1920px; height:1080px; transform-origin:50% 0; }
+  .app { position:absolute; left:60px; top:10px; width:1200px; height:675px; transform:scale(1.5); transform-origin:0 0; font-size:14px; line-height:1.45; }
+  .app header { padding:14px 20px 0 20px; }
+  .app h1 { margin:0 0 2px 0; font-size:22px; color:var(--navy); }
+  .app .sub { color:var(--mute); font-size:13px; }
+  .app .banner { margin:12px 20px; padding:10px 14px; border-radius:8px; font-size:13px; background:#f0f9f3; border-left:6px solid var(--green); }
+  .app nav { display:flex; gap:6px; padding:0 20px; border-bottom:2px solid var(--line); }
+  .app nav span { padding:10px 14px; color:var(--mute); border-bottom:3px solid transparent; }
+  .app nav span.on { color:var(--navy); font-weight:700; border-bottom-color:var(--blue); }
+  .app .body { padding:14px 20px; }
+  .app table { border-collapse:collapse; width:100%; font-size:13px; }
+  .app th, .app td { text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); }
+  .app th { background:var(--card); color:var(--navy); }
+  .app td .muted { color:var(--mute); font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:360px; }
+  .pill { display:inline-block; padding:1px 8px; border-radius:10px; font-weight:700; color:#fff; }
+  .hi { background:var(--red); } .mid { background:var(--orange); } .lo { background:var(--green); }
+  .app tr.hl td { background:#fff6ea; } .app tr.hl td:first-child { box-shadow:inset 4px 0 0 var(--orange); }
+  #s3 .callout { left:96px; top:800px; background:var(--navy); color:#fff; border-radius:22px; padding:26px 36px;
+                 font-size:46px; font-weight:700; box-shadow:0 20px 60px rgba(20,35,70,.35); }
+  #s3 .callout small { display:block; font-size:30px; font-weight:400; color:#dbe6f6; margin-top:6px; }
+  #s3 .stamp { left:960px; top:822px; border:8px solid var(--green); color:var(--green); background:rgba(255,255,255,.96);
+               border-radius:18px; padding:14px 34px; font-size:54px; font-weight:700; letter-spacing:.01em; }
+
+  /* ---------- S4 ---------- */
+  #s4 .count { left:0; right:0; top:170px; text-align:center; font-size:300px; font-weight:700; line-height:1; }
+  #s4 .count span { color:#8fb2e3; font-size:150px; }
+  #s4 .line { left:0; right:0; top:500px; text-align:center; font-size:64px; font-weight:700; }
+  #s4 .bars { left:460px; top:640px; width:1000px; }
+  .bar { position:relative; height:74px; margin-bottom:26px; }
+  .bar .fill { position:absolute; left:0; top:0; bottom:0; border-radius:12px; }
+  .bar .lab { position:absolute; left:24px; top:0; bottom:0; display:flex; align-items:center; font-size:36px; font-weight:700; color:#fff; white-space:nowrap; }
+  #s4 .foot { left:0; right:0; top:935px; text-align:center; font-size:30px; color:#aac4ea; }
+
+  /* ---------- S5 ---------- */
+  #s5 .title { left:0; right:0; top:150px; text-align:center; font-size:84px; font-weight:700; color:var(--navy); }
+  .gcard { top:360px; width:500px; height:440px; background:var(--card); border:1px solid var(--line); border-radius:28px; padding:48px 44px; }
+  .gcard .ic { width:110px; height:110px; border-radius:26px; display:flex; align-items:center; justify-content:center; margin-bottom:34px; }
+  .gcard h3 { margin:0 0 16px 0; font-size:56px; color:var(--navy); line-height:1.05; }
+  .gcard p { margin:0; font-size:38px; color:var(--mute); line-height:1.25; }
+  #s5 .c1 { left:170px; } #s5 .c2 { left:710px; } #s5 .c3 { left:1250px; }
+
+  /* ---------- S6 ---------- */
+  #s6 .card6 { left:660px; top:190px; }
+  #s6 .punch { left:0; right:0; top:680px; text-align:center; font-size:84px; font-weight:700; }
+  #s6 .punch em { font-style:normal; color:#ffb070; }
+  #s6 .word { left:0; right:0; top:285px; text-align:center; font-size:210px; font-weight:700; letter-spacing:.08em; line-height:1; }
+  #s6 .tag { left:0; right:0; top:545px; text-align:center; font-size:70px; font-weight:700; }
+  #s6 .tag em { font-style:normal; color:#ffb070; }
+  #s6 .team { left:0; right:0; top:760px; text-align:center; font-size:38px; color:#dbe6f6; }
+  #s6 .url { left:0; right:0; top:820px; text-align:center; font-size:34px; color:#8fb2e3; }
+</style>
+</head>
+<body>
+
+<!-- S1 - hook -->
+<div class="scene whitebg" id="s1">
+  <div class="abs eyebrow">MoSPI FLASH REPORTS · PAIMANA</div>
+  <div class="abs title" id="s1title"></div>
+  <div class="abs place" id="s1place"></div>
+  <div class="abs fact f1" id="s1f1"></div>
+  <div class="abs fact f2" id="s1f2"></div>
+  <div class="abs card1" id="s1card"></div>
+  <div class="abs plus badge" id="s1plus">+1 month</div>
+  <div class="abs caption" id="s1cap">Every report since March: done <em>next month.</em></div>
+</div>
+
+<!-- S2 - reveal -->
+<div class="scene navybg" id="s2">
+  <div class="abs word" id="s2word">ANUMAAN</div>
+  <div class="abs deva" id="s2deva">अनुमान &nbsp;·&nbsp; estimate</div>
+  <div class="abs tag" id="s2tag">Predicts which completion dates <em>slip next.</em></div>
+  <div class="abs foot" id="s2foot"></div>
+</div>
+
+<!-- S3 - the product in use -->
+<div class="scene whitebg" id="s3">
+  <div class="cam" id="s3cam">
+    <div class="app">
+      <header>
+        <h1>ANUMAAN — auditing the stated completion date</h1>
+        <div class="sub">Project Risk Score · Early Warning Alerts · Benchmarking · Prescriptive Decision Support — SIH26103</div>
+      </header>
+      <div class="banner" id="s3banner"></div>
+      <nav><span class="on">Early Warning Alerts</span><span>Project Audit</span><span>Model Honesty</span><span>Data Pipeline</span><span>Benchmark vs Alternatives</span><span>Offline</span></nav>
+      <div class="body">
+        <table><thead><tr><th>Project</th><th>Ministry</th><th>Original DoC</th><th>Stated DoC</th><th>Drift</th><th>Risk score</th></tr></thead>
+        <tbody id="s3rows"></tbody></table>
+      </div>
+    </div>
+  </div>
+  <div class="abs callout" id="s3call"></div>
+  <div class="abs stamp" id="s3stamp"></div>
+</div>
+
+<!-- S4 - proof -->
+<div class="scene navybg" id="s4">
+  <div class="abs count" id="s4count"></div>
+  <div class="abs line" id="s4line"></div>
+  <div class="abs bars" id="s4bars">
+    <div class="bar" id="b1"><div class="fill" style="background:var(--orange)"></div><div class="lab"></div></div>
+    <div class="bar" id="b2"><div class="fill" style="background:#5b6f92"></div><div class="lab"></div></div>
+  </div>
+  <div class="abs foot" id="s4foot"></div>
+</div>
+
+<!-- S5 - built for government -->
+<div class="scene whitebg" id="s5">
+  <div class="abs title" id="s5title">Built for government use</div>
+  <div class="abs gcard c1" id="c1">
+    <div class="ic" style="background:#e6f2ea"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#1e7a46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg></div>
+    <h3>Works offline</h3><p id="c1p"></p></div>
+  <div class="abs gcard c2" id="c2">
+    <div class="ic" style="background:#e5eef9"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#0f62a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+    <h3>Ministry-scoped</h3><p>Each ministry sees only its own projects</p></div>
+  <div class="abs gcard c3" id="c3">
+    <div class="ic" style="background:#fdeedf"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#e87722" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <h3>Stays in India</h3><p>No foreign AI APIs</p></div>
+</div>
+
+<!-- S6 - punchline + outro -->
+<div class="scene navybg" id="s6">
+  <div class="abs card6" id="s6card"></div>
+  <div class="abs punch" id="s6punch"></div>
+  <div class="abs word" id="s6word">ANUMAAN</div>
+  <div class="abs tag" id="s6tag">Audit the <em>stated completion date.</em></div>
+  <div class="abs team" id="s6team">SIH 2026 · PS SIH26103 · The Raftaar Titans</div>
+  <div class="abs url" id="s6url">github.com/1nikhilchawla/SIH2026-PS26103</div>
+</div>
+
+<script src="data.js"></script>
+<script>
+const D = window.DATA, H = D.hook;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmtInt = n => Number(n).toLocaleString("en-IN");
+
+// ---------- timeline (seconds; every cut sits on a beat at 120 BPM) ----------
+const T = { s1:[0,4], s2:[4,7], s3:[7,11.5], s4:[11.5,15], s5:[15,18.5], s6:[18.5,23] };
+const DURATION = 23;
+const FLIPS = [0.35, 1.0, 1.6, 2.2, 2.8];          // S1 date-card flips, one per report
+const OUTRO = 20.5;                                  // S6: punchline -> wordmark
+
+// ---------- content (all values from data.js) ----------
+$("s1title").textContent = H.short;
+$("s1place").textContent = `${H.state} · ${H.agency}`;
+$("s1f1").innerHTML = `Promised: <b style="color:var(--orange)">${esc(H.original)}</b>`;
+$("s1f2").innerHTML = `Built: <b style="color:var(--green)">${Math.round(H.built_pct)}%</b>`;
+$("s2foot").textContent = `Learned from ${D.n_reports} monthly Flash Reports · ${fmtInt(D.n_projects_panel)} projects · ${fmtInt(D.n_rows)} project-months`;
+$("s3banner").innerHTML = `<b>PAIMANA DATA</b> — parsed from MoSPI Flash Reports · ${D.n_projects_panel} projects × ${D.n_reports} months · walk-forward cutoff ${D.cutoff} · forecast horizon: next monthly report`;
+const pill = p => `<span class="pill ${p >= 0.5 ? "hi" : p >= 0.25 ? "mid" : "lo"}">${p.toFixed(2)}</span>`;
+$("s3rows").innerHTML = D.table.map((a, i) => `<tr id="r${i}"><td><b>${esc(a.id)}</b><div class="muted">${esc(a.name)}</div></td>
+  <td>${esc(a.ministry)}</td><td>${a.original}</td><td>${a.stated}</td><td>${a.drift} mo</td><td>${pill(a.p)}</td></tr>`).join("");
+$("s3call").innerHTML = `Flagged in ${esc(D.june)}: ${H.june_p.toFixed(2)}<small>#${H.june_rank} of ${fmtInt(H.june_of)} projects that month</small>`;
+$("s3stamp").textContent = `✓ July report: moved to ${H.july_stated}`;
+const topPct = Math.round(100 * D.top_moved / D.top_n), basePct = Math.round(100 * D.base_rate);
+$("s4line").textContent = `of its top ${D.top_n} June flags slipped in July`;
+$("s4foot").textContent = `Held-out month · walk-forward validation · no random split · PR-AUC ${D.pr_auc.toFixed(2)}`;
+$("c1p").textContent = `${D.snapshot_kb} KB for all ${fmtInt(D.n_projects_live)} projects`;
+$("s6punch").innerHTML = `Next report? <em>${Math.round(H.live_p * 100)}%</em> it moves again.`;
+
+function dateCard(id) {
+  $(id).innerHTML = `<div class="datecard" style="position:relative">
+    <div class="top">STATED COMPLETION</div>
+    <div class="win"><div class="mo" data-k="a"></div><div class="mo" data-k="b"></div></div>
+    <div class="rep"></div></div>`;
+  return { a:$(id).querySelector('[data-k="a"]'), b:$(id).querySelector('[data-k="b"]'), rep:$(id).querySelector(".rep") };
+}
+const C1 = dateCard("s1card"), C6 = dateCard("s6card");
+C6.a.textContent = H.stated_seq[H.stated_seq.length - 1];
+C6.rep.textContent = `in the ${H.report_seq[H.report_seq.length - 1]} report`;
+C6.b.style.opacity = 0;
+
+// ---------- easing ----------
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (t, s, d) => clamp((t - s) / d);
+const eo = x => 1 - Math.pow(1 - clamp(x), 3);
+const eio = x => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const back = x => { x = clamp(x); const c1 = 1.4, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+
+// in: fade + rise; out: fade + small rise. Writes style only.
+function show(el, t, start, o = {}) {
+  const { dur = .45, dy = 36, dx = 0, s0 = 1, out = null, outDur = .22, ease = eo } = o;
+  const p = ease(prog(t, start, dur));
+  let op = clamp(p), y = (1 - p) * dy, x = (1 - p) * dx, sc = s0 + (1 - s0) * p;
+  if (out !== null) { const q = eio(prog(t, out, outDur)); op *= 1 - q; y -= q * 24; }
+  el.style.opacity = op;
+  el.style.transform = `translate(${x}px,${y}px) scale(${sc})`;
+}
+
+// the incoming scene wipes over the (already emptied) outgoing one
+function sceneVis(id, t, [a, b], dir) {
+  const el = $(id), w0 = a - .2, wd = .42;
+  const visible = a === 0 ? t < b + .3 : (t >= w0 && t < b + .3);
+  el.style.display = visible ? "block" : "none";
+  if (!visible) return;
+  const r = 100 - eio(prog(t, w0, wd)) * 100;
+  el.style.clipPath = a === 0 ? "none" :
+    dir === "up" ? `inset(${r}% 0 0 0)` : dir === "left" ? `inset(0 0 0 ${r}%)` : `inset(0 ${r}% 0 0)`;
+  el.style.zIndex = Math.round(a * 10);
+}
+
+function flipCard(c, t, seq, reps, flips) {
+  let i = -1; for (let k = 0; k < flips.length; k++) if (t >= flips[k]) i = k;
+  if (i < 0) { c.a.style.opacity = 0; c.b.style.opacity = 0; c.rep.textContent = ""; return; }
+  const p = eo(prog(t, flips[i], .26));
+  c.a.textContent = seq[i]; c.a.style.opacity = p; c.a.style.transform = `translateY(${(1 - p) * 90}px)`;
+  if (i > 0) { c.b.textContent = seq[i - 1]; c.b.style.opacity = 1 - p; c.b.style.transform = `translateY(${-p * 90}px)`; }
+  else c.b.style.opacity = 0;
+  c.rep.textContent = `in the ${reps[i]} report`;
+}
+
+// ---------- one frame ----------
+window.renderAt = function (t) {
+  sceneVis("s1", t, T.s1); sceneVis("s2", t, T.s2, "up"); sceneVis("s3", t, T.s3, "right");
+  sceneVis("s4", t, T.s4, "up"); sceneVis("s5", t, T.s5, "left"); sceneVis("s6", t, T.s6, "up");
+
+  // S1 hook
+  if (t < 4.3) {
+    const out = T.s1[1] - .45;
+    show(document.querySelector("#s1 .eyebrow"), t, 0.0, { dur: .35, dy: 14, out });
+    show($("s1title"), t, 0.05, { dur: .45, dy: 50, out });
+    show($("s1place"), t, 0.25, { dur: .4, dy: 20, out });
+    show($("s1f1"), t, 0.55, { dur: .4, dx: -40, dy: 0, out });
+    show($("s1f2"), t, 0.85, { dur: .4, dx: -40, dy: 0, out });
+    show($("s1card"), t, 0.15, { dur: .5, dy: 60, s0: .94, out });
+    flipCard(C1, t, H.stated_seq, H.report_seq, FLIPS);
+    // "+1 month" pops on every flip after the first
+    let k = -1; for (let j = 1; j < FLIPS.length; j++) if (t >= FLIPS[j]) k = j;
+    const bp = k < 0 ? 0 : prog(t, FLIPS[k], .5);
+    const pl = $("s1plus");
+    pl.style.opacity = k < 0 || t > out + .1 ? 0 : (bp < .8 ? 1 : 1 - (bp - .8) / .2);
+    pl.style.transform = `translateY(${-bp * 26}px) scale(${.7 + .3 * back(bp * 2)})`;
+    show($("s1cap"), t, 1.55, { dur: .45, dy: 30, out });
+  }
+
+  // S2 reveal
+  if (t > 3.7 && t < 7.3) {
+    const out = T.s2[1] - .35;
+    show($("s2word"), t, 4.08, { dur: .6, dy: 0, s0: 1.12, out });
+    show($("s2deva"), t, 4.35, { dur: .4, dy: 16, out });
+    show($("s2tag"), t, 4.55, { dur: .45, dy: 30, out });
+    show($("s2foot"), t, 5.05, { dur: .45, dy: 16, out });
+  }
+
+  // S3 the app in use
+  if (t > 6.7 && t < 11.8) {
+    D.table.forEach((_, i) => {
+      const r = $("r" + i), p = eo(prog(t, 7.2 + i * .11, .35));
+      r.style.opacity = p; r.style.transform = `translateX(${(1 - p) * 40}px)`;
+      r.className = i === 0 && t >= 8.35 ? "hl" : "";
+    });
+    // camera: gentle push towards the top row
+    const z = eio(prog(t, 8.2, 1.6));
+    $("s3cam").style.transform = `scale(${1 + z * .025})`;
+    const out = T.s3[1] - .35;
+    show($("s3call"), t, 8.45, { dur: .45, dy: 30, s0: .9, ease: back, out });
+    const sp = prog(t, 9.3, .28);
+    const st = $("s3stamp");
+    st.style.opacity = sp > 0 ? (t > out ? 1 - eio(prog(t, out, .22)) : 1) : 0;
+    st.style.transform = `rotate(-3deg) scale(${1.45 - .45 * eo(sp)})`;
+  }
+
+  // S4 proof
+  if (t > 11.2 && t < 15.3) {
+    const out = T.s4[1] - .35;
+    const n = Math.round(D.top_moved * eo(prog(t, 11.75, 1.0)));
+    $("s4count").innerHTML = `${n}<span> / ${D.top_n}</span>`;
+    show($("s4count"), t, 11.65, { dur: .4, dy: 30, out });
+    show($("s4line"), t, 12.05, { dur: .45, dy: 26, out });
+    const bars = [["b1", topPct, `ANUMAAN's top flags: ${topPct}% slipped`], ["b2", basePct, `All projects: ${basePct}%`]];
+    bars.forEach(([id, pct, lab], i) => {
+      const s = 12.6 + i * .3, p = eo(prog(t, s, .7));
+      const b = $(id); show(b, t, s, { dur: .3, dy: 16, out });
+      b.querySelector(".fill").style.width = `${Math.max(pct, 30) * p}%`;
+      b.querySelector(".lab").textContent = lab;
+      b.querySelector(".lab").style.opacity = clamp((p - .4) / .4);
+    });
+    show($("s4foot"), t, 13.2, { dur: .4, dy: 14, out });
+  }
+
+  // S5 government
+  if (t > 14.7 && t < 18.8) {
+    const out = T.s5[1] - .35;
+    show($("s5title"), t, 15.1, { dur: .45, dy: 30, out });
+    ["c1", "c2", "c3"].forEach((id, i) => show($(id), t, 15.45 + i * .45, { dur: .5, dy: 70, s0: .96, ease: back, out }));
+  }
+
+  // S6 punchline -> outro
+  if (t > 18.2) {
+    const out = OUTRO - .3;
+    show($("s6card"), t, 18.6, { dur: .5, dy: 50, s0: .94, out });
+    show($("s6punch"), t, 18.95, { dur: .45, dy: 30, out });
+    show($("s6word"), t, OUTRO + .05, { dur: .6, dy: 0, s0: 1.1 });
+    show($("s6tag"), t, OUTRO + .4, { dur: .45, dy: 26 });
+    show($("s6team"), t, OUTRO + .75, { dur: .4, dy: 16 });
+    show($("s6url"), t, OUTRO + .9, { dur: .4, dy: 16 });
+  }
+};
+
+window.DURATION = DURATION;
+window.READY = document.fonts.ready.then(() => { window.renderAt(0); return true; });
+</script>
+</body>
+</html>

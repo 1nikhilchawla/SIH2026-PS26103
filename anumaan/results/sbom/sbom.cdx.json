@@ -1,0 +1,1306 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.6",
+ "serialNumber": "urn:uuid:75ca6a87-0293-4c28-9949-ff28e197861b",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-09-30T01:40:42+00:00",
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "scripts/make_sbom.py"
+    }
+   ]
+  },
+  "component": {
+   "type": "application",
+   "name": "anumaan",
+   "bom-ref": "anumaan"
+  }
+ },
+ "components": [
+  {
+   "type": "library",
+   "name": "annotated-doc",
+   "version": "0.0.5",
+   "purl": "pkg:pypi/annotated-doc@0.0.5",
+   "bom-ref": "pypi:annotated-doc@0.0.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "annotated-types",
+   "version": "0.8.0",
+   "purl": "pkg:pypi/annotated-types@0.8.0",
+   "bom-ref": "pypi:annotated-types@0.8.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "anyio",
+   "version": "4.15.1",
+   "purl": "pkg:pypi/anyio@4.15.1",
+   "bom-ref": "pypi:anyio@4.15.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "autograd",
+   "version": "1.9.1",
+   "purl": "pkg:pypi/autograd@1.9.1",
+   "bom-ref": "pypi:autograd@1.9.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "autograd-gamma",
+   "version": "0.4.2",
+   "purl": "pkg:pypi/autograd-gamma@0.4.2",
+   "bom-ref": "pypi:autograd-gamma@0.4.2",
+   "licenses": [
+    {
+     "license": {
+      "name": "UNKNOWN"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "beautifulsoup4",
+   "version": "4.15.0",
+   "purl": "pkg:pypi/beautifulsoup4@4.15.0",
+   "bom-ref": "pypi:beautifulsoup4@4.15.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "certifi",
+   "version": "2026.7.22",
+   "purl": "pkg:pypi/certifi@2026.7.22",
+   "bom-ref": "pypi:certifi@2026.7.22",
+   "licenses": [
+    {
+     "license": {
+      "name": "MPL-2.0"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "cffi",
+   "version": "2.1.1",
+   "purl": "pkg:pypi/cffi@2.1.1",
+   "bom-ref": "pypi:cffi@2.1.1",
+   "licenses": [
+    {
+     "expression": "MIT-0"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "charset-normalizer",
+   "version": "3.5.1",
+   "purl": "pkg:pypi/charset-normalizer@3.5.1",
+   "bom-ref": "pypi:charset-normalizer@3.5.1",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "click",
+   "version": "8.5.0",
+   "purl": "pkg:pypi/click@8.5.0",
+   "bom-ref": "pypi:click@8.5.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "cloudpickle",
+   "version": "3.1.2",
+   "purl": "pkg:pypi/cloudpickle@3.1.2",
+   "bom-ref": "pypi:cloudpickle@3.1.2",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD-3-Clause"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "colorama",
+   "version": "0.4.6",
+   "purl": "pkg:pypi/colorama@0.4.6",
+   "bom-ref": "pypi:colorama@0.4.6",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "contourpy",
+   "version": "1.4.0",
+   "purl": "pkg:pypi/contourpy@1.4.0",
+   "bom-ref": "pypi:contourpy@1.4.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "cryptography",
+   "version": "50.0.1",
+   "purl": "pkg:pypi/cryptography@50.0.1",
+   "bom-ref": "pypi:cryptography@50.0.1",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "cycler",
+   "version": "0.12.1",
+   "purl": "pkg:pypi/cycler@0.12.1",
+   "bom-ref": "pypi:cycler@0.12.1",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "fastapi",
+   "version": "0.141.1",
+   "purl": "pkg:pypi/fastapi@0.141.1",
+   "bom-ref": "pypi:fastapi@0.141.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "fonttools",
+   "version": "4.65.0",
+   "purl": "pkg:pypi/fonttools@4.65.0",
+   "bom-ref": "pypi:fonttools@4.65.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "formulaic",
+   "version": "1.2.2",
+   "purl": "pkg:pypi/formulaic@1.2.2",
+   "bom-ref": "pypi:formulaic@1.2.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "h11",
+   "version": "0.16.0",
+   "purl": "pkg:pypi/h11@0.16.0",
+   "bom-ref": "pypi:h11@0.16.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "httpcore",
+   "version": "1.0.9",
+   "purl": "pkg:pypi/httpcore@1.0.9",
+   "bom-ref": "pypi:httpcore@1.0.9",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "httpx",
+   "version": "0.28.1",
+   "purl": "pkg:pypi/httpx@0.28.1",
+   "bom-ref": "pypi:httpx@0.28.1",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD-3-Clause"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "idna",
+   "version": "3.19",
+   "purl": "pkg:pypi/idna@3.19",
+   "bom-ref": "pypi:idna@3.19",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "iniconfig",
+   "version": "2.3.0",
+   "purl": "pkg:pypi/iniconfig@2.3.0",
+   "bom-ref": "pypi:iniconfig@2.3.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "interface_meta",
+   "version": "2.0.1",
+   "purl": "pkg:pypi/interface-meta@2.0.1",
+   "bom-ref": "pypi:interface_meta@2.0.1",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "joblib",
+   "version": "1.6.0",
+   "purl": "pkg:pypi/joblib@1.6.0",
+   "bom-ref": "pypi:joblib@1.6.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "kiwisolver",
+   "version": "1.5.1",
+   "purl": "pkg:pypi/kiwisolver@1.5.1",
+   "bom-ref": "pypi:kiwisolver@1.5.1",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "lifelines",
+   "version": "0.30.3",
+   "purl": "pkg:pypi/lifelines@0.30.3",
+   "bom-ref": "pypi:lifelines@0.30.3",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "lightgbm",
+   "version": "4.7.0",
+   "purl": "pkg:pypi/lightgbm@4.7.0",
+   "bom-ref": "pypi:lightgbm@4.7.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "llvmlite",
+   "version": "0.49.0",
+   "purl": "pkg:pypi/llvmlite@0.49.0",
+   "bom-ref": "pypi:llvmlite@0.49.0",
+   "licenses": [
+    {
+     "expression": "BSD-2-Clause AND Apache-2.0 WITH LLVM-exception"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "MAPIE",
+   "version": "1.5.0",
+   "purl": "pkg:pypi/mapie@1.5.0",
+   "bom-ref": "pypi:mapie@1.5.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "matplotlib",
+   "version": "3.11.2",
+   "purl": "pkg:pypi/matplotlib@3.11.2",
+   "bom-ref": "pypi:matplotlib@3.11.2",
+   "licenses": [
+    {
+     "license": {
+      "name": "Python Software Foundation License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "mypy_extensions",
+   "version": "1.1.0",
+   "purl": "pkg:pypi/mypy-extensions@1.1.0",
+   "bom-ref": "pypi:mypy_extensions@1.1.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "narwhals",
+   "version": "2.26.0",
+   "purl": "pkg:pypi/narwhals@2.26.0",
+   "bom-ref": "pypi:narwhals@2.26.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "numba",
+   "version": "0.67.0",
+   "purl": "pkg:pypi/numba@0.67.0",
+   "bom-ref": "pypi:numba@0.67.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "numpy",
+   "version": "2.5.3",
+   "purl": "pkg:pypi/numpy@2.5.3",
+   "bom-ref": "pypi:numpy@2.5.3",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "packaging",
+   "version": "26.3",
+   "purl": "pkg:pypi/packaging@26.3",
+   "bom-ref": "pypi:packaging@26.3",
+   "licenses": [
+    {
+     "expression": "Apache-2.0 OR BSD-2-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pandas",
+   "version": "2.3.3",
+   "purl": "pkg:pypi/pandas@2.3.3",
+   "bom-ref": "pypi:pandas@2.3.3",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pandera",
+   "version": "0.33.1",
+   "purl": "pkg:pypi/pandera@0.33.1",
+   "bom-ref": "pypi:pandera@0.33.1",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pdfminer.six",
+   "version": "20260107",
+   "purl": "pkg:pypi/pdfminer.six@20260107",
+   "bom-ref": "pypi:pdfminer.six@20260107",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pdfplumber",
+   "version": "0.11.10",
+   "purl": "pkg:pypi/pdfplumber@0.11.10",
+   "bom-ref": "pypi:pdfplumber@0.11.10",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pillow",
+   "version": "12.3.0",
+   "purl": "pkg:pypi/pillow@12.3.0",
+   "bom-ref": "pypi:pillow@12.3.0",
+   "licenses": [
+    {
+     "expression": "MIT-CMU"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pip",
+   "version": "26.2.1",
+   "purl": "pkg:pypi/pip@26.2.1",
+   "bom-ref": "pypi:pip@26.2.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pluggy",
+   "version": "1.6.0",
+   "purl": "pkg:pypi/pluggy@1.6.0",
+   "bom-ref": "pypi:pluggy@1.6.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pycparser",
+   "version": "3.0",
+   "purl": "pkg:pypi/pycparser@3.0",
+   "bom-ref": "pypi:pycparser@3.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pydantic",
+   "version": "2.13.5",
+   "purl": "pkg:pypi/pydantic@2.13.5",
+   "bom-ref": "pypi:pydantic@2.13.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pydantic_core",
+   "version": "2.46.5",
+   "purl": "pkg:pypi/pydantic-core@2.46.5",
+   "bom-ref": "pypi:pydantic_core@2.46.5",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "Pygments",
+   "version": "2.21.0",
+   "purl": "pkg:pypi/pygments@2.21.0",
+   "bom-ref": "pypi:pygments@2.21.0",
+   "licenses": [
+    {
+     "expression": "BSD-2-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pyparsing",
+   "version": "3.3.2",
+   "purl": "pkg:pypi/pyparsing@3.3.2",
+   "bom-ref": "pypi:pyparsing@3.3.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pypdfium2",
+   "version": "5.13.0",
+   "purl": "pkg:pypi/pypdfium2@5.13.0",
+   "bom-ref": "pypi:pypdfium2@5.13.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD-3-Clause, Apache-2.0, dependency licenses"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pytest",
+   "version": "9.1.1",
+   "purl": "pkg:pypi/pytest@9.1.1",
+   "bom-ref": "pypi:pytest@9.1.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "python-dateutil",
+   "version": "2.9.0.post0",
+   "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+   "bom-ref": "pypi:python-dateutil@2.9.0.post0",
+   "licenses": [
+    {
+     "license": {
+      "name": "Dual License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "pytz",
+   "version": "2026.3.post1",
+   "purl": "pkg:pypi/pytz@2026.3.post1",
+   "bom-ref": "pypi:pytz@2026.3.post1",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "PyYAML",
+   "version": "6.0.3",
+   "purl": "pkg:pypi/pyyaml@6.0.3",
+   "bom-ref": "pypi:pyyaml@6.0.3",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "RapidFuzz",
+   "version": "3.14.6",
+   "purl": "pkg:pypi/rapidfuzz@3.14.6",
+   "bom-ref": "pypi:rapidfuzz@3.14.6",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "requests",
+   "version": "2.34.2",
+   "purl": "pkg:pypi/requests@2.34.2",
+   "bom-ref": "pypi:requests@2.34.2",
+   "licenses": [
+    {
+     "license": {
+      "name": "Apache-2.0"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "scikit-learn",
+   "version": "1.9.1",
+   "purl": "pkg:pypi/scikit-learn@1.9.1",
+   "bom-ref": "pypi:scikit-learn@1.9.1",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "scipy",
+   "version": "1.18.1",
+   "purl": "pkg:pypi/scipy@1.18.1",
+   "bom-ref": "pypi:scipy@1.18.1",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "shap",
+   "version": "0.52.0",
+   "purl": "pkg:pypi/shap@0.52.0",
+   "bom-ref": "pypi:shap@0.52.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "six",
+   "version": "1.17.0",
+   "purl": "pkg:pypi/six@1.17.0",
+   "bom-ref": "pypi:six@1.17.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "slicer",
+   "version": "0.0.8",
+   "purl": "pkg:pypi/slicer@0.0.8",
+   "bom-ref": "pypi:slicer@0.0.8",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT License"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "soupsieve",
+   "version": "2.9.2",
+   "purl": "pkg:pypi/soupsieve@2.9.2",
+   "bom-ref": "pypi:soupsieve@2.9.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "starlette",
+   "version": "1.6.0",
+   "purl": "pkg:pypi/starlette@1.6.0",
+   "bom-ref": "pypi:starlette@1.6.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "threadpoolctl",
+   "version": "3.6.0",
+   "purl": "pkg:pypi/threadpoolctl@3.6.0",
+   "bom-ref": "pypi:threadpoolctl@3.6.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "BSD-3-Clause"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tqdm",
+   "version": "4.70.1",
+   "purl": "pkg:pypi/tqdm@4.70.1",
+   "bom-ref": "pypi:tqdm@4.70.1",
+   "licenses": [
+    {
+     "license": {
+      "name": "MPL-2.0 AND MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "typeguard",
+   "version": "4.6.0",
+   "purl": "pkg:pypi/typeguard@4.6.0",
+   "bom-ref": "pypi:typeguard@4.6.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "typing-inspect",
+   "version": "0.9.0",
+   "purl": "pkg:pypi/typing-inspect@0.9.0",
+   "bom-ref": "pypi:typing-inspect@0.9.0",
+   "licenses": [
+    {
+     "license": {
+      "name": "MIT"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "typing-inspection",
+   "version": "0.4.4",
+   "purl": "pkg:pypi/typing-inspection@0.4.4",
+   "bom-ref": "pypi:typing-inspection@0.4.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "typing_extensions",
+   "version": "4.16.0",
+   "purl": "pkg:pypi/typing-extensions@4.16.0",
+   "bom-ref": "pypi:typing_extensions@4.16.0",
+   "licenses": [
+    {
+     "expression": "PSF-2.0"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "tzdata",
+   "version": "2026.4",
+   "purl": "pkg:pypi/tzdata@2026.4",
+   "bom-ref": "pypi:tzdata@2026.4",
+   "licenses": [
+    {
+     "license": {
+      "name": "Apache-2.0"
+     }
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "urllib3",
+   "version": "2.7.0",
+   "purl": "pkg:pypi/urllib3@2.7.0",
+   "bom-ref": "pypi:urllib3@2.7.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "uvicorn",
+   "version": "0.53.0",
+   "purl": "pkg:pypi/uvicorn@0.53.0",
+   "bom-ref": "pypi:uvicorn@0.53.0",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "wheel",
+   "version": "0.48.0",
+   "purl": "pkg:pypi/wheel@0.48.0",
+   "bom-ref": "pypi:wheel@0.48.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "wrapt",
+   "version": "2.4.1",
+   "purl": "pkg:pypi/wrapt@2.4.1",
+   "bom-ref": "pypi:wrapt@2.4.1",
+   "licenses": [
+    {
+     "expression": "BSD-2-Clause"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@huggingface/tokenizers",
+   "version": "0.2.0",
+   "purl": "pkg:npm/%40huggingface/tokenizers@0.2.0",
+   "bom-ref": "npm:@huggingface/tokenizers@0.2.0",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "2e274c1ded45a5c4981f8bdc4a35e8a1d6b7e290b433c9b58260cebfb4908ba22ffa26f5cd7ec9dec1c1082f7fdc53c2927da4d5be79167795a8c471aebf7da6"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "@receptron/laya",
+   "version": "0.1.2",
+   "purl": "pkg:npm/%40receptron/laya@0.1.2",
+   "bom-ref": "npm:@receptron/laya@0.1.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "713a900b80c463fc03007638e044216d6f3096b3bb999c8b5563b2e75dbbf372d4ab9e5aee72c61aed7ac17562ea88b8b8d45f47470b72d29c400c5d5c25d07c"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "adm-zip",
+   "version": "0.6.1",
+   "purl": "pkg:npm/adm-zip@0.6.1",
+   "bom-ref": "npm:adm-zip@0.6.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "5f0ae36bc9f1f5ee68d8dd66cb80ec28278aa5dae7002cabd70b5b3f1043806ccaccac84f6446d04503c99695d23e455943ec205935663fc10dbec9dc0e47a91"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "define-data-property",
+   "version": "1.1.4",
+   "purl": "pkg:npm/define-data-property@1.1.4",
+   "bom-ref": "npm:define-data-property@1.1.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "ac132f23396903cbfa13e489668a3ef87018aac2eb920ecc49f2229cc3c5866928af0ed7f9d39754942cf904faf731a4cccc9f0e720c3765a2775f8d6cbdd3f8"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "define-properties",
+   "version": "1.2.1",
+   "purl": "pkg:npm/define-properties@1.2.1",
+   "bom-ref": "npm:define-properties@1.2.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "f109902aa10048b7799f1d14d41d6890b1256d4baeb6d27f0276264576db6c60d687ab92db4f048c3e17aaafc8f702bbbb4bfa3b4f178535a7b795ed11b47a0e"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "es-define-property",
+   "version": "1.0.1",
+   "purl": "pkg:npm/es-define-property@1.0.1",
+   "bom-ref": "npm:es-define-property@1.0.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "7b79d17e07d4678acd18bdb7da05205f4e90372c9ecf4e0a76316b17e2d34683979ab3a014a0e0e0109db235bc1274faf5ea9d606991a49c223d560dac2696de"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "es-errors",
+   "version": "1.3.0",
+   "purl": "pkg:npm/es-errors@1.3.0",
+   "bom-ref": "npm:es-errors@1.3.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "65fe47d8ac6ddb18d3bdb26f3f66562c4202c40ea3fa1026333225ca9cb8c5c060d6f2959f1f3d5b2d066d2fa47f9730095145cdd0858765d20853542d2e9cb3"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "escape-string-regexp",
+   "version": "4.0.0",
+   "purl": "pkg:npm/escape-string-regexp@4.0.0",
+   "bom-ref": "npm:escape-string-regexp@4.0.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "4eda5c349dd7033c771aaf2c591cc96956a346cd2e57103660091d6f58e6d9890fcf81ba7a05050320379f9bed10865e7cf93959ae145db2ae4b97ca90959d80"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "global-agent",
+   "version": "4.1.3",
+   "purl": "pkg:npm/global-agent@4.1.3",
+   "bom-ref": "npm:global-agent@4.1.3",
+   "licenses": [
+    {
+     "expression": "BSD-3-Clause"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "2942445628ae153dc8f7bb7e19832290b3c94b62dfa3f4b617e0d0b815b3bb368c3e7bede72c9978fcc0af1dfa7c1ce9193c598c8a436d72dec922e087e93bea"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "globalthis",
+   "version": "1.0.4",
+   "purl": "pkg:npm/globalthis@1.0.4",
+   "bom-ref": "npm:globalthis@1.0.4",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "0e92ca6cd5385b2969c49ca442e8df09cc185a257f2619b9d06a28d30ad520b02fe633abf5df87f944773e14820f6ac2084220d2e73e1be9ae053c03e782610d"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "gopd",
+   "version": "1.2.0",
+   "purl": "pkg:npm/gopd@1.2.0",
+   "bom-ref": "npm:gopd@1.2.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "65429187afe4505a0089302d4d83d9277870f70371c7e04804e8a39e51bd3e7ac9b027128ecd70cb20fabc9a5a62d827cc3aca6114aa7f738ee917daf77c6c46"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "has-property-descriptors",
+   "version": "1.0.2",
+   "purl": "pkg:npm/has-property-descriptors@1.0.2",
+   "bom-ref": "npm:has-property-descriptors@1.0.2",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "e7924d2ae216fafab829ed418ce4e333661cb5022f093ec61731f099f64f1a8e709eb82489dd1842d9c095e152aae9999b86b3de7d814be7ab6f2e62a49760ae"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "matcher",
+   "version": "4.0.0",
+   "purl": "pkg:npm/matcher@4.0.0",
+   "bom-ref": "npm:matcher@4.0.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "4bac79c267039ac0d1454fdcd9d91c703c103d7a05733739f87a50da538df299ef1e59ef1c01e3e5694b56fc3a9fabcdc87b95ba062b168858c5b4bea6f16929"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "object-keys",
+   "version": "1.1.1",
+   "purl": "pkg:npm/object-keys@1.1.1",
+   "bom-ref": "npm:object-keys@1.1.1",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "36e00449439432b9485ce7c72b30fa6e93eeded62ddf1be335d44843e15e4f494d6f82bc591ef409a0f186e360b92d971be1a39323303b3b0de5992d2267e12c"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "onnxruntime-common",
+   "version": "1.30.0",
+   "purl": "pkg:npm/onnxruntime-common@1.30.0",
+   "bom-ref": "npm:onnxruntime-common@1.30.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "edf7555a30080f5755847fc6f2a2b700f011ba7578564045a024003fbaa9e1691a6f49aba2bbe673eb2a893fa62973b30ea7633798fefd9f676f883334f59cc8"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "onnxruntime-node",
+   "version": "1.30.0",
+   "purl": "pkg:npm/onnxruntime-node@1.30.0",
+   "bom-ref": "npm:onnxruntime-node@1.30.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "b7086cd42d82fc1164cf5c9ce4e634288536194aba0d444eee10f86f1e50d90cb79c0309c115d6f31537355733136f5503d96894b3987a9a03f1f8d318e7c8ab"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "semver",
+   "version": "7.8.5",
+   "purl": "pkg:npm/semver@7.8.5",
+   "bom-ref": "npm:semver@7.8.5",
+   "licenses": [
+    {
+     "expression": "ISC"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "63bfca0ec6fc2e3a28669c1aa86cae94ee8342592c8029dc7211c693eb19218e1206f52870c044147e54af57c8e1d57e26f974c3a723bee71a222e34a6e462a0"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "serialize-error",
+   "version": "8.1.0",
+   "purl": "pkg:npm/serialize-error@8.1.0",
+   "bom-ref": "npm:serialize-error@8.1.0",
+   "licenses": [
+    {
+     "expression": "MIT"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "dcd9ee59f33abc1628cb981916f1e262c55b69fbc8f6f66fffe8e52228059f8a0fe338cd3cadcb85c634c520a079bd5ae4bf233bbd4c8adf4b94da22d947c30d"
+    }
+   ]
+  },
+  {
+   "type": "library",
+   "name": "type-fest",
+   "version": "0.20.2",
+   "purl": "pkg:npm/type-fest@0.20.2",
+   "bom-ref": "npm:type-fest@0.20.2",
+   "licenses": [
+    {
+     "expression": "(MIT OR CC0-1.0)"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-512",
+     "content": "35ef9e138af4fe25a7a40c43f39db3dc0f8dd01b7944dfff36327045dd95147126af2c317f9bec66587847a962c65e81fb0cfff1dfa669348090dd452242372d"
+    }
+   ]
+  }
+ ]
+}

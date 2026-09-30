@@ -41,6 +41,7 @@ uvicorn==0.53.0
 
 # --- Tests ------------------------------------------------------------------
 pytest==9.1.1
+httpx==0.28.1           # fastapi.testclient, used by tests/test_security.py
 
 # --- Deliberately NOT dependencies ------------------------------------------
 # pandera, rapidfuzz  - were declared for schema validation and fuzzy entity

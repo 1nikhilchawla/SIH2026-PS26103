@@ -1,0 +1,19 @@
+{
+  "name": "anumaan-laya-sidecar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local, open-weights System-1 triage for ANUMAAN field remarks, via @receptron/laya (Jev-compatible). No hosted AI API; runs on the same server as ANUMAAN.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "fetch-model": "node fetch-model.mjs",
+    "verify-model": "node fetch-model.mjs --verify-only",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@receptron/laya": "0.1.2"
+  }
+}

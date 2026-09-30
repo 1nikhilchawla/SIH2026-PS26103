@@ -89,6 +89,11 @@ def main() -> int:
     on_disk = sorted(p.name for p in RAW.glob("*.pdf"))
     listed = {r["filename"] for r in rows}
     unlisted = [n for n in on_disk if n not in listed]
+    # A PDF nobody pinned is not part of the corpus. It is a failure, not a
+    # note: parse_paimana.py reads only manifest-listed files, but a stray
+    # file in data/raw is exactly what a planted or forged report looks like.
+    for n in unlisted:
+        failures.append({"filename": n, "problem": "on disk but not in manifest.csv"})
 
     payload = {
         "data_source": "paimana",

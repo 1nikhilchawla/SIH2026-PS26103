@@ -1,0 +1,13 @@
+{
+  "name": "ANUMAAN - project risk early warning",
+  "short_name": "ANUMAAN",
+  "description": "Which central-sector project completion dates are about to move, from MoSPI PAIMANA reports. Works offline once saved.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f3864",
+  "icons": [
+    {"src": "/static/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}
+  ]
+}

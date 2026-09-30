@@ -1,0 +1,46 @@
+# Render Blueprint for the ANUMAAN live service.
+# Render reads this file from the repository root: Dashboard -> New -> Blueprint
+# -> pick this repository. The service itself lives in anumaan/; paths below
+# are relative to the repository root, as Render's Blueprint spec requires.
+#
+# The image runs with ANUMAAN_ENV=production and REFUSES TO START until every
+# secret below is set - see anumaan/DEPLOY.md ("Deploying on Render") and
+# anumaan/SECURITY.md section 3. No secret value is stored in this file.
+
+services:
+  - type: web
+    name: anumaan
+    runtime: docker
+    plan: free                     # 512 MB; see anumaan/DEPLOY.md "Sizing" before relying on it
+    region: singapore              # closest Render region to India
+    dockerfilePath: ./anumaan/Dockerfile
+    dockerContext: ./anumaan
+    # No dockerCommand: the Dockerfile's CMD already binds 0.0.0.0:${PORT}
+    # with the hardened uvicorn flags, and Render sets PORT.
+    healthCheckPath: /api/health   # passes only after the model has trained
+    numInstances: 1                # rate limits and the login cache are per process
+    autoDeployTrigger: checksPass  # redeploy only after CI (tests + integrity) passes
+    buildFilter:
+      paths:
+        - anumaan/**
+      ignoredPaths:
+        - anumaan/docs/**
+        - anumaan/brag-output/**
+        - anumaan/tests/**
+    envVars:
+      # Login for everyone who opens the dashboard or the API (password 12+ characters).
+      - key: ANUMAAN_VIEW_USER
+        sync: false
+      - key: ANUMAAN_VIEW_PASSWORD
+        sync: false
+      # Guards /api/retrain. Render generates a random 256-bit value.
+      - key: ANUMAAN_ADMIN_TOKEN
+        generateValue: true
+      # Must be the SAME key used for `python scripts/integrity.py seal --prompt-key`;
+      # an unsigned manifest, or one signed with another key, is refused at startup.
+      - key: ANUMAAN_INTEGRITY_KEY
+        sync: false
+      # The service's own host name, e.g. anumaan.onrender.com (shown on the
+      # service page after the first deploy). '*' is refused.
+      - key: ANUMAAN_ALLOWED_HOSTS
+        sync: false

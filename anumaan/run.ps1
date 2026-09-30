@@ -186,6 +186,13 @@ Invoke-Step -Name "Evaluate: precision@k, reliability, SHAP attributions" `
 Invoke-Step -Name "Build the static demo pages from the artefacts on disk" `
             -Arguments @("scripts/build_demo_paimana.py")
 
+# The pipeline rewrites results/paimana/, which the integrity manifest covers.
+# Re-hash here so the tree is consistent; this seal is UNSIGNED on purpose.
+# Production accepts only a manifest signed with ANUMAAN_INTEGRITY_KEY, which
+# a person applies after review: python scripts/integrity.py seal --prompt-key
+Invoke-Step -Name "Re-seal the integrity manifest (unsigned - sign after review)" `
+            -Arguments @("scripts/integrity.py", "seal")
+
 if (-not $SkipTests) {
     Invoke-Step -Name "Run the test suite" -Arguments @("-m", "pytest", "-q")
 }

@@ -1,0 +1,176 @@
+{
+ "bomFormat": "CycloneDX",
+ "specVersion": "1.6",
+ "serialNumber": "urn:uuid:88701cae-3bba-43e2-a8c7-4311c3a68ff2",
+ "version": 1,
+ "metadata": {
+  "timestamp": "2026-09-30T01:40:44+00:00",
+  "tools": {
+   "components": [
+    {
+     "type": "application",
+     "name": "scripts/make_sbom.py"
+    }
+   ]
+  },
+  "component": {
+   "type": "application",
+   "name": "anumaan-ai",
+   "bom-ref": "anumaan-ai"
+  }
+ },
+ "components": [
+  {
+   "type": "data",
+   "name": "PAIMANA project x month panel",
+   "bom-ref": "data:panel",
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "dcf40d3a6e5b44fa31dc1670409416467111f912a44ac662a017d59a970dfc3f"
+    }
+   ],
+   "data": [
+    {
+     "type": "dataset",
+     "name": "results/paimana/panel.csv",
+     "description": "17010 rows, 2195 projects, 11 monthly MoSPI PAIMANA Flash Reports (2025-09 to 2026-07), parsed and reconciled against each report's printed totals. Public data; no personal data.",
+     "classification": "public"
+    }
+   ]
+  },
+  {
+   "type": "machine-learning-model",
+   "name": "ANUMAAN slip model",
+   "version": "lightgbm",
+   "bom-ref": "model:slip",
+   "description": "Probability that a project's stated completion date moves in the next monthly report.",
+   "modelCard": {
+    "modelParameters": {
+     "task": "binary classification",
+     "architectureFamily": "gradient-boosted decision trees (LightGBM)",
+     "datasets": [
+      {
+       "ref": "data:panel"
+      }
+     ],
+     "inputs": [
+      {
+       "format": "tabular: original_cost_cr, revised_cost_cr, cumulative_expenditure_cr, physical_progress_pct, months_since_approval, cumulative_drift_months, months_to_target, months_past_original, expenditure_ratio, cost_overrun_ratio, exp_progress_divergence, drift_change_1m, date_revised_this_month, revisions_so_far, cost_revised_this_month, months_observed, months_since_last_revision, ministry"
+      }
+     ],
+     "outputs": [
+      {
+       "format": "probability 0-1 (slip_next)"
+      }
+     ]
+    },
+    "quantitativeAnalysis": {
+     "performanceMetrics": [
+      {
+       "type": "PR-AUC",
+       "value": "0.6791",
+       "slice": "walk-forward test month 2026-06"
+      },
+      {
+       "type": "Brier score",
+       "value": "0.0959",
+       "slice": "walk-forward test month 2026-06"
+      },
+      {
+       "type": "base rate",
+       "value": "0.183",
+       "slice": "walk-forward test month 2026-06"
+      }
+     ]
+    },
+    "considerations": {
+     "useCases": [
+      "rank projects for review before each monthly meeting"
+     ],
+     "technicalLimitations": [
+      "one-month horizon; 11 months of history",
+      "predicts the agency's next revision of the date, not the final overrun",
+      "advisory only; a person decides"
+     ]
+    }
+   },
+   "properties": [
+    {
+     "name": "training_code",
+     "value": "scripts/train_t1.py:fit_lightgbm"
+    },
+    {
+     "name": "training_code_source",
+     "value": "def fit_lightgbm(X_train, y_train): clf = lgb.LGBMClassifier( n_estimators=200, learning_rate=0.05, num_leaves=15, min_child_samples=50, random_state=0, verbosity=-1, ) clf.fit(X_train, y_train) return clf"
+    },
+    {
+     "name": "validation",
+     "value": "walk-forward by month; no random split"
+    }
+   ]
+  },
+  {
+   "type": "machine-learning-model",
+   "name": "receptron/laya-onnx",
+   "version": "68f27dfe5a27a54fb2b1fefc432f43f972e90868",
+   "bom-ref": "model:laya",
+   "licenses": [
+    {
+     "expression": "Apache-2.0"
+    }
+   ],
+   "hashes": [
+    {
+     "alg": "SHA-256",
+     "content": "a874eb254b58b0fcb1e7ad56fbb188c29d64e08c9a46b689433e1f52c66dba1e"
+    },
+    {
+     "alg": "SHA-256",
+     "content": "487746363a8da57bcadb4345352997d22a0fb90d70aa22c6856668d023242aba"
+    },
+    {
+     "alg": "SHA-256",
+     "content": "5049005dc6ae3ca5e82cc7d85c421357d5c543817300c8e8c5281ddbc69bb561"
+    },
+    {
+     "alg": "SHA-256",
+     "content": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+    },
+    {
+     "alg": "SHA-256",
+     "content": "50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12"
+    }
+   ],
+   "externalReferences": [
+    {
+     "type": "distribution",
+     "url": "https://huggingface.co/receptron/laya-onnx/tree/68f27dfe5a27a54fb2b1fefc432f43f972e90868"
+    }
+   ],
+   "description": "Laya, the open-weights Jev-compatible System-1 decision model, run locally via ONNX Runtime (@receptron/laya) to triage field remarks to a delay cause.",
+   "modelCard": {
+    "considerations": {
+     "useCases": [
+      "suggest the delay cause and owner for a field remark"
+     ],
+     "technicalLimitations": [
+      "not evaluated on PAIMANA remarks",
+      "12-option cause probabilities are not calibrated; used as a ranking only",
+      "auto-routing only when P(describes a delaying problem) >= taxonomy min_confidence"
+     ]
+    }
+   },
+   "properties": [
+    {
+     "name": "runs",
+     "value": "on the ANUMAAN server CPU; no hosted API"
+    },
+    {
+     "name": "weights_pinned_by",
+     "value": "laya-sidecar/model-manifest.json"
+    }
+   ]
+  }
+ ]
+}

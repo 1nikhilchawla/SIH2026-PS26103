@@ -1,0 +1,563 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "ANUMAAN",
+  "version": "0.3",
+  "description": "ANUMAAN live service (SIH26103). All routes except /api/health require HTTP Basic viewer credentials when configured (always in production). POST /api/retrain additionally requires the X-Admin-Token header."
+ },
+ "paths": {
+  "/api/health": {
+   "get": {
+    "summary": "Health",
+    "description": "Public liveness probe for the platform. Deliberately says nothing about\nthe data: /api/status carries the detail, behind authentication.",
+    "operationId": "health_api_health_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": true,
+         "type": "object",
+         "title": "Response Health Api Health Get"
+        }
+       }
+      }
+     }
+    },
+    "security": []
+   }
+  },
+  "/api/status": {
+   "get": {
+    "summary": "Status",
+    "operationId": "status_api_status_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": true,
+         "type": "object",
+         "title": "Response Status Api Status Get"
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "viewer": []
+     }
+    ]
+   }
+  },
+  "/api/metrics": {
+   "get": {
+    "summary": "Metrics",
+    "operationId": "metrics_api_metrics_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": true,
+         "type": "object",
+         "title": "Response Metrics Api Metrics Get"
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "viewer": []
+     }
+    ]
+   }
+  },
+  "/api/projects": {
+   "get": {
+    "summary": "Projects",
+    "operationId": "projects_api_projects_get",
+    "parameters": [
+     {
+      "name": "min_p",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "number",
+       "maximum": 1.0,
+       "minimum": 0.0,
+       "default": 0.0,
+       "title": "Min P"
+      }
+     },
+     {
+      "name": "ministry",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "maxLength": 120,
+       "default": "",
+       "title": "Ministry"
+      }
+     },
+     {
+      "name": "q",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "maxLength": 100,
+       "default": "",
+       "title": "Q"
+      }
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "integer",
+       "maximum": 500,
+       "minimum": 1,
+       "default": 50,
+       "title": "Limit"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Projects Api Projects Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "viewer": []
+     }
+    ]
+   }
+  },
+  "/api/project/{entity_id}": {
+   "get": {
+    "summary": "Project",
+    "operationId": "project_api_project__entity_id__get",
+    "parameters": [
+     {
+      "name": "entity_id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "pattern": "^[A-Za-z0-9_.-]{1,40}$",
+       "title": "Entity Id"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Project Api Project  Entity Id  Get"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "viewer": []
+     }
+    ]
+   }
+  },
+  "/api/competitors": {
+   "get": {
+    "summary": "Competitors",
+    "description": "Capability comparison. Competitor rows come from config/competitors.yaml\nwith a source URL and a verified flag; ANUMAAN's column is computed from\nthe live model run so it cannot drift from the artefacts.",
+    "operationId": "competitors_api_competitors_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": true,
+         "type": "object",
+         "title": "Response Competitors Api Competitors Get"
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "viewer": []
+     }
+    ]
+   }
+  },
+  "/api/score": {
+   "post": {
+    "summary": "Score",
+    "description": "Live what-if: override point-in-time features on the project's latest\nrow and re-run the trained model. No stored prediction is read, and\nnothing is written: the what-if never changes server state.",
+    "operationId": "score_api_score_post",
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/ScoreRequest"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": true,
+         "type": "object",
+         "title": "Response Score Api Score Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "viewer": []
+     }
+    ]
+   }
+  },
+  "/api/retrain": {
+   "post": {
+    "summary": "Retrain",
+    "description": "The only route that changes what every other user sees. Admin only,\none at a time, cutoff restricted to months the panel actually has, and\nthe new model goes live in a single assignment.",
+    "operationId": "retrain_api_retrain_post",
+    "parameters": [
+     {
+      "name": "x-admin-token",
+      "in": "header",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "X-Admin-Token"
+      }
+     }
+    ],
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "$ref": "#/components/schemas/RetrainRequest"
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object",
+         "additionalProperties": true,
+         "title": "Response Retrain Api Retrain Post"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "viewer": [],
+      "admin": []
+     }
+    ]
+   }
+  },
+  "/api/pipeline": {
+   "get": {
+    "summary": "Pipeline",
+    "description": "Honest status of the REAL PDF ingest, read from artefacts on disk.",
+    "operationId": "pipeline_api_pipeline_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {
+         "additionalProperties": true,
+         "type": "object",
+         "title": "Response Pipeline Api Pipeline Get"
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "viewer": []
+     }
+    ]
+   }
+  },
+  "/": {
+   "get": {
+    "summary": "Index",
+    "operationId": "index__get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "viewer": []
+     }
+    ]
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "HTTPValidationError": {
+    "properties": {
+     "detail": {
+      "items": {
+       "$ref": "#/components/schemas/ValidationError"
+      },
+      "type": "array",
+      "title": "Detail"
+     }
+    },
+    "type": "object",
+    "title": "HTTPValidationError"
+   },
+   "RetrainRequest": {
+    "properties": {
+     "cutoff": {
+      "anyOf": [
+       {
+        "type": "string",
+        "pattern": "^\\d{4}-\\d{2}$"
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Cutoff"
+     }
+    },
+    "additionalProperties": false,
+    "type": "object",
+    "title": "RetrainRequest"
+   },
+   "ScoreRequest": {
+    "properties": {
+     "entity_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]{1,40}$",
+      "title": "Entity Id"
+     },
+     "cumulative_drift_months": {
+      "anyOf": [
+       {
+        "type": "number",
+        "maximum": 600.0,
+        "minimum": -600.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Cumulative Drift Months"
+     },
+     "revisions_so_far": {
+      "anyOf": [
+       {
+        "type": "number",
+        "maximum": 100.0,
+        "minimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Revisions So Far"
+     },
+     "months_since_last_revision": {
+      "anyOf": [
+       {
+        "type": "number",
+        "maximum": 600.0,
+        "minimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Months Since Last Revision"
+     },
+     "expenditure_ratio": {
+      "anyOf": [
+       {
+        "type": "number",
+        "maximum": 1000.0,
+        "minimum": -1.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Expenditure Ratio"
+     },
+     "physical_progress_pct": {
+      "anyOf": [
+       {
+        "type": "number",
+        "maximum": 100.0,
+        "minimum": 0.0
+       },
+       {
+        "type": "null"
+       }
+      ],
+      "title": "Physical Progress Pct"
+     }
+    },
+    "additionalProperties": false,
+    "type": "object",
+    "required": [
+     "entity_id"
+    ],
+    "title": "ScoreRequest"
+   },
+   "ValidationError": {
+    "properties": {
+     "loc": {
+      "items": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ]
+      },
+      "type": "array",
+      "title": "Location"
+     },
+     "msg": {
+      "type": "string",
+      "title": "Message"
+     },
+     "type": {
+      "type": "string",
+      "title": "Error Type"
+     },
+     "input": {
+      "title": "Input"
+     },
+     "ctx": {
+      "type": "object",
+      "title": "Context"
+     }
+    },
+    "type": "object",
+    "required": [
+     "loc",
+     "msg",
+     "type"
+    ],
+    "title": "ValidationError"
+   }
+  },
+  "securitySchemes": {
+   "viewer": {
+    "type": "http",
+    "scheme": "basic"
+   },
+   "admin": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "X-Admin-Token"
+   }
+  }
+ }
+}

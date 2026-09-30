@@ -2,19 +2,25 @@
 
 Predictive analytics for central-sector infrastructure project monitoring (MoSPI / PAIMANA).
 
-**What this is:** a working skeleton so that on day 1 you are downloading real data instead of
-arguing about folder structure. Nothing here is a toy — the offline test suite runs (45/45 pass;
-heavy-dep-blocked run is the P1 acceptance), the parser extracts both OCMS-era and PAIMANA-era
-tables with reconciliation against each report's own summary totals, and the harvest/parse/train
-pipeline runs end-to-end on synthetic Flash-Report-shaped data via `make demo`.
+**Status (29 Sep 2026): running on real PAIMANA data.** 32 Flash Report PDFs are pinned by
+SHA-256; all 11 PAIMANA-era reports reconcile against their own printed totals, giving 17,010
+project-month rows across 2,195 projects (Sep 2025 – Jul 2026). The slip model scores PR-AUC
+0.6791 on the held-out June 2026 month against a 0.2814 best baseline. The 21 older OCMS-era
+reports are not parsed yet. `python -m pytest -q` runs 89 tests.
 
-**Reality check (16 Sep 2026):** `data/raw/` is empty. The live portal's report listing is
-client-rendered, so the current harvester's HTML regex returns 0 reports. ADR-0002 documents the
-route work in flight (D1); until that lands, every number in this repo comes from synthetic data
-shaped like Flash Reports, with the banner and provenance block making that explicit. See
-`results/EVIDENCE.md`.
+| Start here | For |
+|---|---|
+| [`SECURITY.md`](SECURITY.md) | logins per ministry, audit log, integrity signing, what to switch on in GitHub |
+| [`DEPLOY-CLOUD.md`](DEPLOY-CLOUD.md) | NIC / MeghRaj VM, Kubernetes, and offline use in areas with no network |
+| [`DEPLOY.md`](DEPLOY.md) | the public demo on Railway (`railway.json`) or Render (`../render.yaml`) |
+| [`brag-output/`](brag-output/) | 23-second demo video (`brag.mp4`) and how it was made |
+| [`docs/DECK-TO-SOFTWARE.md`](docs/DECK-TO-SOFTWARE.md) | every claim in the SIH deck, and where it lives in the code |
+| [`laya-sidecar/`](laya-sidecar/) | optional local, open-weights triage of field remarks (Laya) |
+| [`AGENTS.md`](AGENTS.md) | rules for AI coding agents working in this repository |
+| [`SOURCES.md`](SOURCES.md) | every link, dataset, paper and article, annotated |
 
-**Start with [`SOURCES.md`](SOURCES.md)** — every link, dataset, paper and article, annotated.
+The sections below are the original design notes; they describe the approach, and the numbers
+above are the current ones.
 
 ---
 
@@ -26,8 +32,8 @@ estimate* of when it will finish. Those estimates are revised, month after month
 **Nobody audits them.** ANUMAAN builds a project-month panel from the historical Flash Reports
 and learns which agencies' forecasts slip, by how much, and how early that was visible — then issues a
 calibrated, interval-bounded forecast for every ongoing project, with the reason and the authority
-who can act on it. (Real ingestion is in flight; the panel currently comes from a synthetic
-generator shaped like Flash Reports — see `results/EVIDENCE.md`.)
+who can act on it. The live panel is parsed from the real reports; the synthetic generator
+remains only as a method demonstration (`ANUMAAN_PANEL`, development only).
 
 You are not building another dashboard. You are building the thing that tells you the dashboard is
 lying — politely, with a confidence interval.

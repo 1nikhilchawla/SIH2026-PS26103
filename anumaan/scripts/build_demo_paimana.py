@@ -30,11 +30,13 @@ from __future__ import annotations
 
 import argparse
 import base64
+import html
 import json
 import os
 import re
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 import numpy as np
 import pandas as pd
@@ -61,6 +63,13 @@ OWNING_AUTHORITY = {
     "unclassified": "n/a (review queue)",
 }
 
+
+
+def _e(value) -> str:
+    """HTML-escape one value for a page built by string formatting. Project,
+    ministry, sector and agency names are text parsed out of government
+    PDFs; the pages must show them, never interpret them."""
+    return html.escape(str(value), quote=True)
 
 def img_b64(path: Path) -> str:
     return "data:image/png;base64," + base64.b64encode(path.read_bytes()).decode()
@@ -98,16 +107,16 @@ def build_watchlist(predictions: pd.DataFrame, panel: pd.DataFrame,
         nm = project_lookup.get(r["entity_id"], {}).get("project_name", r["entity_id"])
         rows.append(
             f"<tr>"
-            f"<td><a href='audit.html?entity={r['entity_id']}'>{r['entity_id']}</a></td>"
-            f"<td>{str(nm)[:60]}</td>"
-            f"<td>{r['ministry']}</td>"
-            f"<td>{r['sector']}</td>"
+            f"<td><a href='audit.html?entity={quote(str(r['entity_id']))}'>{_e(r['entity_id'])}</a></td>"
+            f"<td>{_e(str(nm)[:60])}</td>"
+            f"<td>{_e(r['ministry'])}</td>"
+            f"<td>{_e(r['sector'])}</td>"
             f"<td>{fmt_date(r['original_doc'])}</td>"
             f"<td>{fmt_date(r['stated_doc'])}</td>"
             f"<td>{int(drift)} mo</td>"
             f"<td><strong>{r['p_slip']:.2f}</strong></td>"
-            f"<td>{cause}</td>"
-            f"<td>{owner}</td>"
+            f"<td>{_e(cause)}</td>"
+            f"<td>{_e(owner)}</td>"
             f"</tr>"
         )
 
@@ -286,7 +295,7 @@ def build_audit(predictions: pd.DataFrame, panel: pd.DataFrame,
     html = f"""<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8">
-<title>ANUMAAN - Forecast audit ({entity_id})</title>
+<title>ANUMAAN - Forecast audit ({_e(entity_id)})</title>
 <style>
   body {{ font-family: -apple-system, system-ui, sans-serif;
          max-width: 900px; margin: 24px auto; padding: 0 16px;
@@ -313,8 +322,8 @@ def build_audit(predictions: pd.DataFrame, panel: pd.DataFrame,
   (the next consecutive monthly report).
 </div>
 
-<h1>Forecast audit - {entity_id}</h1>
-<p style="color:#666; font-size:13px;">{project_name} ({agency})</p>
+<h1>Forecast audit - {_e(entity_id)}</h1>
+<p style="color:#666; font-size:13px;">{_e(project_name)} ({_e(agency)})</p>
 
 <div class="panel">
   <h3>Target completion date - agency vs ANUMAAN</h3>
@@ -662,12 +671,12 @@ def shap_html(shap_blob: dict | None, entity_id: str) -> str:
     for c in contribs:
         width = int(abs(c["shap"]) / span * 100)
         colour = "#b85c00" if c["shap"] > 0 else "#1a6b3a"
-        body += (f"<tr><td>{c['feature']}</td>"
+        body += (f"<tr><td>{_e(c['feature'])}</td>"
                  f"<td style='text-align:right'>{c['value']}</td>"
                  f"<td style='width:200px'><div style='background:{colour};"
                  f"height:10px;width:{width}%;border-radius:3px'></div></td>"
                  f"<td style='text-align:right'>{c['shap']:+.4f}</td>"
-                 f"<td style='color:#666'>{c['direction']}</td></tr>")
+                 f"<td style='color:#666'>{_e(c['direction'])}</td></tr>")
     return (
         "<table style='width:100%;font-size:13px;border-collapse:collapse'>"
         "<thead><tr><th style='text-align:left'>Feature</th>"

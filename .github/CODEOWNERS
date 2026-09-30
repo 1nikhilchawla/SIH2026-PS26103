@@ -1,0 +1,32 @@
+# Code owners for ANUMAAN.
+#
+# With branch protection on `main` set to "Require review from Code Owners",
+# nothing below can merge without an approving review from the owner. That
+# includes changes opened by bots and AI coding agents: an agent can propose,
+# it cannot merge. See anumaan/SECURITY.md, section "Repository controls".
+#
+# Everything is owned; the explicit lines document which paths matter most.
+
+*                                   @1nikhilchawla
+
+# What runs in production, and what decides whether it runs.
+/anumaan/app/                       @1nikhilchawla
+/anumaan/app/security.py            @1nikhilchawla
+/anumaan/scripts/integrity.py       @1nikhilchawla
+/anumaan/integrity/                 @1nikhilchawla
+/anumaan/Dockerfile                 @1nikhilchawla
+/anumaan/railway.json               @1nikhilchawla
+/anumaan/requirements*.txt          @1nikhilchawla
+/anumaan/laya-sidecar/              @1nikhilchawla
+/anumaan/docker-compose.yml         @1nikhilchawla
+/anumaan/deploy/                    @1nikhilchawla
+/anumaan/config/                    @1nikhilchawla
+
+# The data the model is trained on and the evidence it cites.
+/anumaan/results/paimana/           @1nikhilchawla
+/anumaan/data/raw/manifest.csv      @1nikhilchawla
+
+# The controls themselves.
+/.github/                           @1nikhilchawla
+/anumaan/SECURITY.md                @1nikhilchawla
+/anumaan/AGENTS.md                  @1nikhilchawla
