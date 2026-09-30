@@ -87,7 +87,7 @@ is described in [SECURITY.md](SECURITY.md), section 3.
 | `ANUMAAN_VIEW_USER` / `ANUMAAN_VIEW_PASSWORD` | yes | Login for everyone who opens the dashboard or the API (HTTP Basic; password 12+ characters). |
 | `ANUMAAN_ADMIN_TOKEN` | yes | Required in the `X-Admin-Token` header for `/api/retrain`, the only route that changes what other users see (32+ characters). |
 | `ANUMAAN_INTEGRITY_KEY` | yes | Verifies the signature on `integrity/MANIFEST.json` at startup. The service will not start on changed files or an unsigned manifest (32+ characters). |
-| `ANUMAAN_ALLOWED_HOSTS` | yes | Comma-separated host names the service answers to, e.g. `anumaan-production.up.railway.app`. `*` is refused. |
+| `ANUMAAN_ALLOWED_HOSTS` | yes | Comma-separated host names the service answers to. `*` is refused. **On Railway, include `healthcheck.railway.app`**: Railway's health check sends that Host header, and the host check applies to `/api/health` too, e.g. `sih2026-ps26103-production.up.railway.app,healthcheck.railway.app`. On Render, the `onrender.com` host alone is enough (Render's health check uses it). |
 | `ANUMAAN_CUTOFF` | no | Walk-forward split month. Default: last labelled month (`2026-06`). |
 | `ANUMAAN_RATE_API_PER_MIN` / `_SCORE_PER_MIN` / `_RETRAIN_PER_HOUR` | no | Rate limits. Defaults 240 / 30 / 6. |
 
@@ -165,9 +165,11 @@ a different key from the one in Railway. Re-seal with
 `python scripts/integrity.py seal --prompt-key` after review, commit, redeploy.
 
 
-**Health check fails but the logs show the app started.** Almost always a bind
-problem: the process must listen on `0.0.0.0` and on `$PORT`. `127.0.0.1` is
-unreachable from Railway's proxy.
+**Health check fails but the logs show the app started.** First check
+`ANUMAAN_ALLOWED_HOSTS`. On Railway it must include `healthcheck.railway.app`,
+or every health check is answered `400 invalid host` and the deploy is marked
+failed. Otherwise it is a bind problem: the process must listen on `0.0.0.0`
+and on `$PORT`. `127.0.0.1` is unreachable from Railway's proxy.
 
 **`ImportError: libgomp.so.1`.** LightGBM needs OpenMP. The Dockerfile installs
 `libgomp1`; if you switch to a Nixpacks build you must add it yourself. This is
