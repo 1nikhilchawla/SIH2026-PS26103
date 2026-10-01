@@ -46,47 +46,6 @@
   code { background:#eef3fa; padding:1px 5px; border-radius:4px; }
   .muted { color:var(--mute); font-size:12px; }
   .ok { color:var(--green); font-weight:700; } .bad { color:#b3261e; font-weight:700; }
-
-  /* Every table scrolls inside its own box (app.js wraps them), so a phone
-     never has to scroll the whole page sideways. A shadow on the right edge
-     shows there are more columns; a short hint says so in words. */
-  .twrap { position:relative; max-width:100%; }
-  .tscroll { overflow-x:auto; -webkit-overflow-scrolling:touch; overscroll-behavior-x:contain; }
-  .twrap.more::after { content:""; position:absolute; top:0; right:0; bottom:0; width:18px; pointer-events:none;
-                       background:linear-gradient(to left, rgba(31,56,100,.16), rgba(31,56,100,0)); }
-  /* The hint is a zero-height sticky anchor before the table, so on a long
-     table it stays in view (40% down the screen) instead of scrolling away. */
-  .thint { position:sticky; top:40%; height:0; z-index:2; pointer-events:none; }
-  .thint span { position:absolute; left:50%; top:44px; transform:translateX(-50%);
-                background:rgba(31,56,100,.72); color:#fff; font-size:13px; font-weight:700; letter-spacing:.01em;
-                padding:7px 14px; border-radius:18px; white-space:nowrap; opacity:0; transition:opacity .35s; }
-  .thint.show span { opacity:1; animation:nudge 1.1s ease-in-out 2; }
-  @keyframes nudge { 0%, 100% { transform:translateX(-50%); } 50% { transform:translateX(calc(-50% - 12px)); } }
-  @media (prefers-reduced-motion: reduce) { .thint.show span { animation:none; } }
-  svg { max-width:100%; height:auto; }
-  code { overflow-wrap:anywhere; }
-
-  /* Phones and narrow windows */
-  @media (max-width: 700px) {
-    header { padding:12px 12px 0 12px; }
-    h1 { font-size:18px; line-height:1.25; }
-    .sub { font-size:12px; }
-    #banner { margin:10px 12px; font-size:12px; overflow-wrap:anywhere; }
-    nav { display:grid; grid-template-columns:1fr 1fr; gap:6px; padding:0 12px 10px 12px; }
-    nav button { border:1px solid var(--line); border-radius:8px; padding:9px 6px; font-size:13px;
-                 background:var(--card); text-align:center; }
-    nav button.on { background:var(--blue); color:#fff; border-color:var(--blue); }
-    section { padding:12px 12px 32px 12px; }
-    .row { gap:10px; }
-    .ctl { flex:1 1 100%; min-width:0; }
-    .ctl input[type=text], .ctl select, .ctl input[type=number], input[type=range] { width:100%; }
-    .ctl button.go, .ctl a.go { width:100%; text-align:center; }
-    th { white-space:nowrap; }
-    th, td { padding:6px 8px; }
-    .grid { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:8px; }
-    .stat b { font-size:18px; overflow-wrap:anywhere; }
-    .card { padding:12px; }
-  }
 </style>
 </head>
 <body>
