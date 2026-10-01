@@ -37,7 +37,7 @@ matplotlib==3.11.2      # reliability and lead-time plots (Agg backend only)
 # previous revision removed both while the import remained, so a clean
 # checkout could not run the app at all.
 fastapi==0.141.1
-uvicorn==0.53.0
+uvicorn==0.54.0
 
 # --- Tests ------------------------------------------------------------------
 pytest==9.1.1
