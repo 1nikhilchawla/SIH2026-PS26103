@@ -19,6 +19,7 @@ import argparse
 import getpass
 import hmac
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -30,7 +31,6 @@ from scripts import integrity  # noqa: E402
 
 LIVE_REF = "origin/main"
 MANIFEST_IN_REPO = "anumaan/integrity/MANIFEST.json"
-PREFIX = "ANUMAAN_INTEGRITY_KEY="
 
 
 def read_clipboard() -> str:
@@ -42,9 +42,12 @@ def read_clipboard() -> str:
 
 
 def clean(raw: str) -> str:
+    # Accepts the bare value, one KEY=value line, or Railway's whole Raw Editor
+    # (ENV or JSON view): the ANUMAAN_INTEGRITY_KEY entry is picked out.
+    found = re.search(r'ANUMAAN_INTEGRITY_KEY"?\s*[:=]\s*["\']?([^"\'\s,]+)', raw)
+    if found:
+        return found.group(1)
     key = raw.strip()
-    if key.startswith(PREFIX):
-        key = key[len(PREFIX):].strip()
     if len(key) >= 2 and key[0] == key[-1] and key[0] in "\"'":
         key = key[1:-1].strip()
     return key
