@@ -1,6 +1,6 @@
 {
  "version": 1,
- "sealed_at": "2026-10-01T07:31:48+05:30",
+ "sealed_at": "2026-10-01T16:09:07+05:30",
  "algorithm": "sha256, CRLF normalised to LF; signature HMAC-SHA256 over the sorted compact JSON of `files`",
  "n_files": 53,
  "files": {
@@ -12,11 +12,11 @@
   "app/panel_adapter.py": "4c3cb9684614f0edaf0bbb0f0e3c493487817b16977e637a7d8fe9bfdc99c8fb",
   "app/redact.py": "8e4675656c7d1a2472df8d36b6471578da063c3c6ef41009e1dad54f464f11b5",
   "app/security.py": "fe93ab3f232dc97ad3dd51b044c1b9746826edfd9f8b13cb6a1563d63c3bd3b6",
-  "app/static/app.js": "5fcf462594d5c872e54579b2c603294f4926dbb0d578c9010dc4ffea8aa07c2c",
+  "app/static/app.js": "ff0f9b5355d2b771e8ba7ce4fd9be0948dd86a7090a98259fe228b7d1af94052",
   "app/static/icon.svg": "1397846703415c3b88bf1ad92ad06b21a470992bdb86a07bf8cf9aae6d213684",
-  "app/static/index.html": "01ad448d7a2070b72c89b74626b8e0b6819a96faac4bd7f3dd4897c1c83ee1ee",
+  "app/static/index.html": "8556034a434e5f7149e3b933758d22eabdc3fc5181938ebb857bb8c8658961e5",
   "app/static/manifest.webmanifest": "712991037dd5d72cb09cb7cd01e6009ccdb3051591a5daabe32e3e738e9f22e3",
-  "app/static/sw.js": "eefaa5f953e76a52e77e9c7ea44ac39bb63083975c8654a3a7997e9e4c6bac1d",
+  "app/static/sw.js": "dd2f5d4bf0bf928e76887098e9842c435a13140a40cb500fecce619172eb41e0",
   "app/users.py": "dcfa7233373f0cb9b1d434bd5bf4ffdb290f84524d5aca10b4a2c89846fc6ca1",
   "config/competitors.yaml": "87f6b4a3bc5148a7cf977d0184349131c335559b3f3b9be1503e9ef68aa82641",
   "config/delay_taxonomy.yaml": "a99c5e6ce39ae7915db42cfc68466ea2517215dccd1e028f5b2709279dc33c75",
@@ -58,5 +58,5 @@
   "scripts/verify_corpus.py": "6e17755cdd3c55742f31e1e6b9fc02bb831a31b4ef374ea7ac8da0bbc1cafb81",
   "scripts/verify_test_target_standalone.py": "a4bba2a8ebbc3f8fec3911b8b019ca6cf10c4c9d7e71b91be3d1dd82dcecfe4d"
  },
- "hmac_sha256": "780b9f191dd73459f9fae2b7e1f8738b51874f976eb50a282909de5a8f9cf8f6"
+ "hmac_sha256": null
 }

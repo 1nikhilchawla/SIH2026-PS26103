@@ -9,12 +9,15 @@
 //               Nothing with project data is cached without that choice.
 // Everything else under /api/ goes to the network and is never cached.
 // "Clear offline data" (or signing out of the device) deletes both caches.
-const SHELL = "anumaan-shell-v1";
+const SHELL = "anumaan-shell-v2";   // bump on every UI change: index.html and app.js must update together
 const DATA = "anumaan-data-v1";
 const SHELL_FILES = ["/", "/static/app.js", "/static/icon.svg", "/manifest.webmanifest"];
 
+// cache: "reload" skips the browser's HTTP cache, which can still hold the
+// previous app.js for hours; without it a new version caches the old script.
 self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(SHELL).then((c) => c.addAll(SHELL_FILES)).then(() => self.skipWaiting()));
+  const fresh = SHELL_FILES.map((u) => new Request(u, { cache: "reload" }));
+  event.waitUntil(caches.open(SHELL).then((c) => c.addAll(fresh)).then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (event) => {
@@ -28,7 +31,8 @@ self.addEventListener("activate", (event) => {
 async function shellFirst(request) {
   const cache = await caches.open(SHELL);
   const hit = await cache.match(request, { ignoreSearch: true });
-  const refresh = fetch(request)
+  // "no-cache" revalidates with the server (an unchanged file costs a 304).
+  const refresh = fetch(request, { cache: "no-cache" })
     .then((res) => { if (res.ok) cache.put(request, res.clone()); return res; })
     .catch(() => null);
   return hit || (await refresh) || new Response("offline", { status: 503 });
