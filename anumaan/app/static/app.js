@@ -214,7 +214,7 @@ function spark(series) {
     const y = ht - 6 - Number(s.p_slip) * (ht - 16);
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   }).join(" ");
-  return h`<svg width="${w}" height="${ht}" role="img" aria-label="risk over time">
+  return h`<svg width="${w}" height="${ht}" viewBox="0 0 ${w} ${ht}" role="img" aria-label="risk over time">
     <polyline points="${pts}" fill="none" stroke="#0f62a8" stroke-width="2"/>
   </svg>`;
 }
@@ -579,5 +579,112 @@ async function loadCompetitors() {
 
     <div class="muted">Comparison file updated ${d.updated} · served from <code>config/competitors.yaml</code></div>`;
 }
+
+// ---------------------------------------------------------------------------
+// Wide tables on narrow screens
+// ---------------------------------------------------------------------------
+// Every table gets its own horizontal scroll box, so a phone never scrolls the
+// whole page sideways, and a shadow on the right edge shows more columns. The
+// first time a table that does not fit comes into view, a short hint tells a
+// first-time user to swipe the table itself; once they have swiped any table,
+// the hint stops. A MutationObserver covers every table any tab renders, now
+// or later, without touching each renderer. Built with DOM text only: nothing
+// here goes through innerHTML.
+
+const HINT_TEXT = matchMedia("(pointer: coarse)").matches
+  ? "← Swipe left to see more" : "← Scroll sideways to see more";
+const HINT_MS = 2600;
+const LEARNED_KEY = "anumaan.swipeLearned";
+let swipeLearned = false;
+try { swipeLearned = localStorage.getItem(LEARNED_KEY) === "1"; }
+catch (e) { swipeLearned = false; }    // storage blocked: keep showing the hint
+
+function columnCount(t) {
+  const row = (t.tHead && t.tHead.rows[0]) || t.rows[0];
+  return row ? [...row.cells].reduce((n, c) => n + (c.colSpan || 1), 0) : 0;
+}
+
+// A wrap is: <div.twrap> <div.thint><span/></div> <div.tscroll><table/></div> </div>
+const boxOf = (wrap) => wrap.lastElementChild;
+const hintOf = (wrap) => wrap.firstElementChild;
+
+function fadeEdge(wrap) {
+  const box = boxOf(wrap);
+  wrap.classList.toggle("more", box.scrollLeft + box.clientWidth < box.scrollWidth - 4);
+}
+
+function showHint(wrap) {
+  const box = boxOf(wrap);
+  if (swipeLearned || wrap.dataset.hinted || box.scrollWidth - box.clientWidth < 24) return;
+  wrap.dataset.hinted = "1";
+  const hint = hintOf(wrap);
+  hint.classList.add("show");
+  setTimeout(() => hint.classList.remove("show"), HINT_MS);
+}
+
+function markLearned(wrap) {
+  hintOf(wrap).classList.remove("show");
+  if (swipeLearned) return;
+  swipeLearned = true;
+  try { localStorage.setItem(LEARNED_KEY, "1"); }
+  catch (e) { swipeLearned = true; }   // not saved: hints stop for this visit only
+}
+
+// Visible: some of the table is in the upper 75% of the screen. The sticky
+// hint then sits on the visible part of the table.
+const tableSeen = new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    e.target.dataset.visible = e.isIntersecting ? "1" : "";
+    if (e.isIntersecting) { fadeEdge(e.target); showHint(e.target); }
+  }
+}, { rootMargin: "0px 0px -25% 0px" });
+
+// Rows arrive after the table is wrapped, and phones rotate: re-check then.
+const tableResized = new ResizeObserver((entries) => {
+  for (const e of entries) {
+    const wrap = e.target.closest(".twrap");
+    if (!wrap) continue;
+    fadeEdge(wrap);
+    if (wrap.dataset.visible) showHint(wrap);
+  }
+});
+
+function wrapTable(t) {
+  if (t.parentElement && t.parentElement.classList.contains("tscroll")) return;
+  const wrap = document.createElement("div");
+  wrap.className = "twrap";
+  const box = document.createElement("div");
+  box.className = "tscroll";
+  const hint = document.createElement("div");
+  hint.className = "thint";
+  hint.setAttribute("aria-hidden", "true");
+  const label = document.createElement("span");
+  label.textContent = HINT_TEXT;
+  hint.append(label);
+  t.before(wrap);
+  box.append(t);
+  wrap.append(hint, box);
+  // Wide tables keep readable columns and scroll; two- and three-column
+  // tables still fit a phone and are left alone.
+  const cols = columnCount(t);
+  if (cols >= 4 && !t.style.minWidth) t.style.minWidth = Math.min(cols * 96, 980) + "px";
+  box.addEventListener("scroll", () => {
+    fadeEdge(wrap);
+    if (box.scrollLeft > 10) markLearned(wrap);
+  }, { passive: true });
+  tableSeen.observe(wrap);
+  tableResized.observe(box);
+  tableResized.observe(t);
+}
+
+function wrapTables(node) {
+  if (node.nodeType !== Node.ELEMENT_NODE) return;
+  if (node.tagName === "TABLE") wrapTable(node);
+  else node.querySelectorAll("table").forEach(wrapTable);
+}
+
+new MutationObserver((mutations) => mutations.forEach((m) => m.addedNodes.forEach(wrapTables)))
+  .observe(document.body, { childList: true, subtree: true });
+wrapTables(document.body);
 
 boot();
