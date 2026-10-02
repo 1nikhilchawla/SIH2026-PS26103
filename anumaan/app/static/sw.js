@@ -9,7 +9,7 @@
 //               Nothing with project data is cached without that choice.
 // Everything else under /api/ goes to the network and is never cached.
 // "Clear offline data" (or signing out of the device) deletes both caches.
-const SHELL = "anumaan-shell-v2";   // bump on every UI change: index.html and app.js must update together
+const SHELL = "anumaan-shell-v3";   // bump on every UI change: index.html and app.js must update together
 const DATA = "anumaan-data-v1";
 const SHELL_FILES = ["/", "/static/app.js", "/static/icon.svg", "/manifest.webmanifest"];
 
