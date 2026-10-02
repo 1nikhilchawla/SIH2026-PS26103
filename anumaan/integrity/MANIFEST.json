@@ -1,6 +1,6 @@
 {
  "version": 1,
- "sealed_at": "2026-10-02T07:55:47+05:30",
+ "sealed_at": "2026-10-02T07:59:07+05:30",
  "algorithm": "sha256, CRLF normalised to LF; signature HMAC-SHA256 over the sorted compact JSON of `files`",
  "n_files": 53,
  "files": {
@@ -58,5 +58,5 @@
   "scripts/verify_corpus.py": "6e17755cdd3c55742f31e1e6b9fc02bb831a31b4ef374ea7ac8da0bbc1cafb81",
   "scripts/verify_test_target_standalone.py": "a4bba2a8ebbc3f8fec3911b8b019ca6cf10c4c9d7e71b91be3d1dd82dcecfe4d"
  },
- "hmac_sha256": null
+ "hmac_sha256": "566f33b20514141bf3bbe11b3862f176ed16b6cf6dcfe03640f1a202e19a8626"
 }
