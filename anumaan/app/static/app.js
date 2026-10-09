@@ -77,7 +77,9 @@ async function boot() {
   const synth = PROV.data_source === "synthetic";
   const el = $("#banner");
   el.className = synth ? "synthetic" : "paimana";
-  const who = s.principal.role === "open"
+  const who = s.public_readonly
+    ? raw(" · <b>public read-only demo</b> of published MoSPI data, no login needed")
+    : s.principal.role === "open"
     ? raw(" · <span class='bad'>no login configured (development)</span>")
     : h` · signed in as <b>${s.principal.user}</b> (${s.principal.role === "ministry" ? s.principal.ministry + " only" : "all ministries"})`;
   el.innerHTML = h`${raw(synth
@@ -349,14 +351,16 @@ async function loadProject(id) {
           ? "It is triaged by Laya, an open-weights model running on this server - nothing leaves it."
           : "Automatic triage (Laya) is not configured on this server; the remark is recorded for a person to classify."}
         Do not enter personal details.</div>
-        <textarea id="rm_text" maxlength="1000" rows="3" style="width:100%;margin-top:8px;font:inherit;padding:6px;border:1px solid var(--line);border-radius:6px"
+        ${STATUS && STATUS.public_readonly
+          ? raw("<div class='muted' style='margin-top:8px'><b>Read-only public demo:</b> remarks are recorded by signed-in ministry officers.</div>")
+          : raw(`<textarea id="rm_text" maxlength="1000" rows="3" style="width:100%;margin-top:8px;font:inherit;padding:6px;border:1px solid var(--line);border-radius:6px"
           placeholder="e.g. Land compensation still pending for 2 km; collector yet to hand over possession."></textarea>
         <div class="row" style="margin-top:6px"><div class="ctl"><button class="go" id="rm_go">Record remark</button></div>
-          <div class="ctl muted" id="rm_out"></div></div>
+          <div class="ctl muted" id="rm_out"></div></div>`)}
         <div id="rm_list">${remarkList(p.remarks || [])}</div>
       </div>
       <div class="muted">data_source: <code>${p.provenance.data_source}</code> · panel <code>${p.provenance.panel_file}</code></div>`;
-    $("#rm_go").onclick = async () => {
+    if ($("#rm_go")) $("#rm_go").onclick = async () => {
       const text = $("#rm_text").value.trim();
       if (text.length < 3) { $("#rm_out").textContent = "Write at least a few words."; return; }
       $("#rm_out").textContent = "recording and triaging…";

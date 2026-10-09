@@ -28,7 +28,7 @@ from scripts import integrity  # noqa: E402
 SECURITY_ENV = ("ANUMAAN_ENV", "ANUMAAN_VIEW_USER", "ANUMAAN_VIEW_PASSWORD",
                 "ANUMAAN_ADMIN_TOKEN", "ANUMAAN_INTEGRITY_KEY", "ANUMAAN_ALLOWED_HOSTS",
                 "ANUMAAN_RATE_API_PER_MIN", "ANUMAAN_RATE_SCORE_PER_MIN",
-                "ANUMAAN_RATE_RETRAIN_PER_HOUR", "ANUMAAN_MAX_BODY_BYTES")
+                "ANUMAAN_RATE_RETRAIN_PER_HOUR", "ANUMAAN_MAX_BODY_BYTES", "ANUMAAN_PUBLIC_READONLY")
 ADMIN = "a" * 40
 KEY = "k" * 40
 PROJECT = "619103"          # a real PAIMANA project code present in the panel
@@ -149,6 +149,36 @@ def test_production_refuses_to_start_on_an_unsigned_manifest():
         assert "signature" in str(exc) or "integrity" in str(exc), str(exc)
     else:
         raise AssertionError("production started on an unsigned manifest")
+
+
+def test_public_readonly_is_explicit_and_keeps_every_other_production_check():
+    prod = dict(ANUMAAN_ENV="production", ANUMAAN_ADMIN_TOKEN=ADMIN,
+                ANUMAAN_INTEGRITY_KEY=KEY, ANUMAAN_ALLOWED_HOSTS="testserver")
+    with env(**prod):
+        assert any("requires logins" in p for p in sec.load_settings().problems)
+    with env(**prod, ANUMAAN_PUBLIC_READONLY="1"):
+        s = sec.load_settings()
+        assert not s.problems, s.problems
+        assert s.public_readonly and not s.viewer_auth_on
+        assert sec.build_user_store(s) is None
+    with env(ANUMAAN_ENV="production", ANUMAAN_PUBLIC_READONLY="1"):
+        problems = " ".join(sec.load_settings().problems)
+        for needle in ("ANUMAAN_ADMIN_TOKEN", "ANUMAAN_INTEGRITY_KEY", "ANUMAAN_ALLOWED_HOSTS"):
+            assert needle in problems, needle
+    with env(ANUMAAN_PUBLIC_READONLY="yes"):
+        assert any("ANUMAAN_PUBLIC_READONLY" in p for p in sec.load_settings().problems)
+
+
+def test_public_readonly_needs_no_login_but_cannot_write():
+    with client(ANUMAAN_PUBLIC_READONLY="1", ANUMAAN_VIEW_USER="mospi",
+                ANUMAAN_VIEW_PASSWORD="correct-horse-1", ANUMAAN_ADMIN_TOKEN=ADMIN) as c:
+        for path in ("/", "/api/status", "/api/projects", f"/api/project/{PROJECT}", "/static/app.js"):
+            assert c.get(path).status_code == 200, path
+        assert c.get("/api/status").json()["public_readonly"] is True
+        r = c.post(f"/api/project/{PROJECT}/remark", json={"text": "land compensation pending"})
+        assert r.status_code == 403
+        assert c.post("/api/retrain", json={}).status_code == 403
+        assert c.get("/api/health", headers={"host": "evil.example"}).status_code == 400
 
 
 def test_weak_secrets_are_rejected_in_any_mode():

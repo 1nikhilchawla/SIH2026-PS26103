@@ -28,11 +28,11 @@ services:
         - anumaan/brag-output/**
         - anumaan/tests/**
     envVars:
-      # Login for everyone who opens the dashboard or the API (password 12+ characters).
-      - key: ANUMAAN_VIEW_USER
-        sync: false
-      - key: ANUMAAN_VIEW_PASSWORD
-        sync: false
+      # Public read-only demo of published data: no login, remarks disabled.
+      # For a private deployment remove this and set ANUMAAN_VIEW_USER and
+      # ANUMAAN_VIEW_PASSWORD (12+ characters) instead.
+      - key: ANUMAAN_PUBLIC_READONLY
+        value: "1"
       # Guards /api/retrain. Render generates a random 256-bit value.
       - key: ANUMAAN_ADMIN_TOKEN
         generateValue: true

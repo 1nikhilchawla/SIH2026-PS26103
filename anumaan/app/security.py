@@ -77,11 +77,15 @@ class Settings:
     laya_url: str | None = None
     laya_token: str | None = None
     rate_remark_per_min: int = 20
+    # ANUMAAN_PUBLIC_READONLY=1: a deliberate public demo of published data.
+    # No login; anonymous visitors can read but not record remarks. Retrain
+    # still needs the admin token, and integrity, hosts and rate limits stay on.
+    public_readonly: bool = False
     problems: tuple[str, ...] = field(default=())
 
     @property
     def viewer_auth_on(self) -> bool:
-        return bool(self.users_file or (self.view_user and self.view_password))
+        return not self.public_readonly and bool(self.users_file or (self.view_user and self.view_password))
 
 
 def _int_env(name: str, default: int, lo: int, hi: int) -> int:
@@ -124,6 +128,10 @@ def load_settings() -> Settings:
         problems.append(f"ANUMAAN_INTEGRITY_KEY must be at least {MIN_SECRET_CHARS} characters")
     if "*" in hosts:
         problems.append("ANUMAAN_ALLOWED_HOSTS must list real host names, not '*'")
+    public_raw = os.environ.get("ANUMAAN_PUBLIC_READONLY", "").strip()
+    if public_raw not in ("", "0", "1"):
+        problems.append("ANUMAAN_PUBLIC_READONLY must be 1 (public read-only demo) or 0")
+    public_readonly = public_raw == "1"
 
     users_file = os.environ.get("ANUMAAN_USERS_FILE") or None
     if users_file and not os.path.isfile(users_file):
@@ -142,9 +150,10 @@ def load_settings() -> Settings:
                             "when ANUMAAN_LAYA_URL is set")
 
     if production:
-        if not (users_file or (view_user and view_password)):
+        if not public_readonly and not (users_file or (view_user and view_password)):
             problems.append("production requires logins: ANUMAAN_USERS_FILE, or "
-                            "ANUMAAN_VIEW_USER and ANUMAAN_VIEW_PASSWORD")
+                            "ANUMAAN_VIEW_USER and ANUMAAN_VIEW_PASSWORD "
+                            "(or ANUMAAN_PUBLIC_READONLY=1 for a deliberate public read-only demo)")
         if not admin_token:
             problems.append("production requires ANUMAAN_ADMIN_TOKEN")
         if not integrity_key:
@@ -165,6 +174,7 @@ def load_settings() -> Settings:
         users_file=users_file, audit_file=audit_file,
         laya_url=laya_url, laya_token=laya_token,
         rate_remark_per_min=_int_env("ANUMAAN_RATE_REMARK_PER_MIN", 20, 1, 1000),
+        public_readonly=public_readonly,
         problems=tuple(problems),
     )
 
@@ -186,8 +196,11 @@ def _eq(a: str, b: str) -> bool:
 
 
 def build_user_store(settings: Settings) -> UserStore | None:
-    """The user store for this process, or None when viewer auth is off
-    (development only - production refuses to start without logins)."""
+    """The user store for this process, or None when viewer auth is off:
+    development, or a deliberate public read-only demo. Production refuses to
+    start without logins unless ANUMAAN_PUBLIC_READONLY=1 is set."""
+    if settings.public_readonly:
+        return None
     if settings.users_file:
         return UserStore.from_file(Path(settings.users_file))
     if settings.view_user and settings.view_password:

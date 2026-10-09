@@ -514,7 +514,7 @@ async def lifespan(_app: FastAPI):
             raise RuntimeError("users file names ministries that are not in the panel "
                                "(check the spelling): " + "; ".join(unknown))
     print(f"[anumaan] security: production={settings.production} "
-          f"logins={'off' if store is None else str(len(store)) + ' user(s)'} "
+          f"logins={'public read-only' if settings.public_readonly else 'off' if store is None else str(len(store)) + ' user(s)'} "
           f"admin_token={'set' if settings.admin_token else 'unset'} "
           f"audit_file={'on' if settings.audit_file else 'off'} "
           f"laya={'on' if settings.laya_url else 'off'} "
@@ -649,6 +649,7 @@ def status(request: Request) -> dict:
             "train_seconds": snap["metrics"]["train_seconds"],
             "principal": _principal(request).public(),
             "live_forecast_month": (live.get("info") or {}).get("month"),
+            "public_readonly": settings.public_readonly,
             "laya": {"configured": bool(settings.laya_url)}}
 
 
@@ -1034,9 +1035,13 @@ def remark(req: RemarkRequest, request: Request,
     """Record a field remark on a project and triage it to a delay cause and
     its owner. Personal identifiers are removed first; the model sees and the
     log keeps only the redacted text."""
+    settings: sec.Settings = STATE["settings"]
+    if settings.public_readonly:
+        # A public demo is read-only: an anonymous visitor must not be able to
+        # put text in front of the next visitor.
+        raise HTTPException(403, "this public demo is read-only; remarks need a ministry login")
     _visible(request, entity_id)
     p = _principal(request)
-    settings: sec.Settings = STATE["settings"]
     text, removed = redact(req.text.strip())
     result = laya_client.triage(settings.laya_url, settings.laya_token, text,
                                 LABELS, MIN_CONFIDENCE)

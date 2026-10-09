@@ -84,7 +84,8 @@ is described in [SECURITY.md](SECURITY.md), section 3.
 | Variable | Required | Purpose |
 |---|---|---|
 | `PORT` | set by Railway / Render | Do not hardcode it. |
-| `ANUMAAN_VIEW_USER` / `ANUMAAN_VIEW_PASSWORD` | yes | Login for everyone who opens the dashboard or the API (HTTP Basic; password 12+ characters). |
+| `ANUMAAN_VIEW_USER` / `ANUMAAN_VIEW_PASSWORD` | yes, unless public | Login for everyone who opens the dashboard or the API (HTTP Basic; password 12+ characters). |
+| `ANUMAAN_PUBLIC_READONLY` | no | `1` = deliberate public demo of the published data: no login, and anonymous visitors cannot record remarks. Retrain still needs the admin token; integrity, hosts and rate limits stay on. `deploy/prepare_railway_release.py --public` produces this variable set. |
 | `ANUMAAN_ADMIN_TOKEN` | yes | Required in the `X-Admin-Token` header for `/api/retrain`, the only route that changes what other users see (32+ characters). |
 | `ANUMAAN_INTEGRITY_KEY` | yes | Verifies the signature on `integrity/MANIFEST.json` at startup. The service will not start on changed files or an unsigned manifest (32+ characters). |
 | `ANUMAAN_ALLOWED_HOSTS` | yes | Comma-separated host names the service answers to. `*` is refused. **On Railway, include `healthcheck.railway.app`**: Railway's health check sends that Host header, and the host check applies to `/api/health` too, e.g. `sih2026-ps26103-production.up.railway.app,healthcheck.railway.app`. On Render, the `onrender.com` host alone is enough (Render's health check uses it). |

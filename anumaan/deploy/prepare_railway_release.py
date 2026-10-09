@@ -51,6 +51,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--user", default="mospi", help="viewer login name (default: mospi)")
     ap.add_argument("--host", default=DEFAULT_HOST, help=f"public Railway host (default: {DEFAULT_HOST})")
+    ap.add_argument("--public", action="store_true",
+                    help="public read-only demo: no login (ANUMAAN_PUBLIC_READONLY=1), no viewer password")
     args = ap.parse_args()
 
     if not re.fullmatch(r"[A-Za-z0-9._-]{3,64}", args.user):
@@ -68,25 +70,30 @@ def main() -> int:
     report = integrity.verify(key=integrity_key, require_signature=True)
     print(f"signed {blob['n_files']} files -> integrity/MANIFEST.json (signature {report['signature']})")
 
-    variables = "\n".join([
-        f"ANUMAAN_VIEW_USER={args.user}",
-        f"ANUMAAN_VIEW_PASSWORD={view_password}",
+    login = (["ANUMAAN_PUBLIC_READONLY=1"] if args.public
+             else [f"ANUMAAN_VIEW_USER={args.user}", f"ANUMAAN_VIEW_PASSWORD={view_password}"])
+    lines = login + [
         f"ANUMAAN_ADMIN_TOKEN={admin_token}",
         f"ANUMAAN_INTEGRITY_KEY={integrity_key}",
         f"ANUMAAN_ALLOWED_HOSTS={args.host.lower()},{RAILWAY_HEALTHCHECK_HOST}",
-    ]) + "\n"
+    ]
+    variables = "\n".join(lines) + "\n"
 
     if not to_clipboard(variables):
-        print("No clipboard tool found. Paste these five lines into Railway yourself:\n")
+        print(f"No clipboard tool found. Paste these {len(lines)} lines into Railway yourself:\n")
         print(variables)
     else:
-        print("The five Railway variables are on your clipboard.")
-        print("  -> Railway: SIH2026-PS26103 service -> Variables -> Raw Editor -> paste -> Update Variables")
+        print(f"The {len(lines)} Railway variables are on your clipboard.")
+        print("  -> Railway: SIH2026-PS26103 service -> Variables -> Raw Editor -> Ctrl+A -> paste -> Update Variables")
+        print("     (replacing everything removes any old variables, e.g. the login ones)")
         print("  -> Then copy any other text, so the key does not stay on the clipboard.")
     print()
-    print("Dashboard login to share with your team and the judges:")
-    print(f"  user:     {args.user}")
-    print(f"  password: {view_password}")
+    if args.public:
+        print("Public read-only demo: anyone with the link can view, no login.")
+    else:
+        print("Dashboard login to share with your team and the judges:")
+        print(f"  user:     {args.user}")
+        print(f"  password: {view_password}")
     print()
     print("The integrity key and admin token are not shown or saved. Keep them only in")
     print("Railway (and a password manager if you want a copy). Next: commit")
