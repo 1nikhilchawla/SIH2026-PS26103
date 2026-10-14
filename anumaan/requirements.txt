@@ -25,7 +25,7 @@ pdfplumber==0.11.10
 
 # --- Panel construction and modelling ---------------------------------------
 pandas==2.3.3
-numpy==2.5.3
+numpy==2.5.4
 scikit-learn==1.9.1
 lightgbm==4.7.0
 shap==0.52.0            # TreeExplainer: exact per-project attributions
