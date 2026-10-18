@@ -24,7 +24,7 @@ beautifulsoup4==4.15.0
 pdfplumber==0.11.10
 
 # --- Panel construction and modelling ---------------------------------------
-pandas==2.3.3
+pandas==3.0.6
 numpy==2.5.3
 scikit-learn==1.9.1
 lightgbm==4.7.0
