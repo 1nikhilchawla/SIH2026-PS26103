@@ -11,7 +11,7 @@
 # self-contained, and it means a cold start does real work - see DEPLOY.md for
 # the measured time and memory.
 
-FROM python:3.14-slim
+FROM python:3.15-slim
 
 # libgomp1: LightGBM links against OpenMP at runtime and fails to import
 # without it on slim images. Everything else in requirements.txt has wheels.
